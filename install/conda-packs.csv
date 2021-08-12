@@ -552,7 +552,7 @@ scikit-bio,,"Data structures, algorithms and educational resources for bioinform
 scikit-image,,"Image processing in Python."
 scikit-learn,,"A set of python modules for machine learning and data mining"
 scikit-rf,,"Object Oriented Microwave Engineering."
-scipy,,"Scientific Library for Python"
+scipy,scipy,"Scientific Library for Python"
 scons,,"Open Source next-generation build tool."
 seaborn,,"Statistical data visualization"
 secretstorage,,"Provides a way for securely storing passwords and other secrets."
