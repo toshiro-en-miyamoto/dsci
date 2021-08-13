@@ -2,9 +2,9 @@
 
 With respect to the free tools for Data Analysis with Python, [Anaconda Individual Edition](https://www.anaconda.com/products/individual) is the world’s most popular Python distribution platform with over 25 million users worldwide. You have three options:
 
-- [Anaconda Individual](https://www.anaconda.com/products/individual)
-- [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-- [Miniforge](https://github.com/conda-forge/miniforge)
+- [Anaconda Individual](https://www.anaconda.com/products/individual), widely used by novices in Python data science
+- [Miniconda](https://docs.conda.io/en/latest/miniconda.html), some experienced data scientists prefer Miniconda to Anaconda
+- [Miniforge](https://github.com/conda-forge/miniforge), recommended for data scientists with professional skills in IT
 
 ## Anaconda or Miniconda
 
