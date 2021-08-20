@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Statistics by Brotanica</title>
+    <link rel="stylesheet" href="../stats-ml.css" type="text/css">
+</head>
+<body>
+
+<p>
+    <strong>Reference</strong>:
+    <a href="https://www.britannica.com/science/statistics">
+        Statistics by Brotanica
+    </a>
+</p>
+
+<!-- ******************************************************************** -->
+<h1>Introduction</h1>
+<section id="introduction" class="description">
+
+<p>
+<strong>Statistics</strong>, the science of collecting, analyzing, presenting, and interpreting data.
+</p>
+<p>
+Data are the facts and figures that are collected, analyzed, and summarized for presentation and interpretation. Data may be classified as either quantitative or qualitative:
+</p>
+<ul>
+    <li>
+        <i>quantitative</i> data measure either how much or how many of something, and
+    </li>
+    <li>
+        <i>qualitative</i> data provide labels, or names, for categories of like items.
+    </li>
+</ul>
+<p>
+For example, suppose that a particular study is interested in characteristics such as age, gender, marital status, and annual income for a sample of 100 individuals. These characteristics would be called the <i>variables</i> of the study, and data values for each of the variables would be associated with each individual. Thus, the data values of 28, male, single, and $30,000 would be recorded for a 28-year-old single male with an annual income of $30,000. With 100 individuals and 4 variables, the data set would have
+    <math>
+        <mrow>
+            <mn>100</mn>
+            <mo>&times;</mo>
+            <mn>4</mn>
+            <mo>&equals;</mo>
+            <mn>400</mn>
+        </mrow>
+    </math>
+items. In this example,
+</p>
+<ul>
+    <li>
+        age and annual income are <i>quantitative variables</i>; the corresponding data values indicate how many years and how much money for each individual.
+    </li>
+    <li>
+        Gender and marital status are <i>qualitative variables</i>. The labels male and female provide the qualitative data for gender, and the labels single, married, divorced, and widowed indicate marital status.
+    </li>
+</ul>
+<p>
+Sample survey methods are used to collect data from observational studies, and experimental design methods are used to collect data from experimental studies. The area of <strong>descriptive statistics</strong> is concerned primarily with methods of presenting and interpreting data using graphs, tables, and numerical summaries. Whenever statisticians use data from a <i>sample</i>&mdash;i.e., a subset of the <i>population</i>&mdash;to make statements about a population, they are performing <strong>statistical inference</strong>. <i>Estimation</i> and <i>hypothesis testing</i> are procedures used to make statistical inferences. Fields such as health care, biology, chemistry, physics, education, engineering, business, and economics make extensive use of statistical inference.
+</p>
+<p>
+Methods of <i>probability</i> were developed initially for the analysis of gambling games. Probability plays a key role in statistical inference; it is used to provide measures of the quality and precision of the inferences. Many of the methods of statistical inference are described in this article. Some of these methods are used primarily for single-variable studies, while others, such as regression and correlation analysis, are used to make inferences about relationships among two or more variables.
+</p>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h1>Descriptive statistics</h1>
+<section id="descriptive_statistics" class="description">
+
+<p>
+Descriptive statistics are tabular, graphical, and numerical summaries of data. The purpose of descriptive statistics is to facilitate the presentation and interpretation of data. Most of the statistical presentations appearing in newspapers and magazines are descriptive in nature.
+</p>
+<ul>
+    <li>
+        Univariate methods of descriptive statistics use data to enhance the understanding of a single variable;
+    </li>
+    <li>
+        multivariate methods focus on using statistics to understand the relationships among two or more variables.
+    </li>
+</ul>
+<p>
+To illustrate methods of descriptive statistics, the previous example in which data were collected on the age, gender, marital status, and annual income of 100 individuals will be examined.
+</p>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h2>Tabular methods</h2>
+<section id="tabular_methods" class="description">
+
+<p>
+The most commonly used tabular summary of data for a single variable is a <i>frequency distribution</i>. A frequency distribution shows the number of data values in each of several nonoverlapping classes. Another tabular summary, called a <i>relative frequency distribution</i>, shows the fraction, or percentage, of data values in each class. The most common tabular summary of data for two variables is a cross tabulation, a two-variable analogue of a frequency distribution.
+</p>
+<p>
+For a qualitative variable, a frequency distribution shows the number of data values in each qualitative <i>category</i>. For instance, the variable gender has two categories: male and female. Thus, a frequency distribution for gender would have two nonoverlapping classes to show the number of males and females. A relative frequency distribution for this variable would show the fraction of individuals that are male and the fraction of individuals that are female.
+</p>
+<p>
+Constructing a frequency distribution for a quantitative variable requires more care in defining the <i>classes</i> and the division points between adjacent classes. For instance, if the age data of the example above ranged from 22 to 78 years, the following six nonoverlapping classes could be used: 20–29, 30–39, 40–49, 50–59, 60–69, and 70–79. A frequency distribution would show the number of data values in each of these classes, and a relative frequency distribution would show the fraction of data values in each.
+</p>
+<p>
+A <i>cross tabulation</i> is a two-way table with the rows of the table representing the <u>classes of one variable</u> and the columns of the table representing the <u>classes of another variable</u>. To construct a cross tabulation using the variables gender and age, gender could be shown with two rows, male and female, and age could be shown with six columns corresponding to the age classes 20–29, 30–39, 40–49, 50–59, 60–69, and 70–79. The entry in each cell of the table would specify the number of data values with the gender given by the row heading and the age given by the column heading. Such a cross tabulation could be helpful in understanding the <u>relationship</u> between gender and age.
+</p>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h2>Graphical methods</h2>
+<section id="graphical_methods" class="description">
+
+<p>
+A <i>bar graph</i> is a graphical device for depicting qualitative data that have been summarized in a frequency distribution. Labels for <u>the categories of the qualitative variable</u> are shown on the horizontal axis of the graph. A bar above each label is constructed such that the height of each bar is <u>proportional</u> to the number of data values in the category.
+</p>
+<p>
+A <i>pie chart</i> is another graphical device for summarizing <u>qualitative data</u>. The size of each slice of the pie is <u>proportional</u> to the number of data values in the corresponding <u>class</u>.
+</p>
+<p>
+A <i>histogram</i> is the most common graphical presentation of quantitative data that have been summarized in a frequency distribution. The values of the quantitative variable are shown on the horizontal axis. A rectangle is drawn above each class such that the base of the rectangle is equal to the width of the <u>class interval</u> and its height is <u>proportional</u> to the number of data values in the class.
+</p>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h2>Numerical measures</h2>
+<section id="numerical_measures" class="description">
+
+<p>
+A variety of numerical measures are used to summarize data.
+</p>
+<ul>
+    <li>
+        The proportion, or percentage, of data values in each category is the primary numerical measure for <u>qualitative</u> data.
+    </li>
+    <li>
+        The mean, median, mode, percentiles, range, variance, and standard deviation are the most commonly used numerical measures for <u>quantitative</u> data.
+    </li>
+</ul>
+<p>
+The <i>mean</i>, often called the average, is computed by adding all the data values for a variable and dividing the sum by the number of data values. The mean is a measure of the central location for the data.
+</p>
+<p>
+The <i>median</i> is another measure of central location that, unlike the mean, is not affected by extremely large or extremely small data values. When determining the median, the data values are first ranked in order from the smallest value to the largest value. If there is an odd number of data values, the median is the middle value; if there is an even number of data values, the median is the average of the two middle values.
+</p>
+<p>
+The third measure of central tendency is the <i>mode</i>, the data value that occurs with greatest frequency.
+</p>
+<p>
+<i>Percentiles</i> provide an indication of how the data values are spread over the interval from the smallest value to the largest value. Approximately
+    <math><mi>p</mi></math>
+percent of the data values fall below the
+    <math><mi>p</mi></math>th
+percentile, and roughly
+    <math>
+        <mrow>
+            <mn>100</mn>
+            <mo>&minus;</mo>
+            <mi>p</mi>
+        </mrow>
+    </math>
+percent of the data values are above the
+    <math><mi>p</mi></math>th
+percentile. Percentiles are reported, for example, on most standardized tests.
+</p>
+<p>
+<i>Quartiles</i> divide the data values into four parts;
+the <u>first quartile</u> is the 25th percentile,
+the <u>second quartile</u> is the 50th percentile (also the median), and
+the <u>third quartile</u> is the 75th percentile.
+</p>
+<p>
+The <i>range</i>, the difference between the largest value and the smallest value, is the simplest measure of variability in the data. The range is determined by only the two extreme data values.
+</p>
+<p>
+The <i>variance</i>
+    (<math>
+        <msup>
+            <mi>s</mi>
+            <mn>2</mn>
+        </msup>
+    </math>)
+and the <i>standard deviation</i>
+    (<math><mi>s</mi></math>),
+on the other hand, are measures of <i>variability</i> that are based on all the data and are more commonly used. Equation 1 shows the formula for computing the variance of a sample consisting of
+    <math><mi>n</mi></math>
+items. In applying equation 1, the <i>deviation</i> (difference) of each data value from the <i>sample mean</i> is computed and squared. The squared deviations are then summed and divided by
+    <math>
+        <mrow>
+            <mi>n</mi>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+        </mrow>
+    </math>
+to provide the <i>sample variance</i>.
+</p>
+<figure>
+    <math displaystyle="true">
+        <mrow>
+            <msup>
+                <mi>s</mi>
+                <mn>2</mn>
+            </msup>
+        </mrow>
+        <mo>&equals;</mo>
+        <mrow>
+            <mfrac>
+                <mrow>
+                    <msubsup>
+                        <mi>&sum;</mi>
+                        <mrow>
+                            <mi>i</mi>
+                            <mo>&equals;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                        <mi>n</mi>
+                    </msubsup>
+                    <mo>&ApplyFunction;</mo>
+                    <msup>
+                        <mrow>
+                            <mo fence="true">&lpar;</mo>
+                            <msub>
+                                <mi>x</mi>
+                                <mi>i</mi>
+                            </msub>
+                            <mo>&minus;</mo>
+                            <mover>
+                                <mi>x</mi>
+                                <mo>&OverBar;</mo>
+                            </mover>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </mfrac>
+        </mrow>
+        <mrow>
+            <mspace width="3em"/>
+            <mtext>(1)</mtext>
+        </mrow>
+    </math>
+</figure>
+<p>
+The standard deviation is the square root of the variance. Because the unit of measure for the standard deviation is the same as the unit of measure for the data, many individuals prefer to use the standard deviation as the descriptive measure of variability.
+</p>
+
+<h3>Outliers</h3>
+<p>
+Sometimes data for a variable will include one or more values that appear unusually large or small and out of place when compared with the other data values. These values are known as <i>outliers</i> and often have been erroneously included in the data set.
+</p>
+<p>
+Experienced statisticians take steps to identify outliers and then review each one carefully for accuracy and the <u>appropriateness of its inclusion</u> in the data set. If an error has been made, corrective action, such as <u>rejecting</u> the data value in question, can be taken.
+</p>
+<p>
+The mean and standard deviation are used to identify outliers. A <i>z-score</i> can be computed for each data value. With
+    <math><mi>x</mi></math>
+representing the data value,
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+    </math>
+the <u>sample mean</u>, and
+    <math><mi>s</mi></math>
+the <u>sample standard deviation</u>, the z-score is given by
+</p>
+<figure>
+    <math displaystyle="true">
+        <mrow>
+            <mi>z</mi>
+            <mo>&equals;</mo>
+            <mfrac>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>x</mi>
+                    <mo>&minus;</mo>
+                    <mover>
+                        <mi>x</mi>
+                        <mo>&OverBar;</mo>
+                    </mover>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mi>s</mi>
+            </mfrac>
+        </mrow>
+    </math>
+</figure>
+<p>
+The z-score represents the relative position of the data value by indicating the number of standard deviations it is from the mean. A rule of thumb is that any value with a <u>z-score less than −3 or greater than +3</u> should be considered an outlier.
+</p>
+
+<h3>Exploratory data analysis</h3>
+<p>
+Exploratory data analysis provides a variety of tools for quickly summarizing and gaining insight about a set of data. Two such methods are the five-number summary and the box plot.
+</p>
+<p>
+A <i>five-number summary</i> simply consists of
+<ul>
+    <li>the smallest data value,</li>
+    <li>the first quartile,</li>
+    <li>the median,</li>
+    <li>the third quartile, and</li>
+    <li>the largest data value.</li>
+</ul>
+</p>
+<p>
+A <i>box plot</i> is a graphical device based on a five-number summary. A rectangle (i.e., the box) is drawn with the ends of the rectangle located at the first and third quartiles. The rectangle represents the middle 50 percent of the data. A vertical line is drawn in the rectangle to locate the median. Finally lines, called <i>whiskers</i>, extend from one end of the rectangle to the smallest data value and from the other end of the rectangle to the largest data value. If outliers are present, the whiskers generally extend only to the smallest and largest data values that are not outliers. Dots, or asterisks, are then placed outside the whiskers to denote the presence of outliers.
+</p>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h1>Probability</h1>
+<section id="probability" class="description">
+
+<p>
+Probability is a subject that deals with uncertainty. In everyday terminology, probability can be thought of as a numerical measure of the likelihood that a particular <i>event</i> will occur. Probability values are assigned on a scale from 0 to 1, with values near 0 indicating that an event is unlikely to occur and those near 1 indicating that an event is likely to take place. A probability of 0.50 means that an event is equally likely to occur as not to occur.
+</p>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h2>Events and their probabilities</h2>
+<section id="events_probabilities" class="description">
+
+<p>
+Oftentimes probabilities need to be computed for related events. For instance, advertisements are developed for the purpose of increasing sales of a product.
+</p>
+<ul>
+    <li>
+        If seeing the advertisement increases the probability of a person buying the product, the events “seeing the advertisement” and “buying the product” are said to be <i>dependent</i>.
+    </li>
+    <li>
+        If two events are <i>independent</i>, the occurrence of one event does not affect the probability of the other event taking place. When two or more events are independent, the probability of their joint occurrence is the <u>product of their individual probabilities</u>.
+    </li>
+    <li>
+        Two events are said to be <i>mutually exclusive</i> if the occurrence of one event means that the other event cannot occur; in this case, when one event takes place, the probability of the other event occurring is zero.
+    </li>
+</ul>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h2>Random variables and probability distributions</h2>
+<section id="probability_distributions" class="description">
+
+<p>
+A <i>random variable</i> is a numerical description of the <u>outcome of a statistical experiment</u>. A random variable that may assume only a finite number or an infinite sequence of values is said to be discrete; one that may assume any value in some interval on the real number line is said to be continuous. For instance, a random variable representing the number of automobiles sold at a particular dealership on one day would be discrete, while a random variable representing the weight of a person in kilograms (or pounds) would be continuous.
+</p>
+<p>
+The <i>probability distribution</i> for a random variable describes how the probabilities are distributed over the values of the random variable.
+</p>
+<p>
+For a discrete random variable,
+    <math><mi>x</mi></math>,
+the probability distribution is defined by a <i>probability mass function</i>, denoted by
+    <math>
+        <mi>f</mi>
+        <mo>&ApplyFunction;</mo>
+        <mo fence="true">&lpar;</mo>
+        <mi>x</mi>
+        <mo fence="true">&rpar;</mo>
+    </math>.
+This function provides the <u>probability for each value of the random variable</u>. In the development of the probability function for a discrete random variable, two conditions must be satisfied:
+</p>
+<ol>
+    <li>
+        <math>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        must be nonnegative for each value of the random variable, and
+    </li>
+    <li>
+        the sum of the probabilities for each value of the random variable must equal one.
+    </li>
+</ol>
+<p>
+A continuous random variable may assume any value in an interval on the real number line or in a collection of intervals. Since there is an infinite number of values in any interval, it is not meaningful to talk about the probability that the random variable will take on a specific value; instead, the probability that a continuous random variable will lie within a <u>given interval</u> is considered.
+</p>
+<p>
+In the continuous case, the counterpart of the probability mass function is the <i>probability density function</i>, also denoted by
+    <math>
+        <mi>f</mi>
+        <mo>&ApplyFunction;</mo>
+        <mo fence="true">&lpar;</mo>
+        <mi>x</mi>
+        <mo fence="true">&rpar;</mo>
+    </math>.
+For a continuous random variable, the probability density function provides the height or value of the function at any particular value of
+    <math><mi>x</mi></math>;
+it does not directly give the probability of the random variable taking on a specific value. However, <u>the area under the graph of
+    <math>
+        <mi>f</mi>
+        <mo>&ApplyFunction;</mo>
+        <mo fence="true">&lpar;</mo>
+        <mi>x</mi>
+        <mo fence="true">&rpar;</mo>
+    </math>
+corresponding to some interval, obtained by computing the integral of
+    <math>
+        <mi>f</mi>
+        <mo>&ApplyFunction;</mo>
+        <mo fence="true">&lpar;</mo>
+        <mi>x</mi>
+        <mo fence="true">&rpar;</mo>
+    </math>
+over that interval, provides the probability that the variable will take on a value within that interval</u>. A probability density function must satisfy two requirements:
+</p>
+<ol>
+    <li>
+        <math>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        must be nonnegative for each value of the random variable, and
+    </li>
+    <li>
+        the integral over all values of the random variable must equal one.
+    </li>
+</ol>
+<p>
+According to the article
+    <a href="https://en.wikipedia.org/wiki/Probability_density_function">
+        Probability density function
+    </a>,
+the probability density function (PDF) is used to specify the probability of the random variable falling within a particular range of values, as opposed to taking on any one value. This probability is given by the integral of this variable's PDF over that range&mdash;that is, it is given by the area under the density function but above the horizontal axis and between the lowest and greatest values of the range.
+</p>
+<figure>
+    <figcaption>
+        Boxplot and probability density function of a normal distribution
+        <math>
+            <mi>N</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mn>0</mn>
+            <mo separator="true">&comma;</mo>
+            <msup>
+                <mi>&sigma;</mi>
+                <mn>2</mn>
+            </msup>
+            <mo fence="true">&rpar;</mo>
+        </math>.
+        By Nishiguchi at en.wikipedia, CC BY-SA 2.5, 2006-09-22
+    </figcaption>
+    <img src="Boxplot_vs_PDF.png" alt="Boxplot and probability density function of a normal distribution">
+</figure>
+<p>
+The <i>expected value</i>, or mean, of a random variable&mdash;denoted by
+    <math>
+        <mi>E</mi>
+        <mo>&ApplyFunction;</mo>
+        <mo fence="true">&lpar;</mo>
+        <mi>x</mi>
+        <mo fence="true">&rpar;</mo>
+    </math>
+or
+    <math><mi>&mu;</mi></math>
+&mdash;is a weighted average of the values the random variable may assume. In the discrete case the weights are given by the probability mass function, and in the continuous case the weights are given by the probability density function. The formulas for computing the expected values of discrete and continuous random variables are given by equations 2 and 3, respectively.
+</p>
+<figure>
+    <math>
+        <mrow>
+            <mi>E</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mo>&equals;</mo>
+        <mi>&mu;</mi>
+        <mo>&equals;</mo>
+        <mrow>
+            <mo>&sum;</mo>
+            <mo>&ApplyFunction;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>x</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+        </mrow>
+        <mrow>
+            <mspace width="3em"/>
+            <mtext>(2)</mtext>
+        </mrow>
+    </math>
+</figure>
+<figure>
+    <math>
+        <mrow>
+            <mi>E</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mo>&equals;</mo>
+        <mi>&mu;</mi>
+        <mo>&equals;</mo>
+        <mrow>
+            <mo>&Integral;</mo>
+            <mo>&ApplyFunction;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>x</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&InvisibleTimes;</mo>
+                <mrow>
+                    <mo>&PartialD;</mo>
+                    <mi>x</mi>
+                </mrow>
+            </mrow>
+        </mrow>
+        <mrow>
+            <mspace width="3em"/>
+            <mtext>(3)</mtext>
+        </mrow>
+    </math>
+</figure>
+<p>
+The <i>variance</i> of a random variable, denoted by
+    <math>
+        <mi>Var</mi>
+        <mo>&ApplyFunction;</mo>
+        <mo fence="true">&lpar;</mo>
+        <mi>x</mi>
+        <mo fence="true">&rpar;</mo>
+    </math>
+or
+    <math>
+        <msup>
+            <mi>&sigma;</mi>
+            <mn>2</mn>
+        </msup>
+    </math>,
+is a weighted average of the squared deviations from the mean. In the discrete case the weights are given by the probability mass function, and in the continuous case the weights are given by the probability density function. The formulas for computing the variances of discrete and continuous random variables are given by equations 4 and 5, respectively.
+</p>
+<figure>
+    <math>
+        <mrow>
+            <mi>Var</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mo>&equals;</mo>
+        <msup>
+            <mi>&sigma;</mi>
+            <mn>2</mn>
+        </msup>
+        <mo>&equals;</mo>
+        <mrow>
+            <mo>&sum;</mo>
+            <mo>&ApplyFunction;</mo>
+            <mrow>
+                <msup>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>x</mi>
+                        <mo>&minus;</mo>
+                        <mi>&mu;</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mn>2</mn>
+                </msup>
+                <mo>&InvisibleTimes;</mo>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>x</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+        </mrow>
+        <mrow>
+            <mspace width="3em"/>
+            <mtext>(4)</mtext>
+        </mrow>
+    </math>
+</figure>
+<figure>
+    <math>
+        <mrow>
+            <mi>Var</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mo>&equals;</mo>
+        <msup>
+            <mi>&sigma;</mi>
+            <mn>2</mn>
+        </msup>
+        <mo>&equals;</mo>
+        <mrow>
+            <mo>&Integral;</mo>
+            <mo>&ApplyFunction;</mo>
+            <mrow>
+                <msup>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>x</mi>
+                        <mo>&minus;</mo>
+                        <mi>&mu;</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mn>2</mn>
+                </msup>
+                <mo>&InvisibleTimes;</mo>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>x</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&InvisibleTimes;</mo>
+                <mrow>
+                    <mo>&PartialD;</mo>
+                    <mi>x</mi>
+                </mrow>
+            </mrow>
+        </mrow>
+        <mrow>
+            <mspace width="3em"/>
+            <mtext>(5)</mtext>
+        </mrow>
+    </math>
+</figure>
+<p>
+The <i>standard deviation</i>, denoted
+    <math><mi>&sigma;</mi></math>,
+is the positive square root of the variance. Since the standard deviation is measured in the same units as the random variable and the variance is measured in squared units, the standard deviation is often the preferred measure.
+</p>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h2>Special probability distributions</h2>
+<section id="special_probability_distributions" class="description">
+
+<p>
+Two of the most widely used discrete probability distributions are the binomial and Poisson.
+</p>
+
+<h3>The binomial distribution</h3>
+<p>
+The binomial probability mass function (equation 6) provides the probability that
+    <math><mi>x</mi></math>
+successes will occur in
+    <math><mi>n</mi></math>
+trials of a binomial experiment.
+</p>
+<figure>
+    <math displaystyle="true">
+        <mrow>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mo>&equals;</mo>
+        <mrow>
+            <mo fence="true">&lpar;</mo>
+            <mfrac linethickness="0">
+                <mi>n</mi>
+                <mi>x</mi>
+            </mfrac>
+            <mo fence="true">&rpar;</mo>
+            <mo>&InvisibleTimes;</mo>
+            <msup>
+                <mi>p</mi>
+                <mi>x</mi>
+            </msup>
+            <mo>&InvisibleTimes;</mo>
+            <msup>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>1</mn>
+                    <mo>&minus;</mo>
+                    <mi>p</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mi>x</mi>
+                </mrow>
+            </msup>
+        </mrow>
+        <mrow>
+            <mspace width="3em"/>
+            <mtext>(6)</mtext>
+        </mrow>
+    </math>
+</figure>
+<p>
+A binomial experiment has four properties:
+</p>
+<ol>
+    <li>
+        it consists of a sequence of
+            <math><mi>n</mi></math>
+        identical trials;
+    </li>
+    <li>
+        two outcomes, success or failure, are possible on each trial;
+    </li>
+    <li>
+        the probability of success on any trial, denoted
+            <math><mi>p</mi></math>,
+        does not change from trial to trial; and
+    </li>
+    <li>
+        the trials are independent.
+    </li>
+</ol>
+<p>
+For instance, suppose that it is known that 10 percent of the owners of two-year old automobiles have had problems with their automobile’s electrical system. To compute the probability of finding exactly 2 owners that have had electrical system problems out of a group of 10 owners, the binomial probability mass function can be used by setting
+    <math>
+        <mi>n</mi>
+        <mo>&equals;</mo>
+        <mn>10</mn>
+    </math>,
+    <math>
+        <mi>x</mi>
+        <mo>&equals;</mo>
+        <mn>2</mn>
+    </math>,
+and
+    <math>
+        <mi>p</mi>
+        <mo>&equals;</mo>
+        <mn>0.1</mn>
+    </math>
+in equation 6; for this case, the probability is 0.1937.
+</p>
+
+<h3>The Poisson distribution</h3>
+<p>
+The Poisson probability distribution is often used as a model of the number of arrivals at a facility within a given period of time. For instance, a random variable might be defined as the number of telephone calls coming into an airline reservation system during a period of 15 minutes. If the mean number of arrivals during a 15-minute interval is known, the Poisson probability mass function given by equation 7 can be used to compute the probability of x arrivals.
+</p>
+<figure>
+    <math displaystyle="true">
+        <mi>f</mi>
+        <mo>&ApplyFunction;</mo>
+        <mo fence="true">&lpar;</mo>
+        <mi>x</mi>
+        <mo fence="true">&rpar;</mo>
+        <mo>&equals;</mo>
+        <mrow>
+            <mfrac>
+                <mrow>
+                    <msup>
+                        <mi>&mu;</mi>
+                        <mi>x</mi>
+                    </msup>
+                    <mo>&InvisibleTimes;</mo>
+                    <msup>
+                        <mi>&escr;</mi>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mi>&mu;</mi>
+                        </mrow>
+                    </msup>
+                </mrow>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&excl;</mo>
+                </mrow>
+            </mfrac>
+        </mrow>
+        <mrow>
+            <mspace width="3em"/>
+            <mtext>(7)</mtext>
+        </mrow>
+    </math>
+</figure>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h1>Estimation</h1>
+<section id="estimation" class="description">
+
+<p>
+It is often of interest to learn about the characteristics of a large group of elements such as individuals, households, buildings, products, parts, customers, and so on. All the elements of interest in a particular study form the population. Because of time, cost, and other considerations, data often cannot be collected from every element of the population. In such cases, a subset of the population, called a <i>sample</i>, is used to provide the data. Data from the sample are then used to develop <i>estimates</i> of the characteristics of the larger <i>population</i>. The process of using a sample to make inferences about a population is called <i>statistical inference</i>.
+</p>
+<p>
+Characteristics such as the population mean, the population variance, and the population proportion are called <i>parameters</i> of the population. Characteristics of the sample such as the sample mean, the sample variance, and the sample proportion are called <i>sample statistics</i>. There are two types of estimates: point and interval. A <i>point estimate</i> is a value of a sample statistic that is used as a <u>single estimate</u> of a population parameter. <u>No statements are made about the quality or precision of a point estimate.</u> Statisticians prefer <i>interval estimates</i> because interval estimates are accompanied by a <u>statement concerning the degree of confidence</u> that the interval contains the population parameter being estimated. Interval estimates of population parameters are called <i>confidence intervals</i>.
+</p>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Estimation and Test</title>
+    <link rel="stylesheet" href="stats-ml.css" type="text/css">
+</head>
+<body>
+
+<h1>Estimation and Test</h1>
+
+<section id="estimate_test" class="description">
+
+<p>
+<i>統計学的推測</i>とは，標本から母集団の統計学的な性質を推測することである。その目的の一つに <i>推定</i>と呼ばれるものがある。例えば，無作為に選ばれた数校で身長を測定したとき，標本平均
+    ¯X
+    <math>
+        <mover>
+            <mi>X</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+    </math>
+は県下の全小学6年生の母平均
+    <math><mi>&mu;</mi></math>
+のよい推定値を与えるであろう。推定値を求める方法は2通りある。
+</p>
+<ul>
+    <li>
+        <i>点推定法</i>: ある1つの数値（点推定値）として母数を推定する。
+    </li>
+    <li>
+        <i>区間推定法</i>: ある確からしさのもとで母数の存在する区間を推定する。
+    </li>
+</ul>
+
+<p>
+統計的仮説検定と区間推定はともに，ある母数を持つ母集団から標本を抽出し，その標本から得られる統計量を対象とするという類似点を持つ。しかし，両者は推論の方向が逆の関係にあると言ってよい。
+</p>
+<ul>
+    <li>
+        <i>区間推定</i>では，統計量の分布を元に，特定の標本統計量の値がある確率の下で起こり得る母数の存在する<u>区間を求める</u>。
+    </li>
+    <li>
+        <i>仮説検定</i>では，母数に関するある特定の仮定（<u>帰無仮説</u>）を設定し，その下で，ある特定の統計量が得られる<u>確率を求める</u>。 もし，得られた確率がある基準（<u>有意水準</u>）より小さければ，母数に関する仮定が誤っている可能性が強いと判断すればよい。
+    </li>
+</ul>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h2>Hypothesis test</h2>
+
+<section id="hypothesis_testing" class="description">
+
+<h3>仮説検定 hypothesis test</h3>
+<p>
+研究者はある理論から予想される事実を証明するために，調査または実験を行い，データを収集する。
+この際の作業仮説（または実験仮説）を<i>対立仮説</i>
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>1</mn>
+        </msub>
+    </math>
+(<i>alternative hypothesis</i>)
+とする。
+例えば，“新しく開発された薬剤は，従来薬より有効である”とか，“男と女で読書時間に差がある”というのが対立仮説である。
+</p>
+<p>
+これに対して，作業仮説を否定する仮説を<i>帰無仮説</i>
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>
+(<i>null hypothesis</i>)
+とする。
+例えば，前の例では，“新しく開発された薬剤は，従来薬より有効とはいえない”とか，“男と女で読書時間に差はない”というのが帰無仮説である。
+</p>
+<p>
+仮説検定の対象となるのは帰無仮説である。帰無仮説が棄却されれば対立仮説が支持されることになり，帰無仮説が棄却されて始めて研究者の調査・実験意図が達せられるわけで，この意味で 帰無仮説（無に帰される仮説）と呼ばれる。
+</p>
+
+<h3>Hypothesis Test</h3>
+<p>
+Setting up and testing hypotheses is an essential part of statistical inference. In order to formulate such a test, usually some theory has been put forward, either because it is believed to be true or because it is to be used as a basis for argument, but has not been proved, for example, claiming that a new drug is better than the current drug for treatment of the same symptoms.
+</p>
+<p>
+In each problem considered, the question of interest is simplified into two competing claims / hypotheses between which we have a choice; the <i>null hypothesis</i>, denoted
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>,
+against the <i>alternative hypothesis</i>, denoted
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>1</mn>
+        </msub>
+    </math>.
+</p>
+<p>
+The hypotheses are often statements about population parameters like <i>expected value</i> and <i>variance</i>; for example
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>
+might be that the expected value of the height of ten year old boys in the Scottish population is not different from that of ten year old girls.
+</p>
+<p>
+The outcome of a hypothesis test test is "Reject
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>
+in favour of
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>1</mn>
+        </msub>
+    </math>"
+or "Do not reject
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>".
+We never conclude "Reject
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>1</mn>
+        </msub>
+    </math>",
+or even "Accept
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>1</mn>
+        </msub>
+    </math>".
+</p>
+<p>
+If we conclude "Do not reject
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>",
+this does not necessarily mean that the null hypothesis is true, it only suggests that there is not sufficient evidence against
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>
+in favour of
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>1</mn>
+        </msub>
+    </math>.
+Rejecting the null hypothesis then, suggests that the alternative hypothesis may be true.
+</p>
+
+<h3>有意確率 p-value</h3>
+<p>
+統計的仮説検定において，帰無仮説のもとで得られた検定統計量が実現する確率。例えば，正規分布において標準得点が1.96以上となる確率は2.5%。有意確率がまえもって定めた<i>有意水準</i>より小さい場合に帰無仮説を棄却し，大きい場合に帰無仮説を採択する。
+</p>
+
+<h3>有意水準 level of significance; significance level</h3>
+<p>
+統計的仮説検定を行う場合に，帰無仮説を棄却するかどうかを判定する基準5%あるいは1%がよく使用される。有意水準5%で検定を行うということは，<i>第1種の過誤</i>をおかす確率（または危険率）が5%であることを意味する。すなわち，同様の調査・検定を行うと，20回に1回は得られた結論が誤っていることを表す。「有意水準αで検定すると有意な差が認められた」ということと，「危険率αのもとで有意な差があるといえる」は同じような意味で使用される。
+</p>
+
+<h3>第1種の過誤 type I error</h3>
+<p>
+帰無仮説が正しいにもかかわらず帰無仮説を棄却するという誤り。
+</p>
+
+<h3>第2種の過誤 type II error</h3>
+<p>
+帰無仮説が誤っているにもかかわらず帰無仮説を採択するという誤り。
+</p>
+
+<h3>P-Value</h3>
+<p>
+The probability value (p-value) of a statistical hypothesis test is the probability of getting a value of the test statistic as extreme as or more extreme than that observed by chance alone, if the null hypothesis
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>,
+is true. It is the probability of wrongly rejecting the null hypothesis if it is in fact true.
+</p>
+<p>
+It is equal to the <i>significance level</i> of the test for which we would only just reject the null hypothesis. The p-value is compared with the actual significance level of our test and, if it is smaller, the result is significant. That is, if the null hypothesis were to be rejected at the 5% signficance level, this would be reported as
+    <math>
+        <mrow>
+            <mi>p</mi>
+            <mo>&lt;</mo>
+            <mn>0.05</mn>
+        </mrow>
+    </math>.
+</p>
+<p>
+Small p-values suggest that the null hypothesis is unlikely to be true. The smaller it is, the more convincing is the rejection of the null hypothesis. It indicates the strength of evidence for say, rejecting the null hypothesis
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>,
+rather than simply concluding "Reject
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>"
+or "Do not reject
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>".
+</p>
+
+<h3>Significance Level</h3>
+<p>
+The significance level of a statistical hypothesis test is a fixed probability of wrongly rejecting the null hypothesis
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>,
+if it is in fact true.
+</p>
+<p>
+It is the probability of a <i>type I error</i> and is set by the investigator in relation to the consequences of such an error. That is, we want to make the significance level as small as possible in order to protect the null hypothesis and to prevent, as far as possible, the investigator from inadvertently making false claims.
+Usually, the significance level is chosen to be 0.05 (or equivalently, 5%).
+</p>
+
+<h3>Type I Error</h3>
+<p>
+In a hypothesis test, a type I error occurs when the null hypothesis is rejected when it is in fact true; that is,
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>
+is wrongly rejected.
+</p>
+<p>
+For example, in a clinical trial of a new drug, the null hypothesis might be that the new drug is no better, on average, than the current drug; i.e.
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>:
+there is no difference between the two drugs on average.
+A type I error would occur if we concluded that the two drugs produced different effects when in fact there was no difference between them.
+</p>
+<p>
+A type I error is often considered to be more serious, and therefore more important to avoid, than a <i>type II error</i>. The hypothesis test procedure is therefore adjusted so that there is a guaranteed 'low' probability of rejecting the null hypothesis wrongly; this probability is never 0.
+</p>
+
+<h3>Type II Error</h3>
+<p>
+In a hypothesis test, a type II error occurs when the null hypothesis H0, is not rejected when it is in fact false. For example, in a clinical trial of a new drug, the null hypothesis might be that the new drug is no better, on average, than the current drug; i.e.
+    <math>
+        <msub>
+            <mi>H</mi>
+            <mn>0</mn>
+        </msub>
+    </math>:
+there is no difference between the two drugs on average.
+A type II error would occur if it was concluded that the two drugs produced the same effect, i.e. there is no difference between the two drugs on average, when in fact they produced different ones.
+</p>
+
+</section>
+
+</html>
+</body>
