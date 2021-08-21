@@ -6,12 +6,370 @@
 </head>
 <body>
 
-<h1>Hypothesis Test</h1>
+<h1>Probability</h1>
 
 <!-- ******************************************************************** -->
 <h2>Random variables and probability distributions</h2>
 
 <section id="random_variables" class="description">
+
+<h3>確率変数 random variable</h3>
+<p>
+「乱数サイ」の目は
+    <math>
+        <mrow>
+            <mo fence="true">&lbrace;</mo>
+            <mn>0</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>1</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <mn>9</mn>
+            <mo fence="true">&rbrace;</mo>
+        </mrow>
+    </math>
+をとります。この場合離散的な変数
+    <math><mi>X</mi></math>
+が
+    <math>
+        <mrow>
+            <mo fence="true">&lbrace;</mo>
+            <mn>0</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>1</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <mn>9</mn>
+            <mo fence="true">&rbrace;</mo>
+        </mrow>
+    </math>
+のいずれかの値をとることになります。正しいさいころでは、乱数サイの目はランダムネスをもっており、予測はできません。このように変数
+    <math><mi>X</mi></math>
+がある特定の値をとることが偶然に支配されており、かつ、ある特定の値
+    <math><mi>x</mi></math>
+をとる確率が与えられているとき、その変数を確率変数といいます。
+</p>
+<p>
+離散型確率変数のとる値が
+    <math>
+        <mrow>
+            <mo fence="true">&lbrace;</mo>
+            <msub>
+                <mi>x</mi>
+                <mn>1</mn>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>x</mi>
+                <mn>2</mn>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi>
+            </msub>
+            <mo fence="true">&rbrace;</mo>
+        </mrow>
+    </math>
+である場合、確率分布
+    <math>
+        <mrow>
+            <mi>P</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>X</mi>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>i</mi>
+            </msub>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mo>&equals;</mo>
+        <mrow>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>i</mi>
+            </msub>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mspace width="1em"/>
+        <mrow>
+            <mo fence="true">&lbrace;</mo>
+            <mi>i</mi>
+            <mo separator="true">&colon;</mo>
+            <mn>1</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo fence="true">&rbrace;</mo>
+        </mrow>
+    </math>
+に対して、次の式が成り立ちます。ここで、
+    <math>
+        <mrow>
+            <mi>P</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>X</mi>
+            <mo>&equals;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+    </math>
+は確率変数
+    <math><mi>X</mi></math>
+が値
+    <math><mi>x</mi></math>
+をとる確率を意味しています。
+</p>
+<figure>
+    <math>
+        <mn>0</mn>
+        <mo>&le;</mo>
+        <mrow>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>i</mi>
+            </msub>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mo>&le;</mo>
+        <mn>1</mn>
+    </math>
+</figure>
+<figure>
+    <math displaystyle="true">
+        <mrow>
+            <munderover>
+                <mo>&sum;</mo>
+                <mrow>
+                    <mi>i</mi>
+                    <mo>&equals;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mi>n</mi>
+            </munderover>
+        </mrow>
+        <mrow>
+            <mo>&ApplyFunction;</mo>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>i</mi>
+            </msub>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mo>&equals;</mo>
+        <mn>1</mn>
+    </math>
+</figure>
+
+<p>
+乱数サイの場合は、
+    <math>
+        <mrow>
+            <msub>
+                <mi>x</mi>
+                <mi>i</mi>
+            </msub>
+            <mo>&equals;</mo>
+            <mi>i</mi>
+        </mrow>
+        <mspace width="1em"/>
+        <mrow>
+            <mo fence="true">&lbrace;</mo>
+            <mi>i</mi>
+            <mo separator="true">&colon;</mo>
+            <mn>0</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>1</mn>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <mn>9</mn>
+            <mo fence="true">&rbrace;</mo>
+        </mrow>
+    </math>
+として
+</p>
+<figure>
+    <math>
+        <mrow>
+            <mo>&ApplyFunction;</mo>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>i</mi>
+            </msub>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mo>&equals;</mo>
+        <mn>0.1</mn>
+    </math>
+</figure>
+<p>
+です。この
+    <math><mi>f</mi></math>
+を離散型の確率分布といいます。確率分布は確率の「重み」の分布の様子を表します。
+</p>
+
+<p>
+次に連続型の確率変数を定義してみましょう。例えば、日本の高校1年生の男子生徒の身長について考えることにします。Aくんが165.5cm、Bくんが168.2cmであったとしましょう。身長は遺伝や生育環境により決まるものですが、高校1年生という集団を考える場合、ある確率でこのような身長の生徒が出現すると考えることが、確率論を用いた推測を行う場合の基本となります。
+</p>
+<p>
+身長のような連続量の場合は、連続確率変数
+    <math><mi>X</mi></math>
+を考える必要があります。連続確率変数の場合は、ある特定の値
+    <math><mi>x</mi></math>
+になる確率を考えることができず、次のようにある範囲を考える必要があります。すなわち、変数
+    <math><mi>X</mi></math>
+がある特定の値をとることが偶然に支配されており、かつ、ある特定の範囲
+    <math>
+        <mrow>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>x</mi>
+            <mo>&plus;</mo>
+            <mi>&Delta;</mi>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+    </math>
+の値をとる確率が与えられているとき、その変数を連続確率変数と呼びます。
+</p>
+<figure>
+    <math displaystyle="true">
+        <mrow>
+            <munder>
+                <mi>lim</mi>
+                <mrow>
+                    <mi>&Delta;</mi>
+                    <mi>x</mi>
+                    <mo>&rightarrow;</mo>
+                    <mn>0</mn>
+                </mrow>
+            </munder>
+        </mrow>
+        <mo>&ApplyFunction;</mo>
+        <mfrac>
+            <mrow>
+                <mi>P</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>x</mi>
+                <mo>&lt;</mo>
+                <mi>X</mi>
+                <mo>&le;</mo>
+                <mi>x</mi>
+                <mo>&plus;</mo>
+                <mi>&Delta;</mi>
+                <mi>x</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mrow>
+                <mi>&Delta;</mi>
+                <mi>x</mi>
+            </mrow>
+        </mfrac>
+        <mo>&equals;</mo>
+        <mrow>
+            <mo>&ApplyFunction;</mo>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+    </math>
+</figure>
+<figure>
+    <math>
+        <mrow>
+            <mi>F</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+        <mo>&equals;</mo>
+        <mrow>
+            <mi>P</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>X</mi>
+            <mo>&le;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+    </math>
+</figure>
+<p>
+関数
+    <math>
+        <mi>f</mi>
+        <mo>&ApplyFunction;</mo>
+        <mo fence="true">&lpar;</mo>
+        <mi>x</mi>
+        <mo fence="true">&rpar;</mo>
+    </math>
+を
+    <math><mi>X</mi></math>
+の<i>確率密度関数</i>（Probability Density Function）、
+    <math>
+        <mi>F</mi>
+        <mo>&ApplyFunction;</mo>
+        <mo fence="true">&lpar;</mo>
+        <mi>x</mi>
+        <mo fence="true">&rpar;</mo>
+    </math>
+を<i>確率分布関数</i>または累積密度関数（Cumulative Distribution Function）といいます。
+</p>
+<figure>
+    <figcaption>確率密度関数と確率の関係</figcaption>
+    <img src="bellcurve.svg" alt="Bell curve">
+</figure>
+<p>
+密度関数は上の図で表され、この場合
+    <math><mi>X</mi></math>
+が
+    <math>
+        <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+        </msub>
+    </math>
+から
+    <math>
+        <msub>
+            <mi>x</mi>
+            <mn>2</mn>
+        </msub>
+    </math>
+の範囲の値をとる確率は斜線の部分の面積になります。
+</p>
 
 <h3>Random Variable</h3>
 <p>
@@ -360,20 +718,24 @@ is the derivative of the cumulative distribution function
     </math>
 </figure>
 <p>
-the total probability for all possible values of the continuous random variable X is 1:
+the total probability for all possible values of the continuous random variable
+    <math><mi>X</mi></math>
+is 1:
 </p>
 <figure>
     <math>
-        <mo>&Integral;</mo>
-        <mi>f</mi>
-        <mo>&ApplyFunction;</mo>
-        <mo fence="true">&lpar;</mo>
-            <mi>x</mi>
-        <mo fence="true">&rpar;</mo>
-        <mo>&InvisibleTimes;</mo>
         <mrow>
-            <mo>&PartialD;</mo>
-            <mi>x</mi>
+            <mo>&Integral;</mo>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+                <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+            <mo>&InvisibleTimes;</mo>
+            <mrow>
+                <mo>&PartialD;</mo>
+                <mi>x</mi>
+            </mrow>
         </mrow>
         <mo>&equals;</mo>
         <mn>1</mn>
@@ -1402,16 +1764,6 @@ Rejecting the null hypothesis then, suggests that the alternative hypothesis may
 統計的仮説検定を行う場合に，帰無仮説を棄却するかどうかを判定する基準5%あるいは1%がよく使用される。有意水準5%で検定を行うということは，<i>第1種の過誤</i>をおかす確率（または危険率）が5%であることを意味する。すなわち，同様の調査・検定を行うと，20回に1回は得られた結論が誤っていることを表す。「有意水準αで検定すると有意な差が認められた」ということと，「危険率αのもとで有意な差があるといえる」は同じような意味で使用される。
 </p>
 
-<h3>第1種の過誤 type I error</h3>
-<p>
-帰無仮説が正しいにもかかわらず帰無仮説を棄却するという誤り。
-</p>
-
-<h3>第2種の過誤 type II error</h3>
-<p>
-帰無仮説が誤っているにもかかわらず帰無仮説を採択するという誤り。
-</p>
-
 <h3>P-Value</h3>
 <p>
 The probability value (p-value) of a statistical hypothesis test is the probability of getting a value of the test statistic as extreme as or more extreme than that observed by chance alone, if the null hypothesis
@@ -1471,6 +1823,16 @@ if it is in fact true.
 <p>
 It is the probability of a <i>type I error</i> and is set by the investigator in relation to the consequences of such an error. That is, we want to make the significance level as small as possible in order to protect the null hypothesis and to prevent, as far as possible, the investigator from inadvertently making false claims.
 Usually, the significance level is chosen to be 0.05 (or equivalently, 5%).
+</p>
+
+<h3>第1種の過誤 type I error</h3>
+<p>
+帰無仮説が正しいにもかかわらず帰無仮説を棄却するという誤り。
+</p>
+
+<h3>第2種の過誤 type II error</h3>
+<p>
+帰無仮説が誤っているにもかかわらず帰無仮説を採択するという誤り。
 </p>
 
 <h3>Type I Error</h3>
