@@ -829,8 +829,207 @@ has the same probability of being selected. Choosing the elements from the popul
 A sampling distribution is a probability distribution for a sample statistic. Knowledge of the sampling distribution is necessary for the construction of an interval estimate for a population parameter. This is why a probability sample is needed; without a probability sample, the sampling distribution cannot be determined and an interval estimate of a parameter cannot be constructed.
 </p>
 
+<h2>Estimation of a population mean</h2>
+<p>
+The most fundamental point and interval estimation process involves the estimation of a <i>population mean</i>. Suppose it is of interest to estimate the population mean,
+    <math><mi>&mu;</mi></math>,
+for a quantitative variable. Data collected from a simple random sample can be used to compute the <i>sample mean</i>,
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+    </math>,
+where the value of
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+    </math>
+provides a <u>point estimate</u> of
+    <math><mi>&mu;</mi></math>.
+</p>
+<p>
+When the sample mean is used as a point estimate of the population mean, some <i>error</i> can be expected owing to the fact that a sample, or subset of the population, is used to compute the point estimate. The absolute value of the difference between the sample mean,
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+    </math>,
+and the population mean,
+    <math><mi>&mu;</mi></math>,
+written
+    <math>
+        <mrow>
+            <mo fence="true">&verbar;</mo>
+            <mover>
+                <mi>x</mi>
+                <mo>&OverBar;</mo>
+            </mover>
+            <mo>&minus;</mo>
+            <mi>&mu;</mi>
+            <mo fence="true">&verbar;</mo>
+        </mrow>
+    </math>,
+is called the <i>sampling error</i>. Interval estimation incorporates a probability statement about the magnitude of the sampling error. The sampling distribution of
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+    </math>
+provides the basis for such a statement.
+</p>
+<p>
+Statisticians have shown that the mean of the sampling distribution of
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+    </math>
+is equal to the population mean,
+    <math><mi>&mu;</mi></math>,
+and that the <i>standard deviation</i> is given by
+    <math>
+        <mfrac>
+            <mi>&sigma;</mi>
+            <msqrt>
+                <mi>n</mi>
+            </sqrt>
+        </mfrac>
+    </math>,
+where
+    <math><mi>&sigma;</mi></math>
+is the <i>population standard deviation</i>. The standard deviation of a sampling distribution is called the <i>standard error</i>. For large sample sizes, the <i>central limit theorem</i> indicates that the sampling distribution of
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+    </math>
+can be approximated by a normal probability distribution. As a matter of practice, statisticians usually consider samples of size 30 or more to be large.
+</p>
+<p>
+In the large-sample case, a 95% confidence interval estimate for the population mean is given by
+    <math>
+        <mrow>
+            <mover>
+                <mi>x</mi>
+                <mo>&OverBar;</mo>
+            </mover>
+            <mo>&PlusMinus;</mo>
+            <mrow>
+                <mn>1.96</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>&sigma;</mi>
+            </mrow>
+            <mo>&frasl;</mo>
+            <msqrt>
+                <mi>n</mi>
+            </msqrt>
+        </mrow>
+    </math>.
+When the population standard deviation,
+    <math><mi>&sigma;</mi></math>,
+is unknown, the sample standard deviation is used to estimate
+    <math><mi>&sigma;</mi></math>
+in the confidence interval formula. The quantity
+    <math>
+        <mrow>
+            <mn>1.96</mn>
+            <mo>&InvisibleTimes;</mo>
+            <mi>&sigma;</mi>
+        </mrow>
+        <mo>&frasl;</mo>
+        <msqrt>
+            <mi>n</mi>
+        </msqrt>
+    </math>
+is often called the <i>margin of error</i> for the estimate. The quantity
+    <math>
+        <mi>&sigma;</mi>
+        <mo>&frasl;</mo>
+        <msqrt>
+            <mi>n</mi>
+        </msqrt>
+    </math>
+is the <i>standard error</i>, and 1.96 is the number of standard errors from the mean necessary to include 95% of the values in a normal distribution. The interpretation of a 95% confidence interval is that 95% of the intervals constructed in this manner will contain the population mean. Thus, any interval computed in this manner has a 95% confidence of containing the population mean. By changing the constant from 1.96 to <u>1.645, a 90% confidence interval</u> can be obtained. It should be noted from the formula for an interval estimate that a 90% confidence interval is narrower than a 95% confidence interval and as such has a slightly smaller confidence of including the population mean. Lower levels of confidence lead to even more narrow intervals. In practice, a 95% confidence interval is the most widely used.
+</p>
+<p>
+Owing to the presence of the
+    <math>
+        <msqrt>
+            <mi>n</mi>
+        </msqrt>
+    </math>
+term in the formula for an interval estimate, the sample size affects the margin of error. Larger sample sizes lead to smaller margins of error. This observation forms the basis for procedures used to select the sample size. Sample sizes can be chosen such that the confidence interval satisfies any desired requirements about the size of the margin of error.
+</p>
+<p>
+The procedure just described for developing interval estimates of a population mean is based on the use of a large sample. In the small-sample case &mdash; i.e., where the sample size
+    <math><mi>n</mi></math>
+is less than 30 &mdash; the <i>t</i>-distribution is used when specifying the margin of error and constructing a confidence interval estimate. For example, at a 95% level of confidence, a value from the <i>t</i>-distribution,
+determined by the value of
+    <math><mi>n</mi></math>,
+would replace the 1.96 value obtained from the normal distribution.
+The <i>t</i>-values will always be larger, leading to wider confidence intervals, but, as the sample size becomes larger, the <i>t</i>-values get closer to the corresponding values from a normal distribution. With a sample size of 25, the <i>t</i>-value used would be 2.064, as compared with the normal probability distribution value of 1.96 in the large-sample case.
+</p>
 
+<h3>Estimation of other parameters</h3>
+<p>
+For qualitative variables, the <i>population proportion</i> is a parameter of interest. A point estimate of the population proportion is given by the <i>sample proportion</i>. With knowledge of the sampling distribution of the sample proportion, an interval estimate of a population proportion is obtained in much the same fashion as for a population mean. Point and interval estimation procedures such as these can be applied to other population parameters as well. For instance, interval estimation of a <i>population variance</i>, standard deviation, and total can be required in other applications.
+</p>
 
+<h3>Estimation procedures for two populations</h3>
+<p>
+The estimation procedures can be extended to two populations for comparative studies. For example, suppose a study is being conducted to determine differences between the salaries paid to <u>a population of men</u> and <u>a population of women</u>. Two independent simple random samples, one from the population of men and one from the population of women, would provide two sample means,
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+        <mn>₁</mn>
+    </math>
+and
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+        <mn>₂</mn>
+    </math>.
+The difference between the two sample means,
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+        <mn>₁</mn>
+        <mo>&minus;</mo>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+        <mn>₂</mn>
+    </math>,
+would be used as a point estimate of the difference between the two population means. The sampling distribution of
+    <math>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+        <mn>₁</mn>
+        <mo>&minus;</mo>
+        <mover>
+            <mi>x</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+        <mn>₂</mn>
+    </math>
+would provide the basis for a confidence interval estimate of the difference between the two population means. For qualitative variables, point and interval estimates of the difference between population proportions can be constructed by considering the difference between sample proportions.
+</p>
 
 </section>
 

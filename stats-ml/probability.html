@@ -961,7 +961,7 @@ is a probability density function then it must obey two conditions:
     </li>
 </ul>
 
-<h3>中心極限定理 central limit theorem [青木:統計学用語辞典 II]</h3>
+<h3>中心極限定理 central limit theorem [青木:用語辞典 II]</h3>
 <p>
 平均値
     <math><mi>&mu;</mi></math>，
@@ -1271,7 +1271,7 @@ We write
     </math>.
 </p>
 
-<h3>二項分布 binomial distribution [青木:統計学用語辞典 II]</h3>
+<h3>二項分布 binomial distribution [青木:用語辞典 II]</h3>
 <p>
 ある集団において，特性Aを持つものの割合が
     <math><mi>p</mi></math>
@@ -1386,6 +1386,25 @@ We write
         <mo fence="true">&rpar;</mo>
     </math>
 と表すことにする。
+</p>
+
+<h3>母比率 population proportion [青木:用語辞典 II、二項分布]
+<p>
+ある集団において，特性Aを持つものの割合が
+    <math><mi>p</mi></math>
+であり，持たないものの割合が
+    <math><mi>q</mi></math>
+であるとする（
+    <math>
+        <mi>p</mi>
+        <mo>&plus;</mo>
+        <mi>q</mi>
+        <mo>&equals;</mo>
+        <mn>1</mn>
+    </math>
+）。
+    <math><mi>p</mi></math>
+を母比率という。
 </p>
 
 <h3>Binomial distribution [Wikipedia]</h3>
@@ -1593,7 +1612,7 @@ successes in a sequence of
 trials.
 </p>
 
-<h3>ベルヌーイ試行 Bernoulli trials [青木:統計学用語辞典 II、二項分布]</h3>
+<h3>ベルヌーイ試行 Bernoulli trials [青木:用語辞典 II、二項分布]</h3>
 <p>
 1回ごとの事象の生起確率
     <math><mi>p</mi></math>
@@ -1604,7 +1623,7 @@ trials.
 回事象が生じる確率は二項分布である。このため二項分布はベルヌーイ分布とも呼ばれる。
 </p>
 
-<h3>ポアソン分布 Poisson distribution [青木:統計学用語辞典 II]</h3>
+<h3>ポアソン分布 Poisson distribution [青木:用語辞典 II]</h3>
 <p>
 「自動車事故による死亡が1年間に1万人であるとする。日本の人口を11,600万人，ある都市の人口を100万人としたとき，その都市で自動車事故による死亡が一件もないという日が起こる確率を求めよ。」
 </p>
@@ -1843,274 +1862,6 @@ distribution approaches the Poisson distribution with the parameter given by
         <mi>p</mi>
     </math>.
 This is useful since the computations involved in calculating binomial probabilities are greatly reduced.
-</p>
-
-</section>
-
-<!-- ******************************************************************** -->
-<h2>Hypothesis test</h2>
-
-<section id="hypothesis_testing" class="description">
-
-<h3>仮説検定 hypothesis test [統計局:学習教材1]</h3>
-<p>
-検定は、母集団に関するある仮説が統計学的に成り立つか否かを、標本のデータを用いて判断することで、以下の1&Tilde;4の手順で実施します。
-例えば、「駅前のハンバーガー店のフライドポテトの重量が公表値のとおりか」を検証するため、統計的仮説検定を実施してみましょう。
-</p>
-<dl>
-    <dt>仮説を設定する</dt>
-    <dd>
-        仮説は、導き出したい結論とは反対の仮説を設定します。この仮説を<i>帰無仮説</i>と呼びます。
-        <ul>
-            <li>導き出したい結論: その重量が公表値のとおりではない。</li>
-            <li>設定する帰無仮説: その重量が公表値のとおりである。</li>
-        </ul>
-    </dd>
-    <dt>有意水準を決定する</dt>
-    <dd>
-        有意水準とは、設定した帰無仮説が間違っていると判断する（帰無仮説を棄却する）確率のことです。有意水準0.05に設定した場合、5%以下の確率で生じる現象は、非常にまれなことであるとします。有意水準は、0.05や0.01が多く使われています。ここでは、有意水準0.05とします。
-    </dd>
-    <dt>検証する</dt>
-    <dd>
-        設定した仮説が正しいとした場合、データから仮説が実現する確率を導いて、検証します。ただし、設定した仮説の値がどのくらいの確率で起こりうるのかが分からないため、検証するために使用する値
-        「検定統計量 <math><mi>Z</mi></math>」
-        を算出して、検証します。
-        （フライドポテトを10個購入し、その重量を計測した結果、
-        <math>
-            <mi>Z</mi>
-            <mo>&equals;</mo>
-            <mo>&minus;</mo>
-            <mn>2.64</mn>
-        </math>
-        が得られたとします。）
-        標準正規分布表から
-        <math>
-            <mi>Z</mi>
-            <mo>&equals;</mo>
-            <mo>&minus;</mo>
-            <mn>2.64</mn>
-        </math>
-        に対応する値0.0042が得られ、両側検定では2倍にした値0.0084がP値となります。先に決めた有意水準0.05よりもP値0.0084が小さいことから、観察された事象が起こることは非常にまれなことであると判断できます。
-    </dd>
-    <dt>背理法を用いて結論を導く</dt>
-    <dd>
-        検証の結果、帰無仮説は正しいとは言えないと分かります。よって、帰無仮説とは逆の結論である「その重量が公表値のとおりではない」が正しいと判断することができます。
-    </dd>
-</dl>
-<p>
-このように、仮説検定は、導き出したい結論とは逆の仮説を設定して、この仮説が正しいとは言えないことを証明することで、導き出したい結論が正しいとする方法であり、背理法の考え方に基づいています。
-</p>
-
-<h3>Hypothesis Test [STEPS:Glossary]</h3>
-<p>
-Setting up and testing hypotheses is an essential part of statistical inference. In order to formulate such a test, usually some theory has been put forward, either because it is believed to be true or because it is to be used as a basis for argument, but has not been proved, for example, claiming that a new drug is better than the current drug for treatment of the same symptoms.
-</p>
-<p>
-In each problem considered, the question of interest is simplified into two competing claims / hypotheses between which we have a choice; the <i>null hypothesis</i>, denoted
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>,
-against the <i>alternative hypothesis</i>, denoted
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>1</mn>
-        </msub>
-    </math>.
-</p>
-<p>
-The hypotheses are often statements about population parameters like <i>expected value</i> and <i>variance</i>; for example
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>
-might be that the expected value of the height of ten year old boys in the Scottish population is not different from that of ten year old girls.
-</p>
-<p>
-The outcome of a hypothesis test test is "Reject
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>
-in favour of
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>1</mn>
-        </msub>
-    </math>"
-or "Do not reject
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>".
-We never conclude "Reject
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>1</mn>
-        </msub>
-    </math>",
-or even "Accept
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>1</mn>
-        </msub>
-    </math>".
-</p>
-<p>
-If we conclude "Do not reject
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>",
-this does not necessarily mean that the null hypothesis is true, it only suggests that there is not sufficient evidence against
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>
-in favour of
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>1</mn>
-        </msub>
-    </math>.
-Rejecting the null hypothesis then, suggests that the alternative hypothesis may be true.
-</p>
-
-<h3>有意確率 p-value [青木:用語辞典I]</h3>
-<p>
-統計的仮説検定において，帰無仮説のもとで得られた検定統計量が実現する確率。例えば，正規分布において標準得点が1.96以上となる確率は2.5%。有意確率がまえもって定めた<i>有意水準</i>より小さい場合に帰無仮説を棄却し，大きい場合に帰無仮説を採択する。
-</p>
-
-<h3>有意水準 significance level [青木:用語辞典I]</h3>
-<p>
-統計的仮説検定を行う場合に，帰無仮説を棄却するかどうかを判定する基準5%あるいは1%がよく使用される。有意水準5%で検定を行うということは，<i>第1種の過誤</i>をおかす確率（または危険率）が5%であることを意味する。すなわち，同様の調査・検定を行うと，20回に1回は得られた結論が誤っていることを表す。「有意水準αで検定すると有意な差が認められた」ということと，「危険率αのもとで有意な差があるといえる」は同じような意味で使用される。
-</p>
-
-<h3>P-Value [STEPS:Glossary]</h3>
-<p>
-The probability value (p-value) of a statistical hypothesis test is the probability of getting a value of the test statistic as extreme as or more extreme than that observed by chance alone, if the null hypothesis
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>,
-is true. It is the probability of wrongly rejecting the null hypothesis if it is in fact true.
-</p>
-<p>
-It is equal to the <i>significance level</i> of the test for which we would only just reject the null hypothesis. The p-value is compared with the actual significance level of our test and, if it is smaller, the result is significant. That is, if the null hypothesis were to be rejected at the 5% signficance level, this would be reported as
-    <math>
-        <mrow>
-            <mi>p</mi>
-            <mo>&lt;</mo>
-            <mn>0.05</mn>
-        </mrow>
-    </math>.
-</p>
-<p>
-Small p-values suggest that the null hypothesis is unlikely to be true. The smaller it is, the more convincing is the rejection of the null hypothesis. It indicates the strength of evidence for say, rejecting the null hypothesis
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>,
-rather than simply concluding "Reject
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>"
-or "Do not reject
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>".
-</p>
-
-<h3>Significance Level [STEPS:Glossary]</h3>
-<p>
-The significance level of a statistical hypothesis test is a fixed probability of wrongly rejecting the null hypothesis
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>,
-if it is in fact true.
-</p>
-<p>
-It is the probability of a <i>type I error</i> and is set by the investigator in relation to the consequences of such an error. That is, we want to make the significance level as small as possible in order to protect the null hypothesis and to prevent, as far as possible, the investigator from inadvertently making false claims.
-Usually, the significance level is chosen to be 0.05 (or equivalently, 5%).
-</p>
-
-<h3>第1種の過誤 type I error [青木:用語辞典I]</h3>
-<p>
-帰無仮説が正しいにもかかわらず帰無仮説を棄却するという誤り。
-</p>
-
-<h3>第2種の過誤 type II error [青木:用語辞典I]</h3>
-<p>
-帰無仮説が誤っているにもかかわらず帰無仮説を採択するという誤り。
-</p>
-
-<h3>Type I Error [STEPS:Glossary]</h3>
-<p>
-In a hypothesis test, a type I error occurs when the null hypothesis is rejected when it is in fact true; that is,
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>
-is wrongly rejected.
-</p>
-<p>
-For example, in a clinical trial of a new drug, the null hypothesis might be that the new drug is no better, on average, than the current drug; i.e.
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>:
-there is no difference between the two drugs on average.
-A type I error would occur if we concluded that the two drugs produced different effects when in fact there was no difference between them.
-</p>
-<p>
-A type I error is often considered to be more serious, and therefore more important to avoid, than a <i>type II error</i>. The hypothesis test procedure is therefore adjusted so that there is a guaranteed 'low' probability of rejecting the null hypothesis wrongly; this probability is never 0.
-</p>
-
-<h3>Type II Error [STEPS:Glossary]</h3>
-<p>
-In a hypothesis test, a type II error occurs when the null hypothesis H0, is not rejected when it is in fact false. For example, in a clinical trial of a new drug, the null hypothesis might be that the new drug is no better, on average, than the current drug; i.e.
-    <math>
-        <msub>
-            <mi>H</mi>
-            <mn>0</mn>
-        </msub>
-    </math>:
-there is no difference between the two drugs on average.
-A type II error would occur if it was concluded that the two drugs produced the same effect, i.e. there is no difference between the two drugs on average, when in fact they produced different ones.
 </p>
 
 </section>
