@@ -3,7 +3,7 @@
     margin-right: 1em;
 }
 
-.summary {
+.wrapup {
     padding: 0.2em 1em;
     border-radius: 10px;
 }
@@ -20,8 +20,8 @@ h1 {
     text-decoration: overline;
 }
 
-th, td, mtd, {
-    padding: 0 1em;
+th, td, mtd {
+    padding: 0 0.5em;
 }
 
 code {

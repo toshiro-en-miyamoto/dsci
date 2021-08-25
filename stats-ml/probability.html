@@ -2,7 +2,8 @@
 <html lang="ja">
 <head>
     <title>Probability</title>
-    <link rel="stylesheet" href="stats-ml.css" type="text/css">
+    <link rel="stylesheet" href="../style/dark.css" type="text/css">
+    <link rel="stylesheet" href="../style/indent.css" type="text/css">
 </head>
 <body>
 
@@ -31,9 +32,7 @@
             <mo fence="true">&rbrace;</mo>
         </mrow>
     </math>
-をとります。この場合離散的な変数
-    <math><mi>X</mi></math>
-が
+をとります。この場合離散的な変数 <var>X</var> が
     <math>
         <mrow>
             <mo fence="true">&lbrace;</mo>
@@ -49,11 +48,7 @@
             <mo fence="true">&rbrace;</mo>
         </mrow>
     </math>
-のいずれかの値をとることになります。正しいさいころでは、乱数サイの目はランダムネスをもっており、予測はできません。このように変数
-    <math><mi>X</mi></math>
-がある特定の値をとることが偶然に支配されており、かつ、ある特定の値
-    <math><mi>x</mi></math>
-をとる確率が与えられているとき、その変数を確率変数といいます。
+のいずれかの値をとることになります。正しいさいころでは、乱数サイの目はランダムネスをもっており、予測はできません。このように変数 <var>X</var> がある特定の値をとることが偶然に支配されており、かつ、ある特定の値 <var>x</var> をとる確率が与えられているとき、その変数を確率変数といいます。
 </p>
 <p>
 離散型確率変数のとる値が
@@ -131,11 +126,7 @@
             <mo fence="true">&rpar;</mo>
         </mrow>
     </math>
-は確率変数
-    <math><mi>X</mi></math>
-が値
-    <math><mi>x</mi></math>
-をとる確率を意味しています。
+は確率変数 <var>X</var> が値 <var>x</var> をとる確率を意味しています。
 </p>
 <figure>
     <math>
@@ -230,22 +221,14 @@
     </math>
 </figure>
 <p>
-です。この
-    <math><mi>f</mi></math>
-を離散型の確率分布といいます。確率分布は確率の「重み」の分布の様子を表します。
+です。この <var>f</var> を離散型の確率分布といいます。確率分布は確率の「重み」の分布の様子を表します。
 </p>
 
 <p>
-次に連続型の確率変数を定義してみましょう。例えば、日本の高校1年生の男子生徒の身長について考えることにします。Aくんが165.5cm、Bくんが168.2cmであったとしましょう。身長は遺伝や生育環境により決まるものですが、高校1年生という集団を考える場合、ある確率でこのような身長の生徒が出現すると考えることが、確率論を用いた推測を行う場合の基本となります。
+次に連続型の確率変数を定義してみましょう。例えば、日本の高校1年生の男子生徒の身長について考えることにします。Aくんが 165.5cm、Bくんが 168.2cmであったとしましょう。身長は遺伝や生育環境により決まるものですが、高校1年生という集団を考える場合、ある確率でこのような身長の生徒が出現すると考えることが、確率論を用いた推測を行う場合の基本となります。
 </p>
 <p>
-身長のような連続量の場合は、連続確率変数
-    <math><mi>X</mi></math>
-を考える必要があります。連続確率変数の場合は、ある特定の値
-    <math><mi>x</mi></math>
-になる確率を考えることができず、次のようにある範囲を考える必要があります。すなわち、変数
-    <math><mi>X</mi></math>
-がある特定の値をとることが偶然に支配されており、かつ、ある特定の範囲
+身長のような連続量の場合は、連続確率変数 <var>X</var> を考える必要があります。連続確率変数の場合は、ある特定の値 <var>x</var> になる確率を考えることができず、次のようにある範囲を考える必要があります。すなわち、変数 <var>X</var> がある特定の値をとることが偶然に支配されており、かつ、ある特定の範囲
     <math>
         <mrow>
             <mo fence="true">&lpar;</mo>
@@ -335,9 +318,7 @@
         <mi>x</mi>
         <mo fence="true">&rpar;</mo>
     </math>
-を
-    <math><mi>X</mi></math>
-の<i>確率密度関数</i>（Probability Density Function）、
+を <var>X</var> の<strong>確率密度関数</strong>（Probability Density Function）、
     <math>
         <mi>F</mi>
         <mo>&ApplyFunction;</mo>
@@ -345,45 +326,64 @@
         <mi>x</mi>
         <mo fence="true">&rpar;</mo>
     </math>
-を<i>確率分布関数</i>または累積密度関数（Cumulative Distribution Function）といいます。
+を<strong>確率分布関数</strong>または<em>累積密度関数</em>（Cumulative Distribution Function）といいます。
 </p>
 <figure>
     <figcaption>確率密度関数と確率の関係</figcaption>
     <img src="bellcurve.svg" alt="Bell curve">
 </figure>
 <p>
-密度関数は上の図で表され、この場合
-    <math><mi>X</mi></math>
-が
-    <math>
-        <msub>
-            <mi>x</mi>
-            <mn>1</mn>
-        </msub>
-    </math>
-から
-    <math>
-        <msub>
-            <mi>x</mi>
-            <mn>2</mn>
-        </msub>
-    </math>
-の範囲の値をとる確率は斜線の部分の面積になります。
+密度関数は上の図で表され、この場合 <var>X</var> が <var>x₁</var> から <var>x₂</var> の範囲の値をとる確率は斜線の部分の面積になります。
 </p>
 
 <h3>Random Variable [STEPS:Glossary]</h3>
 <p>
-The outcome of an experiment need not be a number, for example, the outcome when a coin is tossed can be 'heads' or 'tails'. However, we often want to represent outcomes as numbers. A random variable is a <u>function</u> that associates a unique numerical value with every outcome of an experiment. The value of the random variable will vary from trial to trial as the experiment is repeated.
+The outcome of an experiment need not be a number, for example, the outcome when a coin is tossed can be 'heads' or 'tails'. However, we often want to represent outcomes as numbers. A <strong>random variable</strong> is a <em>function</em> that associates a unique numerical value with every outcome of an experiment. The value of the random variable will vary from trial to trial as the experiment is repeated.
 </p>
 <p>
 There are two types of random variable - discrete and continuous.
-A random variable has either an associated <i>probability distribution</i> (discrete random variable) or <i>probability density function</i> (continuous random variable).
+A random variable has either an associated <em>probability distribution</em> (discrete random variable) or <em>probability density function</em> (continuous random variable).
 </p>
 
 <h3>確率分布 probability distribution [青木:自習ノート、分布関数]</h3>
 <p>
-2個のサイコロを1000回振って毎回の出た目の和を記録するという実験を行った結果を表1の左半分に示す。
-理論的に考察すると，目の和が最小であるのは，両方のサイコロが共に1の目が出たときであり，これは1&frasl;36 の確率であることが分かる。目の和が 3 になるのは，(1, 2)という出方と(2, 1)という出方の 2 通りであり 2&frasl;36 となる。これをまとめると表1の右半分になる。
+2 個のサイコロを 1000 回振って毎回の出た目の和を記録するという実験を行った結果を表1の左半分に示す。理論的に考察すると，目の和が最小であるのは，両方のサイコロが共に 1 の目が出たときであり，これは
+    <math>
+        <mrow>
+            <mn>1</mn>
+            <mo>&frasl;</mo>
+            <mn>36</mn>
+        </mrow>
+    </math>
+の確率であることが分かる。目の和が 3 になるのは，
+    <math>
+        <mrow>
+            <mo fence="true">&lpar;</mo>
+            <mn>1</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>2</mn>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+    </math>
+という出方と
+    <math>
+        <mrow>
+            <mo fence="true">&lpar;</mo>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>1</mn>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+    </math>
+という出方の 2 通りであり
+    <math>
+        <mrow>
+            <mn>2</mn>
+            <mo>&frasl;</mo>
+            <mn>36</mn>
+        </mrow>
+    </math>
+となる。これをまとめると表1の右半分になる。
 </p>
 <figure>
     <figcaption>表1．2個のサイコロを振る実験で出た目の和の分布と理論的な分布</figcaption>
@@ -433,99 +433,99 @@ A random variable has either an associated <i>probability distribution</i> (disc
         </th>
     </tr>
     <tr>
-        <td class="numbers-in-table">2</td>
-        <td class="numbers-in-table">23</td>
-        <td class="numbers-in-table">0.023</td>
-        <td class="numbers-in-table">0.023</td>
-        <td class="numbers-in-table">1&frasl;36=0.028</td>
-        <td class="numbers-in-table">1&frasl;36=0.028</td>
+        <td class="numbers">2</td>
+        <td class="numbers">23</td>
+        <td class="numbers">0.023</td>
+        <td class="numbers">0.023</td>
+        <td class="numbers">1 &frasl; 36 = 0.028</td>
+        <td class="numbers">1 &frasl; 36 = 0.028</td>
     </tr>
     <tr>
-        <td class="numbers-in-table">3</td>
-        <td class="numbers-in-table">48</td>
-        <td class="numbers-in-table">0.048</td>
-        <td class="numbers-in-table">0.071</td>
-        <td class="numbers-in-table">2&frasl;36=0.056</td>
-        <td class="numbers-in-table">3&frasl;36=0.083</td>
+        <td class="numbers">3</td>
+        <td class="numbers">48</td>
+        <td class="numbers">0.048</td>
+        <td class="numbers">0.071</td>
+        <td class="numbers">2 &frasl; 36 = 0.056</td>
+        <td class="numbers">3 &frasl; 36 = 0.083</td>
     </tr>
     <tr>
-        <td class="numbers-in-table">4</td>
-        <td class="numbers-in-table">90</td>
-        <td class="numbers-in-table">0.090</td>
-        <td class="numbers-in-table">0.161</td>
-        <td class="numbers-in-table">3&frasl;36=0.083</td>
-        <td class="numbers-in-table">6&frasl;36=0.167</td>
+        <td class="numbers">4</td>
+        <td class="numbers">90</td>
+        <td class="numbers">0.090</td>
+        <td class="numbers">0.161</td>
+        <td class="numbers">3 &frasl; 36 = 0.083</td>
+        <td class="numbers">6 &frasl; 36 = 0.167</td>
     </tr>
     <tr>
-        <td class="numbers-in-table">5</td>
-        <td class="numbers-in-table">101</td>
-        <td class="numbers-in-table">0.101</td>
-        <td class="numbers-in-table">0.262</td>
-        <td class="numbers-in-table">4&frasl;36=0.111</td>
-        <td class="numbers-in-table">10&frasl;36=0.278</td>
+        <td class="numbers">5</td>
+        <td class="numbers">101</td>
+        <td class="numbers">0.101</td>
+        <td class="numbers">0.262</td>
+        <td class="numbers">4  &frasl; 36 = 0.111</td>
+        <td class="numbers">10 &frasl; 36 = 0.278</td>
     </tr>
     <tr>
-        <td class="numbers-in-table">6</td>
-        <td class="numbers-in-table">158</td>
-        <td class="numbers-in-table">0.158</td>
-        <td class="numbers-in-table">0.420</td>
-        <td class="numbers-in-table">5&frasl;36=0.139</td>
-        <td class="numbers-in-table">15&frasl;36=0.417</td>
+        <td class="numbers">6</td>
+        <td class="numbers">158</td>
+        <td class="numbers">0.158</td>
+        <td class="numbers">0.420</td>
+        <td class="numbers">5  &frasl; 36 = 0.139</td>
+        <td class="numbers">15 &frasl; 36 = 0.417</td>
     </tr>
     <tr>
-        <td class="numbers-in-table">7</td>
-        <td class="numbers-in-table">160</td>
-        <td class="numbers-in-table">0.160</td>
-        <td class="numbers-in-table">0.580</td>
-        <td class="numbers-in-table">6&frasl;36=0.167</td>
-        <td class="numbers-in-table">21&frasl;36=0.583</td>
+        <td class="numbers">7</td>
+        <td class="numbers">160</td>
+        <td class="numbers">0.160</td>
+        <td class="numbers">0.580</td>
+        <td class="numbers">6  &frasl; 36 = 0.167</td>
+        <td class="numbers">21 &frasl; 36 = 0.583</td>
     </tr>
     <tr>
-        <td class="numbers-in-table">8</td>
-        <td class="numbers-in-table">135</td>
-        <td class="numbers-in-table">0.135</td>
-        <td class="numbers-in-table">0.715</td>
-        <td class="numbers-in-table">5&frasl;36=0.139</td>
-        <td class="numbers-in-table">26&frasl;36=0.722</td>
+        <td class="numbers">8</td>
+        <td class="numbers">135</td>
+        <td class="numbers">0.135</td>
+        <td class="numbers">0.715</td>
+        <td class="numbers">5  &frasl; 36 = 0.139</td>
+        <td class="numbers">26 &frasl; 36 = 0.722</td>
     </tr>
     <tr>
-        <td class="numbers-in-table">9</td>
-        <td class="numbers-in-table">122</td>
-        <td class="numbers-in-table">0.122</td>
-        <td class="numbers-in-table">0.837</td>
-        <td class="numbers-in-table">4&frasl;36=0.111</td>
-        <td class="numbers-in-table">30&frasl;36=0.833</td>
+        <td class="numbers">9</td>
+        <td class="numbers">122</td>
+        <td class="numbers">0.122</td>
+        <td class="numbers">0.837</td>
+        <td class="numbers">4  &frasl; 36 = 0.111</td>
+        <td class="numbers">30 &frasl; 36 = 0.833</td>
     </tr>
     <tr>
-        <td class="numbers-in-table">10</td>
-        <td class="numbers-in-table">87</td>
-        <td class="numbers-in-table">0.087</td>
-        <td class="numbers-in-table">0.924</td>
-        <td class="numbers-in-table">3&frasl;36=0.083</td>
-        <td class="numbers-in-table">33&frasl;36=0.917</td>
+        <td class="numbers">10</td>
+        <td class="numbers">87</td>
+        <td class="numbers">0.087</td>
+        <td class="numbers">0.924</td>
+        <td class="numbers">3  &frasl; 36 = 0.083</td>
+        <td class="numbers">33 &frasl; 36 = 0.917</td>
     </tr>
     <tr>
-        <td class="numbers-in-table">11</td>
-        <td class="numbers-in-table">50</td>
-        <td class="numbers-in-table">0.050</td>
-        <td class="numbers-in-table">0.974</td>
-        <td class="numbers-in-table">2&frasl;36=0.056</td>
-        <td class="numbers-in-table">35&frasl;36=0.972</td>
+        <td class="numbers">11</td>
+        <td class="numbers">50</td>
+        <td class="numbers">0.050</td>
+        <td class="numbers">0.974</td>
+        <td class="numbers">2  &frasl; 36 = 0.056</td>
+        <td class="numbers">35 &frasl; 36 = 0.972</td>
     </tr>
     <tr>
-        <td class="numbers-in-table">12</td>
-        <td class="numbers-in-table">26</td>
-        <td class="numbers-in-table">0.026</td>
-        <td class="numbers-in-table">1.000</td>
-        <td class="numbers-in-table">1&frasl;36=0.028</td>
-        <td class="numbers-in-table">36&frasl;36=1.000</td>
+        <td class="numbers">12</td>
+        <td class="numbers">26</td>
+        <td class="numbers">0.026</td>
+        <td class="numbers">1.000</td>
+        <td class="numbers">1  &frasl; 36 = 0.028</td>
+        <td class="numbers">36 &frasl; 36 = 1.000</td>
     </tr>
     <tr>
         <td>合計</td>
-        <td class="numbers-in-table">1000</td>
-        <td class="numbers-in-table">1.000</td>
+        <td class="numbers">1000</td>
+        <td class="numbers">1.000</td>
         <td></td>
-        <td class="numbers-in-table">1.000</td>
+        <td class="numbers">1.000</td>
         <td></td>
     </tr>
     </table>
@@ -547,12 +547,10 @@ A random variable has either an associated <i>probability distribution</i> (disc
 
 <h3>Probability Distribution [STEPS:Glossary]</h3>
 <p>
-The <u>probability distribution of a discrete random variable</u> is a <strong>list</strong> of probabilities associated with each of its possible values. It is also sometimes called the probability function or the probability mass function.
+The <strong>probability distribution</strong> of a discrete random variable is a <em>list</em> of probabilities associated with each of its possible values. It is also sometimes called the probability function or the probability mass function.
 </p>
 <p>
-More formally, the probability distribution of a discrete random variable
-    <math><mi>X</mi></math>
-is a <u>function</u> which gives the probability
+More formally, the probability distribution of a discrete random variable <var>X</var> is a <em>function</em> which gives the probability
     <math>
         <mi>p</mi>
         <mo>&ApplyFunction;</mo>
@@ -563,20 +561,7 @@ is a <u>function</u> which gives the probability
         </msub>
         <mo fence="true">&rpar;</mo>
     </math>
-that the random variable equals
-    <math>
-        <msub>
-            <mi>x</mi>
-            <mi>i</mi>
-        </msub>
-    </math>,
-for each value
-    <math>
-        <msub>
-            <mi>x</mi>
-            <mi>i</mi>
-        </msub>
-    </math>:
+that the random variable equals <var>x<sub>i</sub></var>
 </p>
 <figure>
     <math>
@@ -650,15 +635,10 @@ It satisfies the following conditions:
 
 <h3>Cumulative Distribution Function [STEPS:Glossary]</h3>
 <p>
-All random variables (discrete and continuous) have a cumulative distribution function. It is a function giving the probability that the random variable
-    <math><mi>X</mi></math>
-is less than or equal to
-    <math><mi>x</mi></math>,
-for every value
-    <math><mi>x</mi></math>.
+All random variables (discrete and continuous) have a cumulative distribution function. It is a function giving the probability that the random variable <var>X</var> is less than or equal to <var>x</var>, for every value <var>x</var>.
 </p>
 <p>
-Formally, the cumulative distribution function
+Formally, the <strong>cumulative distribution function</strong>
     <math>
         <mi>F</mi>
         <mo>&ApplyFunction;</mo>
@@ -702,16 +682,12 @@ is defined to be:
 </figure>
 
 <p>
-For a discrete random variable, the cumulative distribution function is found by summing up the probabilities as in the example below.
-</p>
-<p>
-For a continuous random variable, the cumulative distribution function is the integral of its probability density function.
+For a discrete random variable, the cumulative distribution function is found by <em>summing up</em> the probabilities as in the example below.
+For a continuous random variable, the cumulative distribution function is the <em>integral</em> of its probability density function.
 </p>
 
 <p>
-Example: Suppose a random variable
-    <math><mi>X</mi></math>
-has the following probability distribution
+Example: Suppose a random variable <var>X</var> has the following probability distribution
     <math>
         <mi>p</mi>
         <mo>&ApplyFunction;</mo>
@@ -763,12 +739,12 @@ is:
                     <mo fence="true">&rpar;</mo>
                 </math>
             </th>
-            <td class="numbers-in-table">1&frasl;32</td>
-            <td class="numbers-in-table">5&frasl;32</td>
-            <td class="numbers-in-table">10&frasl;32</td>
-            <td class="numbers-in-table">10&frasl;32</td>
-            <td class="numbers-in-table">5&frasl;32</td>
-            <td class="numbers-in-table">1&frasl;32</td>
+            <td class="numbers">1  &frasl; 32</td>
+            <td class="numbers">5  &frasl; 32</td>
+            <td class="numbers">10 &frasl; 32</td>
+            <td class="numbers">10 &frasl; 32</td>
+            <td class="numbers">5  &frasl; 32</td>
+            <td class="numbers">1  &frasl; 32</td>
         </tr>
         <tr>
             <th>
@@ -783,19 +759,19 @@ is:
                     <mo fence="true">&rpar;</mo>
                 </math>
             </th>
-            <td class="numbers-in-table">1&frasl;32</td>
-            <td class="numbers-in-table">6&frasl;32</td>
-            <td class="numbers-in-table">16&frasl;32</td>
-            <td class="numbers-in-table">26&frasl;32</td>
-            <td class="numbers-in-table">31&frasl;32</td>
-            <td class="numbers-in-table">32&frasl;32</td>
+            <td class="numbers">1  &frasl; 32</td>
+            <td class="numbers">6  &frasl; 32</td>
+            <td class="numbers">16 &frasl; 32</td>
+            <td class="numbers">26 &frasl; 32</td>
+            <td class="numbers">31 &frasl; 32</td>
+            <td class="numbers">32 &frasl; 32</td>
         </tr>
     </table>
 </figure>
 
 <h3>Probability Density Function [STEPS:Glossary]</h3>
 <p>
-The <u>probability density function of a continuous random variable</u> is a <strong>function</strong> which can be integrated to obtain the probability that the random variable takes a value in a given interval.
+The <strong>probability density function</strong> of a continuous random variable is a function which can be integrated to obtain the probability that the random variable takes a value in a given interval.
 </p>
 <p>
 More formally, the probability density function,
@@ -806,11 +782,7 @@ More formally, the probability density function,
             <mi>x</mi>
         <mo fence="true">&rpar;</mo>
     </math>,
-of a continuous random variable
-    <math>
-        <mi>X</mi>
-    </math>
-is the <u>derivative of the cumulative distribution function</u>
+of a continuous random variable <var>X</var> is the <em>derivative</em> of the cumulative distribution function
     <math>
         <mi>F</mi>
         <mo>&ApplyFunction;</mo>
@@ -925,9 +897,7 @@ is a probability density function then it must obey two conditions:
 </p>
 <ul>
     <li>
-        that the total probability for all possible values of the continuous random variable
-            <math><mi>X</mi></math>
-        is 1:
+        the total probability for all possible values of the continuous random variable <var>X</var> is 1:
             <math>
                 <mrow>
                     <mo>&Integral;</mo>
@@ -947,7 +917,7 @@ is a probability density function then it must obey two conditions:
             </math>
     </li>
     <li>
-        that the probability density function can never be negative:
+        the probability density function can never be negative:
             <math>
                 <mi>f</mi>
                 <mo>&ApplyFunction;</mo>
@@ -957,22 +927,13 @@ is a probability density function then it must obey two conditions:
                 <mo>&gt;</mo>
                 <mn>0</mn>
             </math>
-        for all <math><mi>x</mi></math>.
+        for all <var>x</var>.
     </li>
 </ul>
 
 <h3>中心極限定理 central limit theorem [青木:用語辞典 II]</h3>
 <p>
-平均値
-    <math><mi>&mu;</mi></math>，
-分散
-    <math>
-        <msup>
-            <mi>&sigma;</mi>
-            <mn>2</mn>
-        </msup>
-    </math>
-をもつ，任意の分布に従う乱数列
+平均値 <var>&mu;</var>，分散 <var>&sigma;&sup2;</var> をもつ，任意の分布に従う乱数列
     <math>
         <msub>
             <mi>x</mi>
@@ -1031,17 +992,10 @@ is a probability density function then it must obey two conditions:
     </math>
 </figure>
 <p>
-の確率分布は，
-    <math><mi>n</mi></math>
-が大きくなるとき，平均値
-    <math><mi>&mu;</mi></math>，
-分散
+の確率分布は，<var>n</var> が大きくなるとき，平均値 <var>&mu;</var>，分散
     <math displaystyle="true">
         <mfrac>
-            <msup>
-                <mi>&sigma;</mi>
-                <mn>2</mn>
-            </msup>
+            <mi>&sigma;&sup2;</mi>
             <mi>n</mi>
         </mfrac>
     </math>
@@ -1050,38 +1004,20 @@ is a probability density function then it must obey two conditions:
 
 <h3>Central Limit Theorem [STEPS:Glossary]</h3>
 <p>
-The Central Limit Theorem states that whenever a random sample of size
-    <math><mi>n</mi></math>
-is taken from any distribution with mean
-    <math><mi>&mu;</mi></math>
-and variance
-    <math>
-        <msup>
-            <mi>&sigma;</mi>
-            <mn>2</mn>
-        </msup>
-    </math>,
-then the sample mean
+The <strong>Central Limit Theorem</strong> states that whenever a random sample of size <var>n</var> is taken from any distribution with mean <var>&mu;</var> and variance <var>&sigma;&sup2;</var>, then the sample mean
     <math>
         <mover>
             <mi>x</mi>
             <mi>&OverBar;</mi>
         </mover>
     </math>
-will be approximately normally distributed with mean
-    <math><mi>&mu;</mi></math>
-and variance
+will be approximately normally distributed with mean <var>&mu;</var> and variance
     <math>
-        <msup>
-            <mi>&sigma;</mi>
-            <mn>2</mn>
-        </msup>
+        <mi>&sigma;&sup2;</mi>
         <mo>&frasl;</mo>
         <mi>n</mi>
     </math>.
-The larger the value of the sample size
-    <math><mi>n</mi></math>,
-the better the approximation to the normal.
+The larger the value of the sample size <var>n</var>, the better the approximation to the normal.
 </p>
 <p>
 This is very useful when it comes to inference. For example, it allows us (if the sample size is fairly large) to use hypothesis tests which assume normality even if our data appear non-normal. This is because the tests use the sample mean
@@ -1138,10 +1074,7 @@ which the Central Limit Theorem tells us will be approximately normally distribu
                 <mrow>
                     <mn>2</mn>
                     <mo>&InvisibleTimes;</mo>
-                    <msup>
-                        <mi>&sigma;</mi>
-                        <mn>2</mn>
-                    </msup>
+                    <mi>&sigma;&sup2;</mi>
                 </mrow>
             </mfrac>
             <mo fence="true">&rbrace;</mo>
@@ -1149,16 +1082,7 @@ which the Central Limit Theorem tells us will be approximately normally distribu
     </math>
 </figure>
 <p>
-で表される確率分布。これを、平均
-    <math><mi>&mu;</mi></math>、
-分散
-    <math>
-        <msup>
-            <mi>&sigma;</mi>
-            <mn>2</mn>
-        </msup>
-    </math>
-の正規分布といい、記号
+で表される確率分布。これを平均 <var>&mu;</var>、分散 <var>&sigma;&sup2;</var> の<strong>正規分布</strong>といい、記号
     <math>
         <mrow>
             <mi>N</mi>
@@ -1166,40 +1090,29 @@ which the Central Limit Theorem tells us will be approximately normally distribu
             <mo fence="true">&lpar;</mo>
             <mi>&mu;</mi>
             <mo separator="true">&comma;</mo>
-            <msup>
-                <mi>&sigma;</mi>
-                <mn>2</mn>
-            </msup>
+            <mi>&sigma;&sup2;</mi>
             <mo fence="true">&rpar;</mo>
         </mrow>
     </math>
-で表す。単峰性で平均
-    <math><mi>&mu;</mi></math>
-を中心に左右対称な形状を示す。誤差の分布など自然界の多くの事象の分布モデルとして使用される。
+で表す。単峰性で平均 <var>&mu;</var> を中心に左右対称な形状を示す。誤差の分布など自然界の多くの事象の分布モデルとして使用される。
 </p>
 
 <h3>Normal Distribution (STEPS:Glossary)</h3>
 <p>
-Normal distributions model (some) continuous random variables. Strictly, a Normal random variable should be capable of assuming any value on the real line, though this requirement is often waived in practice. For example, height at a given age for a given gender in a given racial group is adequately described by a Normal random variable even though heights must be positive.
+<strong>Normal distributions</strong> model (some) continuous random variables. Strictly, a Normal random variable should be capable of assuming any value on the real line, though this requirement is often waived in practice. For example, height at a given age for a given gender in a given racial group is adequately described by a Normal random variable even though heights must be positive.
 </p>
 <p>
-A continuous random variable
-    <math><mi>X</mi></math>,
-taking all real values in the range
+A continuous random variable <var>X</var>, taking all real values in the range
     <math>
         <mrow>
             <mo fence="true">&lpar;</mo>
-            <mo>&minus;</mo><mi>&infin;</mi>
+            <mi>&minus;&infin;</mi>
             <mo separator="true">&comma;</mo>
             <mi>&infin;</mi>
             <mo fence="true">&rpar;</mo>
         </mrow>
     </math>
-is said to follow a Normal distribution with parameters
-    <math><mi>&mu;</mi></math>
-and
-    <math><mi>&sigma;</mi></math>
-if it has probability density function
+is said to follow a Normal distribution with parameters <var>&mu;</var> and <var>&sigma;</var> if it has probability density function
 </p>
 <figure>
     <math displaystyle="true">
@@ -1262,10 +1175,7 @@ We write
             <mo fence="true">&lpar;</mo>
             <mi>&mu;</mi>
             <mo separator="true">&comma;</mo>
-            <msup>
-                <mi>&sigma;</mi>
-                <mn>2</mn>
-            </msup>
+            <mi>&sigma;&sup2;</mi>
             <mo fence="true">&rpar;</mo>
         </mrow>
     </math>.
@@ -1273,28 +1183,17 @@ We write
 
 <h3>二項分布 binomial distribution [青木:用語辞典 II]</h3>
 <p>
-ある集団において，特性Aを持つものの割合が
-    <math><mi>p</mi></math>
-であり，持たないものの割合が
-    <math><mi>q</mi></math>
-であるとする（
+ある集団において，特性Aを持つものの割合が <var>p</var> であり，持たないものの割合が <var>q</var> であるとする (
     <math>
-        <mi>p</mi>
-        <mo>&plus;</mo>
-        <mi>q</mi>
-        <mo>&equals;</mo>
-        <mn>1</mn>
-    </math>
-）。
-このとき，集団から無作為に
-    <math><mi>n</mi></math>
-人を抽出したとき，特性Aを持つものが
-    <math><mi>x</mi></math>
-人である確率を考える。
-    <math><mi>n</mi></math>
-人のうち
-    <math><mi>x</mi></math>
-人が特性を持つ組合せは
+        <mrow>
+            <mi>p</mi>
+            <mo>&plus;</mo>
+            <mi>q</mi>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </mrow>
+    </math>)。
+このとき，集団から無作為に <var>n</var> 人を抽出したとき，特性Aを持つものが <var>x</var> 人である確率を考える。<var>n</var> 人のうち <var>x</var> 人が特性を持つ組合せは
     <math>
         <mmultiscripts>
             <mi>C</mi>
@@ -1312,20 +1211,13 @@ We write
         </mfrac>
         <mo fence="true">&rpar;</mo>
     </math>
-とも書く） 。その各々に対して，
-    <math><mi>x</mi></math>
-人が特性Aを持つ確率は
+とも書く） 。その各々に対して，<var>x</var> 人が特性Aを持つ確率は <var>p<sup>x</sup></var>，残り
     <math>
-        <msup>
-            <mi>p</mi>
+        <mrow>
+            <mi>n</mi>
+            <mo>&minus;</mo>
             <mi>x</mi>
-        </msup>
-    </math>
-，残り
-    <math>
-        <mi>n</mi>
-        <mo>&minus;</mo>
-        <mi>x</mi>
+        </mrow>
     </math>
 人が特性を持たない確率は
     <math>
@@ -1375,100 +1267,88 @@ We write
     </math>
 </figure>
 <p>
-が求める確率であり，この分布を二項分布と呼ぶ。この分布を
+が求める確率であり，この分布を<strong>二項分布</strong>と呼ぶ。この分布を
     <math>
-        <mi>B</mi>
-        <mo>&ApplyFunction;</mo>
-        <mo fence="true">&lpar;</mo>
-        <mi>n</mi>
-        <mo separator="true">&comma;</mo>
-        <mi>p</mi>
-        <mo fence="true">&rpar;</mo>
+        <mrow>
+            <mi>B</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>n</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>p</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
     </math>
 と表すことにする。
 </p>
 
-<h3>母比率 population proportion [青木:用語辞典 II、二項分布]
+<h3>母比率 population proportion [青木:用語辞典 II、二項分布]</h3>
 <p>
-ある集団において，特性Aを持つものの割合が
-    <math><mi>p</mi></math>
-であり，持たないものの割合が
-    <math><mi>q</mi></math>
-であるとする（
+ある集団において，特性Aを持つものの割合が <var>p</var> であり，持たないものの割合が <var>q</var> であるとする (
     <math>
-        <mi>p</mi>
-        <mo>&plus;</mo>
-        <mi>q</mi>
-        <mo>&equals;</mo>
-        <mn>1</mn>
-    </math>
-）。
-    <math><mi>p</mi></math>
-を母比率という。
+        <mrow>
+            <mi>p</mi>
+            <mo>&plus;</mo>
+            <mi>q</mi>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </mrow>
+    </math>)。
+この <var>p</var> を<strong>母比率</strong>という。
 </p>
 
 <h3>Binomial distribution [Wikipedia]</h3>
 <p>
-In probability theory and statistics, the binomial distribution with parameters
-    <math><mi>n</mi></math>
-and
-    <math><mi>p</mi></math>
-is the discrete probability distribution of the number of successes in a sequence of
-    <math><mi>n</mi></math>
-independent experiments, each asking a yes–no question, and each with its own Boolean-valued outcome: success (with probability
-    <math><mi>n</mi></math>
-) or failure (with probability
+In probability theory and statistics, the <strong>binomial distribution</strong> with parameters <var>n</var> and <var>p</var> is the discrete probability distribution of the number of successes in a sequence of <var>n</var> independent experiments, each asking a yes–no question, and each with its own Boolean-valued outcome: success (with probability <var>n</var>) or failure (with probability
     <math>
-        <mi>q</mi>
-        <mo>&equals;</mo>
-        <mn>1</mn>
-        <mo>&minus;</mo>
-        <mi>p</mi>
-    </math>
-).
+        <mrow>
+            <mi>q</mi>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+            <mo>&minus;</mo>
+            <mi>p</mi>
+        </mrow>
+    </math>).
 </p>
 <p>
-The binomial distribution is frequently used to model the number of successes in a sample of size
-    <math><mi>n</mi></math>
-drawn with replacement from a population of size
-    <math><mi>N</mi></math>.
+The binomial distribution is frequently used to model the number of successes in a sample of size <var>n</var> drawn with replacement from a population of size <var>N</var>.
 </p>
 <p>
-In general, if the random variable
-    <math><mi>X</mi></math>
-follows the binomial distribution with parameters
+In general, if the random variable <var>X</var> follows the binomial distribution with parameters
     <math>
-        <mi>n</mi>
-        <mo>&in;</mo>
-        <mi>&naturals;</mi>
+        <mrow>
+            <mi>n</mi>
+            <mo>&in;</mo>
+            <mi>&naturals;</mi>
+        </mrow>
     </math>
 and
     <math>
-        <mi>p</mi>
-        <mo>&in;</mo>
-        <mo fence="true">&lsqb;</mo>
-        <mn>0</mn>
-        <mo separator="true">&comma;</mo>
-        <mn>1</mn>
-        <mo fence="true">&rsqb;</mo>
+        <mrow>
+            <mi>p</mi>
+            <mo>&in;</mo>
+            <mo fence="true">&lsqb;</mo>
+            <mn>0</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>1</mn>
+            <mo fence="true">&rsqb;</mo>
+        </mrow>
     </math>,
 we write
     <math>
-        <mi>X</mi>
-        <mo>&Tilde;</mo>
-        <mi>B</mi>
-        <mo>&ApplyFunction;</mo>
-        <mo fence="true">&lpar;</mo>
-        <mi>n</mi>
-        <mo separator="true">&comma;</mo>
-        <mi>p</mi>
-        <mo fence="true">&rpar;</mo>
+        <mrow>
+            <mi>X</mi>
+            <mo>&Tilde;</mo>
+            <mi>B</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>n</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>p</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
     </math>.
-The probability of getting exactly
-    <math><mi>k</mi></math>
-successes in
-    <math><mi>n</mi></math>
-independent <i>Bernoulli trials</i> (a single success/failure experiment) is given by the probability mass function:
+The probability of getting exactly <var>k</var> successes in <var>n</var> independent <em>Bernoulli trials</em> (a single success/failure experiment) is given by the probability mass function:
 </p>
 <figure>
     <math displaystyle="true">
@@ -1560,9 +1440,7 @@ where
         </mfrac>
         <mo fence="true">&rpar;</mo>
     </math>
-is the <i>binomial coefficient</i>, hence the name of the distribution. The formula can be understood as follows:
-    <math><mi>k</mi></math>
-successes occur with probability
+is the <em>binomial coefficient</em>, hence the name of the distribution. The formula can be understood as follows: <var>k</var> successes occur with probability
     <math>
         <msup>
             <mi>p</mi>
@@ -1592,11 +1470,7 @@ failures occur with probability
             </mrow>
         </msup>
     </math>.
-However, the
-    <math><mi>k</mi></math>
-successes can occur anywhere among the
-    <math><mi>n</mi></math>
-trials, and there are
+However, the <var>k</var> successes can occur anywhere among the <var>n</var> trials, and there are
     <math>
         <mo fence="true">&lpar;</mo>
         <mfrac linethickness="0">
@@ -1605,22 +1479,12 @@ trials, and there are
         </mfrac>
         <mo fence="true">&rpar;</mo>
     </math>
-different ways of distributing
-    <math><mi>k</mi></math>
-successes in a sequence of
-    <math><mi>n</mi></math>
-trials.
+different ways of distributing <var>k</var> successes in a sequence of <var>n</var> trials.
 </p>
 
 <h3>ベルヌーイ試行 Bernoulli trials [青木:用語辞典 II、二項分布]</h3>
 <p>
-1回ごとの事象の生起確率
-    <math><mi>p</mi></math>
-が一定であるとき，実験を繰り返し行うことをベルヌーイ試行というが，独立に実験を
-    <math><mi>n</mi></math>
-回繰り返したとき，
-    <math><mi>x</mi></math>
-回事象が生じる確率は二項分布である。このため二項分布はベルヌーイ分布とも呼ばれる。
+1回ごとの事象の生起確率 <var>p</var> が一定であるとき，実験を繰り返し行うことを<strong>ベルヌーイ試行</strong>というが，独立に実験を <var>n</var> 回繰り返したとき，<var>x</var> 回事象が生じる確率は二項分布である。このため二項分布はベルヌーイ分布とも呼ばれる。
 </p>
 
 <h3>ポアソン分布 Poisson distribution [青木:用語辞典 II]</h3>
@@ -1628,9 +1492,7 @@ trials.
 「自動車事故による死亡が1年間に1万人であるとする。日本の人口を11,600万人，ある都市の人口を100万人としたとき，その都市で自動車事故による死亡が一件もないという日が起こる確率を求めよ。」
 </p>
 <p>
-ある一人の人が交通事故にあう1日あたりの確率
-    <math><mi>p</mi></math>
-はきわめて小さい。
+ある一人の人が交通事故にあう1日あたりの確率 <var>p</var> はきわめて小さい。
 </p>
 <figure>
     <math displaystyle="true">
@@ -1659,7 +1521,7 @@ trials.
     </math>
 </figure>
 <p>
-また，この都市の人口はきわめて大きいので，交通事故死の確率はポアソン分布に従うと考えられる。
+また，この都市の人口はきわめて大きいので，交通事故死の確率は<strong>ポアソン分布</strong>に従うと考えられる。
 </p>
 <figure>
     <math displaystyle="true">
@@ -1694,9 +1556,7 @@ trials.
     </math>
 </figure>
 <p>
-ポアソン分布のパラメータ
-    <math><mi>&lambda;</mi></math>
-は，
+ポアソン分布のパラメータ <var>&lambda;</var> は，
 </p>
 <figure>
     <math>
@@ -1735,7 +1595,7 @@ trials.
 となる。
 </p>
 <p>
-このほか，ポアソン分布に当てはまる事象としては，製品中の不良品の個数，一定時間内に電話がかかってくる回数などがあげられる。
+このほか，<em>ポアソン分布</em>に当てはまる事象としては，製品中の不良品の個数，一定時間内に電話がかかってくる回数などがあげられる。
 </p>
 
 <h3>Poisson Distribution [STEPS:Glossary]</h3>
@@ -1751,19 +1611,17 @@ Typically, a Poisson random variable is a count of the number of events that occ
     </li>
 </ul>
 <p>
-A discrete random variable
-    <math><mi>X</mi></math>
-is said to follow a Poisson distribution with parameter
-    <math><mi>m</mi></math>,
-written
+A discrete random variable <var>X</var> is said to follow a <strong>Poisson distribution</strong> with parameter <var>m</var>, written
     <math>
-        <mi>X</mi>
-        <mo>&Tilde;</mo>
-        <mi>Po</mi>
-        <mo>&ApplyFunction;</mo>
-        <mo fence="true">&lpar;</mo>
-        <mi>m</mi>
-        <mo fence="true">&rpar;</mo>
+        <mrow>
+            <mi>X</mi>
+            <mo>&Tilde;</mo>
+            <mi>Po</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>m</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
     </math>,
 if it has probability distribution
 </p>
@@ -1799,67 +1657,69 @@ if it has probability distribution
 <p>
 The Poisson distribution has expected value
     <math>
-        <mi>E</mi>
-        <mo>&ApplyFunction;</mo>
-        <mo fence="true">&lpar;</mo>
-        <mi>X</mi>
-        <mo fence="true">&rpar;</mo>
-        <mo>&equals;</mo>
-        <mi>m</mi>
+        <mrow>
+            <mi>E</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>X</mi>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mi>m</mi>
+        </mrow>
     </math>
 and variance
     <math>
-        <mi>V</mi>
-        <mo>&ApplyFunction;</mo>
-        <mo fence="true">&lpar;</mo>
-        <mi>X</mi>
-        <mo fence="true">&rpar;</mo>
-        <mo>&equals;</mo>
-        <mi>m</mi>
+        <mrow>
+            <mi>V</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>X</mi>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mi>m</mi>
+        </mrow>
     </math>;
 i.e.
     <math>
-        <mi>E</mi>
-        <mo>&ApplyFunction;</mo>
-        <mo fence="true">&lpar;</mo>
-        <mi>X</mi>
-        <mo fence="true">&rpar;</mo>
-        <mo>&equals;</mo>
-        <mi>V</mi>
-        <mo>&ApplyFunction;</mo>
-        <mo fence="true">&lpar;</mo>
-        <mi>X</mi>
-        <mo fence="true">&rpar;</mo>
-        <mo>&equals;</mo>
-        <mi>m</mi>
+        <mrow>
+            <mi>E</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>X</mi>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mi>V</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>X</mi>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mi>m</mi>
+        </mrow>
     </math>.
 </p>
 <p>
-The Poisson distribution can sometimes be used to <u>approximate the Binomial distribution</u> with parameters
-    <math><mi>n</mi></math>
-and
-    <math><mi>p</mi></math>.
-When the number of observations
-    <math><mi>n</mi></math>
-is large, and the success probability
-    <math><mi>p</mi></math>
-is small, the
+The Poisson distribution can sometimes be used to approximate the <em>Binomial distribution</em> with parameters <var>n</var> and <var>p</var>. When the number of observations <var>n</var> is large, and the success probability <var>p</var> is small, the
     <math>
-        <mi>Bi</mi>
-        <mo>&ApplyFunction;</mo>
-        <mo fece="true">&lpar;</mo>
-        <mi>n</mi>
-        <mo separator="true">&comma;</mo>
-        <mi>p</mi>
-        <mo fence="true">&rpar;</mo>
+        <mrow>
+            <mi>Bi</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fece="true">&lpar;</mo>
+            <mi>n</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>p</mi>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
     </math>
 distribution approaches the Poisson distribution with the parameter given by
     <math>
-        <mi>m</mi>
-        <mo>&equals;</mo>
-        <mi>n</mi>
-        <mo>&InvisibleTimes;</mo>
-        <mi>p</mi>
+        <mrow>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <mi>n</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>p</mi>
+        </mrow>
     </math>.
 This is useful since the computations involved in calculating binomial probabilities are greatly reduced.
 </p>
