@@ -16,8 +16,12 @@
     text-align: left;
 }
 
-h1 {
+h1, h2 {
     text-decoration: overline;
+}
+
+h1, h2, h3 {
+    margin-top: 10%;
 }
 
 th, td, mtd {

@@ -1,19 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-    width="600" height="200" viewBox="0 0 1000 600">
+    width="300" height="240" viewBox="0 0 820 600">
     <defs>
         <linearGradient id="g">
-            <stop offset="24.999999%" stop-color="white"/>
-            <stop offset="25.000001%" stop-color="green"/>
-            <stop offset="44.999999%" stop-color="green"/>
-            <stop offset="45.000001%" stop-color="white"/>
+            <stop offset="24.999999%" stop-color="Linen"/>
+            <stop offset="25.000001%" stop-color="Teal"/>
+            <stop offset="44.999999%" stop-color="Teal"/>
+            <stop offset="45.000001%" stop-color="Linen"/>
         </linearGradient>
     </defs>
-    <path d="M10,490C230,490 290,10 400,10C500,10 560,490 790,490v5H10z"
-        fill="url(#g)" stroke="black" stroke-width="2" />
-    <text x="840" y="510" font-size="48"> X  </text>
-    <text x="180" y="560" font-size="36"> X1 </text>
-    <text x="340" y="560" font-size="36"> X2 </text>
-    <text x="700" y="200" font-size="48"> f(x) </text>
-    <line x1="680" y1="200" x2="560" y2="260"
-        stroke="black" stroke-width="1" />
+    <rect x="0" y="0" width="820" height="600"
+        style="fill:Linen" />
+    <path d="M20,500C240,500 300,20 410,20C510,20 570,500 800,500v15H20z"
+        style="fill:url(#g);stroke:MidnightBlue;stroke-width:4"/>
+    <text x="190" y="570" font-size="36"> X1 </text>
+    <text x="340" y="570" font-size="36"> X2 </text>
+    <text x="680" y="200" font-size="48"> f(x) </text>
+    <line x1="650" y1="200" x2="560" y2="260"
+        stroke="MidnightBlue" stroke-width="3" />
 </svg>

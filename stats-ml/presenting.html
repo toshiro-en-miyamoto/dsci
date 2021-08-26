@@ -2,7 +2,8 @@
 <html lang="ja">
 <head>
     <title>Presenting data</title>
-    <link rel="stylesheet" href="stats-ml.css" type="text/css">
+    <link rel="stylesheet" href="../style/dark.css" type="text/css">
+    <link rel="stylesheet" href="../style/indent.css" type="text/css">
 </head>
 <body>
 
@@ -15,26 +16,26 @@
 
 <h3>母集団と標本 population and sample [青木:自習ノート]</h3>
 <p>
-統計的なデータの持つ情報は，どのような場合においても，それが取り出された集団に関して解釈されなければならない。われわれが知識・情報を得たいと考えている対象の全体を<i>母集団</i>といい，母集団から抽出された一部分を<i>標本</i>と呼ぶ。
+統計的なデータの持つ情報は，どのような場合においても，それが取り出された集団に関して解釈されなければならない。われわれが知識・情報を得たいと考えている対象の全体を<strong>母集団</strong>といい，母集団から抽出された一部分を<strong>標本</strong>と呼ぶ。
 </p>
 <p>
 全体調査が無意味であるとき，または不可能なときや，時間・費用が制限されているときには，標本調査をすることにより母集団の姿を推定することになる。
 </p>
 <p>
-標本は母集団のほんの一部分にすぎないから，<u>標本から得られる情報にもとづいて，それが抽出された母集団全体についての性質・構造・法則性を推測しようとする</u>と，常に不確実性がつきまとうことになる。この不確実性を制御することが統計学の主題の一つである。
+標本は母集団のほんの一部分にすぎないから，標本から得られる情報にもとづいて，それが抽出された母集団全体についての性質・構造・法則性を推測しようとすると，常に不確実性がつきまとうことになる。この不確実性を制御することが統計学の主題の一つである。
 </p>
 
 <h3>Population [STEPS:Glossary]</h3>
 <p>
-A population is any entire collection of people, animals, plants or things from which we may collect data. It is the entire group we are interested in, which we wish to describe or draw conclusions about.
+A <strong>population</strong> is any entire collection of people, animals, plants or things from which we may collect data. It is the entire group we are interested in, which we wish to describe or draw conclusions about.
 </p>
 <p>
-In order to make any generalisations about a population, a <i>sample</i>, that is meant to be representative of the population, is often studied. For each population there are many possible samples. A sample statistic gives information about a corresponding population parameter. For example, the sample mean for a set of data would give information about the overall population mean.
+In order to make any generalisations about a population, a <em>sample</em>, that is meant to be representative of the population, is often studied. For each population there are many possible samples. A sample statistic gives information about a corresponding population parameter. For example, the sample mean for a set of data would give information about the overall population mean.
 </p>
 
 <h3>Sample [STEPS:Glossary]</h3>
 <p>
-A sample is a group of units selected from a larger group (the <i>population</i>). By studying the sample it is hoped to draw valid conclusions about the larger group.
+A <strong>sample</strong> is a group of units selected from a larger group (the <em>population</em>). By studying the sample it is hoped to draw valid conclusions about the larger group.
 </p>
 <p>
 A sample is generally selected for study because the population is too large to study in its entirety. The sample should be representative of the general population. This is often best achieved by random sampling. Also, before collecting the sample, it is important that the researcher carefully and completely defines the population, including a description of the members to be included.
@@ -42,15 +43,15 @@ A sample is generally selected for study because the population is too large to 
 
 <h3>Parameter [STEPS:Glossary]</h3>
 <p>
-A parameter is a value, usually unknown (and which therefore has to be estimated), used to represent a certain <i>population</i> characteristic. For example, the population mean is a parameter that is often used to indicate the average value of a quantity.
+A <strong>parameter</strong> is a value, usually unknown (and which therefore has to be estimated), used to represent a certain <em>population</em> characteristic. For example, the population mean is a parameter that is often used to indicate the average value of a quantity.
 </p>
 <p>
-Within a population, a parameter is a fixed value which does not vary. Each sample drawn from the population has its own value of any <i>statistic</i> that is used to estimate this parameter. For example, the mean of the data in a sample is used to give information about the overall mean in the population from which that sample was drawn.
+Within a population, a parameter is a fixed value which does not vary. Each sample drawn from the population has its own value of any <em>statistic</em> that is used to estimate this parameter. For example, the mean of the data in a sample is used to give information about the overall mean in the population from which that sample was drawn.
 </p>
 
 <h3>Statistic [STEPS:Glossary]</h3>
 <p>
-A statistic is a quantity that is calculated from a <i>sample</i> of data. It is used to give information about unknown values in the corresponding population. For example, the average of the data in a sample is used to give information about the overall average in the population from which that sample was drawn.
+A <strong>statistic</strong> is a quantity that is calculated from a <em>sample</em> of data. It is used to give information about unknown values in the corresponding population. For example, the average of the data in a sample is used to give information about the overall average in the population from which that sample was drawn.
 </p>
 <p>
 It is possible to draw more than one sample from the same population and the value of a statistic will in general vary from sample to sample. For example, the average value in a sample is a statistic. The average values in more than one sample, drawn from the same population, will not necessarily be equal.
@@ -58,7 +59,7 @@ It is possible to draw more than one sample from the same population and the val
 
 <h3>統計量 statistic [青木:自習ノート、一変量データの分布の数値表現]</h3>
 <p>
-変数の尺度水準によって以下の統計量・結果が有効である。ある尺度水準の変数で有効な統計量は，それより上位の尺度水準の変数でも全てが有効である。
+変数の尺度水準によって以下の統計量・結果が有効である。ある<em>尺度水準</em>の変数で有効な統計量は，それより上位の尺度水準の変数でも全てが有効である。
 </p>
 <ul>
     <li>名義尺度変数: 有効ケース数，最頻値，度数分布</li>
@@ -168,13 +169,13 @@ Categories should be chosen carefully since a bad choice can prejudice the outco
 
 <h3>データの水準 [青木:用語辞典II]</h3>
 <p>
-ある対象の特性値を数値に対応させるときの基準。名義尺度，順序尺度，間隔尺度，比例尺度の4種類がある。名義尺度データは最も水準が低く，比例尺度データは最も水準が高い。ある水準のデータは，それより低い水準のデータが持つ性質を全て持つ。例えば，間隔尺度データに適用できる全ての統計手法は，比例尺度データにも適用できる。ただし，逆は成り立たない。「順序尺度以上」という場合には，データの水準が順序尺度よりも高い間隔尺度および比例尺度を含む。
+ある対象の特性値を数値に対応させるときの基準。<em>名義尺度</em>，<em>順序尺度</em>，<em>間隔尺度</em>，<em>比例尺度</em>の4種類がある。名義尺度データは最も水準が低く，比例尺度データは最も水準が高い。ある水準のデータは，それより低い水準のデータが持つ性質を全て持つ。例えば，間隔尺度データに適用できる全ての統計手法は，比例尺度データにも適用できる。ただし，逆は成り立たない。「順序尺度以上」という場合には，データの水準が順序尺度よりも高い間隔尺度および比例尺度を含む。
 (順序尺度以上：順序尺度・間隔尺度・比例尺度のいずれか、間隔尺度以上：間隔尺度・比例尺度のいずれか)
 </p>
 
 <h3>Level of measurement [Wikipedia]</h3>
 <p>
-or <i>scale of measure</i> is a classification that describes the nature of information within the values assigned to variables. Psychologist Stanley Smith Stevens developed the best-known classification with four levels, or scales, of measurement: nominal, ordinal, interval, and ratio.
+or <em>scale of measure</em> is a classification that describes the nature of information within the values assigned to variables. Psychologist Stanley Smith Stevens developed the best-known classification with four levels, or scales, of measurement: <em>nominal</em>, <em>ordinal</em>, <em>interval</em>, and <em>ratio</em>.
 </p>
 
 <h3>名義尺度 nominal scale [青木:用語辞典I]</h3>
@@ -184,7 +185,7 @@ or <i>scale of measure</i> is a classification that describes the nature of info
 
 <h3>Nominal Data [STEPS:Glossary]</h3>
 <p>
-A set of data is said to be nominal if the values / observations belonging to it can be assigned a code in the form of a number where the numbers are simply labels. You can count but not order or measure nominal data. For example, in a data set males could be coded as 0, females as 1; marital status of an individual could be coded as Y if married, N if single.
+A set of data is said to be nominal if the values / observations belonging to it can be assigned a code in the form of a number where the numbers are simply labels. You can count but not order or measure nominal data. For example, in a data set males could be coded as 0, females as 1; marital status of an individual could be coded as <var>Y</var> if married, <var>N</var> if single.
 </p>
 
 <h3>順序尺度 ordinal scale [青木:用語辞典I]</h3>
@@ -242,12 +243,12 @@ An interval scale is a scale of measurement where the distance between any two a
 
 <h3>平均値 mean [青木:用語辞典II]</h3>
 <p>
-統計学用語としての平均値には，算術平均値，調和平均値，幾何平均値の３種類がある。
+統計学用語としての<strog>平均値</strong>には，算術平均値，調和平均値，幾何平均値の３種類がある。
 </p>
 
 <h3>Sample Mean [STEPS:Glossary]</h3>
 <p>
-The sample mean is an estimator available for estimating the <i>population mean</i> (see also <i>expected value</i>). It is a measure of location, commonly called the average, often symbolised
+The <strong>sample mean</strong> is an estimator available for estimating the <em>population mean</em> (see also <em>expected value</em>). It is a measure of location, commonly called the average, often symbolised
     <math>
         <mover>
             <mn>x</mn>
@@ -264,69 +265,54 @@ It is especially useful as being representative of the whole sample for use in s
 
 <h3>期待値 expectation [青木:用語辞典I]</h3>
 <p>
-ある事象
-    <math><msub><mi>X</mi><mi>i</mi></msub></math>
-の起きる確率を
-    <math><msub><mi>p</mi><mi>i</mi></msub></math>
-とする
+ある事象 <var>X<sub>i</sub></var> の起きる確率を <var>p<sub>i</sub></var> とする
     <math>
-        <mo fence="true">&lpar;</mo>
         <mrow>
-            <mi>i</mi>
-            <mo>&equals;</mo>
-            <mn>1</mn>
-            <mo>&comma;</mo>
-            <mn>2</mn>
-            <mo>&comma;</mo>
-            <mo>&hellip;</mo>
-            <mo>&comma;</mo>
-            <mi>m</mi>
-        </mrow>
-        <mo separator="true">&semi;</mo>
-        <mrow>
+            <mo fence="true">&lpar;</mo>
             <mrow>
-                <mi>&sum;</mi>
-                <mo>&ApplyFunction;</mo>
-                <msub><mi>p</mi><mi>i</mi></msub>
+                <mi>i</mi>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+                <mo>&comma;</mo>
+                <mn>2</mn>
+                <mo>&comma;</mo>
+                <mo>&hellip;</mo>
+                <mo>&comma;</mo>
+                <mi>m</mi>
             </mrow>
-            <mo>&equals;</mo>
-            <mn>1</mn>
+            <mo separator="true">&semi;</mo>
+            <mrow>
+                <mrow>
+                    <mi>&sum;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mi>i</mi>
+                    </msub>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
         </mrow>
-        <mo fence="true">&rpar;</mo>
     </math>。
-例えば，くじ引きで，1等10000円は
-    <math>
-        <msub><mi>p</mi><mn>1</mn></msub>
-        <mo>&equals;</mo>
-        <mrow>
-            <mn>1</mn><mo>&frasl;</mo><mn>10</mn>
-        </mrow>
-    </math>，
-2等1000円は
-    <math>
-        <msub><mi>p</mi><mn>2</mn></msub>
-        <mo>&equals;</mo>
-        <mrow>
-            <mn>2</mn><mo>&frasl;</mo><mn>10</mn>
-        </mrow>
-    </math>，
-3等100円は
-    <math>
-        <msub><mi>p</mi><mn>3</mn></msub>
-        <mo>&equals;</mo>
-        <mrow>
-            <mn>3</mn><mo>&frasl;</mo><mn>10</mn>
-        </mrow>
-    </math>，
-4等50円は
-    <math>
-        <msub><mi>p</mi><mn>4</mn></msub>
-        <mo>&equals;</mo>
-        <mrow>
-            <mn>4</mn><mo>&frasl;</mo><mn>10</mn>
-        </mrow>
-    </math>
+例えば，くじ引きで，
+<ul>
+    <li>
+        1等 10000 円は <var>p₁</var> = 1 &frasl; 10
+    </li>
+    <li>
+        2等 1000 円は <var>p₂</var> = 2 &frasl; 10
+    </li>
+    <li>
+        3等 100 円は <var>p₃</var> = 3 &frasl; 10
+    </li>
+    <li>
+        4等 50 円は <var>p₄</var> = 4 &frasl; 10
+    </li>
+</ul>
 の確率であるとするとき，このくじを 1 回引いて得られる賞金は，
+<figure>
     <math>
         <mrow>
             <mn>10000</mn>
@@ -354,26 +340,25 @@ It is especially useful as being representative of the whole sample for use in s
         <mo>&equals;</mo>
         <mn>1250</mn>
     </math>
-円である。この1250円はくじ引きによって「平均して期待できる」賞金である。これを期待値と呼ぶ。期待値とは，この例のような離散分布における平均値でもある。連続分布の場合にも積分によって同様なことが導かれる。
+</figure>
+円である。この 1250 円はくじ引きによって「平均して期待できる」賞金である。これを<strong>期待値</strong>と呼ぶ。期待値とは，この例のような離散分布における平均値でもある。連続分布の場合にも<em>積分</em>によって同様なことが導かれる。
 </p>
 <p>
-別の例では，ある標本がある特性を持つか持たないかの2通りであるとき，すなわち母比率が
-    <math><mi>p</mi></math>
-の母集団から
-    <math><mi>n</mi></math>
-ケースの標本を抽出したときに，標本中で特性を持つものの期待値は
+別の例では，ある標本がある特性を持つか持たないかの2通りであるとき，すなわち母比率が <var>p</var> の母集団から <var>n</var> ケースの標本を抽出したときに，標本中で特性を持つものの期待値は
     <math>
-        <mi>n</mi>
-        <mo>&times;</mo>
-        <mi>p</mi>
+        <mrow>
+            <mi>n</mi>
+            <mo>&times;</mo>
+            <mi>p</mi>
+        </mrow>
     </math>
 である。
 </p>
 
 <h3>Expected Value [STEPS:Glossary]</h3>
 <p>
-The expected value (or population mean) of a random variable indicates its average or central value. It is a useful summary value (a number) of the variable's distribution.
-Stating the expected value gives a general impression of the behaviour of some random variable without giving full details of its probability distribution (if it is discrete) or its probability density function (if it is continuous).
+The <strong>expected</strong> value (or <em>population mean</em>) of a random variable indicates its average or central value. It is a useful summary value (a number) of the variable's distribution.
+Stating the expected value gives a general impression of the behaviour of some random variable without giving full details of its <em>probability distribution</em> (if it is discrete) or its <em>probability density function</em> (if it is continuous).
 </p>
 
 <h3>最頻値 mode [青木:用語辞典II]</h3>
@@ -381,7 +366,7 @@ Stating the expected value gives a general impression of the behaviour of some r
 
 <h3>Mode [STEPS:Glossary]</h3>
 <p>
-The mode is the most frequently occurring value in a set of discrete data. There can be more than one mode if two or more values are equally common.
+The <strong>mode</strong> is the most frequently occurring value in a set of discrete data. There can be more than one mode if two or more values are equally common.
 </p>
 
 <h3>中央値 median [青木:用語辞典II]</h3>
@@ -391,7 +376,7 @@ The mode is the most frequently occurring value in a set of discrete data. There
 
 <h3>Median [STEPS:Glossary]</h3>
 <p>
-The median is the value halfway through the ordered data set, below and above which there lies an equal number of data values.
+The <strong>median</strong> is the value halfway through the ordered data set, below and above which there lies an equal number of data values.
 
 It is generally a good descriptive measure of the location which works well for skewed data, or data with outliers.
 
@@ -408,7 +393,7 @@ The median is the 0.5 quantile.
 
 <h3>散布度 dispersion [青木:用語辞典I]</h3>
 <p>
-ある変数の分布を要約する統計量。間隔尺度以上の変数における分散，標準偏差，範囲，変動係数のように分布の広がり（散らばり）を表す統計量の総称。順序尺度変数については特定の統計量・用語がなく，散布度という用語が概念的に使用されている。
+ある変数の分布を要約する統計量。間隔尺度以上の変数における<em>分散</em>，<em>標準偏差</em>，<em>範囲</em>，<em>変動係数</em>のように分布の広がり（散らばり）を表す統計量の総称。順序尺度変数については特定の統計量・用語がなく，散布度という用語が概念的に使用されている。
 </p>
 
 <h3>Dispersion [STEPS:Glossary]</h3>
@@ -418,7 +403,7 @@ The data values in a sample are not all the same. This variation between values 
 When the dispersion is large, the values are widely scattered; when it is small they are tightly clustered. The width of diagrams such as dot plots, box plots, stem and leaf plots is greater for samples with more dispersion and vice versa.
 </p>
 <p>
-There are several measures of dispersion, the most common being the standard deviation. These measures indicate to what degree the individual observations of a data set are dispersed or 'spread out' around their mean.
+There are several measures of dispersion, the most common being the <em>standard deviation</em>. These measures indicate to what degree the individual observations of a data set are dispersed or 'spread out' around their mean.
 </p>
 
 <h3>範囲 range [青木:用語辞典II]</h3>
@@ -463,7 +448,7 @@ There are several measures of dispersion, the most common being the standard dev
 
 <h3>Range [STEPS:Glossary]</h3>
 <p>
-The range of a sample (or a data set) is a measure of the spread or the dispersion of the observations. It is the difference between the largest and the smallest observed value of some quantitative characteristic and is very easy to calculate.
+The <strong>range</strong> of a sample (or a data set) is a measure of the spread or the dispersion of the observations. It is the difference between the largest and the smallest observed value of some quantitative characteristic and is very easy to calculate.
 
 The range value of a data set is greatly influenced by the presence of just one unusually large or small value in the sample (outlier).
 
@@ -472,72 +457,75 @@ The range of 65,73,89,56,73,52,47 is 89-47 = 42.
 
 <h3>四分位数 quartiles [統計局:基本用語集]</h3>
 <p>
-データを小さい順に並べて、下から1/4のところのデータを第1四分位数、2/4のところのデータを第2四分位数（これは中央値と同じ）、3/4のところのデータを第3四分位数という。そして、第1四分位数、第2四分位数、第3四分位数をまとめて、四分位数という。
+データを小さい順に並べて、下から1/4のところのデータを<em>第1四分位数</em>、2/4のところのデータを<em>第2四分位数</em>（これは中央値と同じ）、3/4のところのデータを<em>第3四分位数</em>という。そして、第1四分位数、第2四分位数、第3四分位数をまとめて、<strong>四分位数</strong>という。
 </p>
 
 <h3>Quartiles [STEPS:Glossary]</h3>
 <p>
-Quartiles are values that divide a sample of data into four groups containing (as far as possible) equal numbers of observations.
+<strong>Quartiles</strong> are values that divide a sample of data into four groups containing (as far as possible) equal numbers of observations.
 
-A data set has three quartiles. References to quartiles often relate to just the outer two, the upper and the lower quartiles; the second quartile being equal to the median. The lower quartile is the data value a quarter way up through the ordered data set; the upper quartile is the data value a quarter way down through the ordered data set.
+A data set has three quartiles. References to quartiles often relate to just the outer two, the upper and the lower quartiles; the second quartile being equal to the median. The <em>lower quartile</em> is the data value a quarter way up through the ordered data set; the <em>upper quartile</em> is the data value a quarter way down through the ordered data set.
 </p>
 
 <h3>四分位範囲 quartile range [統計局:基本用語集]</h3>
 <p>
-（第3四分位数－第1四分位数）の値のことを四分位範囲といい、中心付近のデータがどのくらい散らばっているかの目安として用いる。
+（第3四分位数－第1四分位数）の値のことを<strong>四分位範囲</strong>といい、中心付近のデータがどのくらい散らばっているかの目安として用いる。
 </p>
 
 <h3>Inter-quartile Range (IRQ) [STEPS:Glossary]</h3>
 <p>
-The inter-quartile range is a measure of the spread of or dispersion within a data set. It is calculated by taking the difference between the upper and the lower quartiles. The IQR is the width of an interval which contains the middle 50% of the sample, so it is smaller than the range and its value is less affected by outliers.
+The <strong>inter-quartile range</strong> is a measure of the spread of or dispersion within a data set. It is calculated by taking the difference between the upper and the lower quartiles. The IQR is the width of an interval which contains the <em>middle 50%</em> of the sample, so it is smaller than the range and its value is less affected by outliers.
 </p>
 
 <h3>Percentile [STEPS:Glossary]</h3>
 <p>
-Percentiles are values that divide a sample of data into one hundred groups containing (as far as possible) equal numbers of observations. For example, 30% of the data values lie below the 30th percentile.
+<strong>Percentiles</strong> are values that divide a sample of data into one hundred groups containing (as far as possible) equal numbers of observations. For example, 30% of the data values lie below the <em>30th</em> percentile.
 </p>
 
 <h3>分位数 quantile [Wikipedia]</h3>
 <p>
-ある種の正の整数
-    <math><mi>m</mi></math>
-に対し、分布を
-    <math><mi>m</mi></math>
-等分する
+ある種の正の整数 <var>m</var> に対し、分布を <var>m</var> 等分する
     <math>
-        <mi>m</mi>
-        <mo>&minus;</mo>
-        <mn>1</mn>
+        <mrow>
+            <mi>m</mi>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+        </mrow>
     </math>
 個の値、つまり、
     <math>
         <mi>i</mi>
         <mo>&equals;</mo>
+        <mo fence="true">&lpar;</mo>
         <mn>1</mn>
         <mo>&comma;</mo>
         <mn>2</mn>
         <mo>&comma;</mo>
         <mi>&hellip;</mi>
         <mo>&comma;</mo>
-        <mi>m</mi><mo>&minus;</mo><mn>1</mn>
+        <mrow>
+            <mi>m</mi>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+        </mrow>
+        <mo fence="true">&rpar;</mo>
     </math>
 に対する
     <math>
-        <mi>i</mi>
-        <mo>&div;</mo>
-        <mi>m</mi>
+        <mrow>
+            <mi>i</mi>
+            <mo>&frasl;</mo>
+            <mi>m</mi>
+        </mrow>
     </math>
-分位数を、
-    <math><mi>m</mi></math>
-分位数という。
-ただし、英語のquantileには、等分割する値（value）の意味と、そのようにして分割された群（group）の二つの意味がある。
+分位数を、<var>m</var> 分位数という。ただし、英語の quantile には、等分割する値（value）の意味と、そのようにして分割された群（group）の二つの意味がある。
 </p>
 
 <h3>Quantile [STEPS:Glossary]</h3>
 <p>
-Quantiles are a set of 'cut points' that divide a sample of data into groups containing (as far as possible) equal numbers of observations.
+<strong>Quantiles</strong> are a set of 'cut points' that divide a sample of data into groups containing (as far as possible) equal numbers of observations.
 
-Examples of quantiles include quartile, quintile, percentile.
+Examples of quantiles include <em>quartile</em>, quintile, <em>percentile</em>.
 </p>
 
 <h3>分散 variance [統計局:基本用語集]</h3>
@@ -599,22 +587,9 @@ Examples of quantiles include quartile, quintile, percentile.
 </figure>
 <p>
 [青木:用語辞典II]
-度数分布表から分散
-    <math><mi>V</mi></math>
-を求めるには，各階級の度数を
-    <math>
-        <msub>
-            <mi>f</mi>
-            <mi>i</mi>
-        </msub>
-    </math>，
-その中心点を
-    <math>
-        <msub>
-            <mi>X</mi>
-            <mi>i</mi>
-        </msub>
-    </math>，
+度数分布表から分散 <var>V</var> を求めるには，
+各階級の度数を <var>f<sub>i</sub></var>，
+その中心点を <var>X<sub>i</sub></var>，
 平均値を
     <math>
         <mover>
@@ -622,11 +597,8 @@ Examples of quantiles include quartile, quintile, percentile.
             <mo>&OverBar;</mo>
         </mover>
     </math>，
-階級数を
-    <math><mi>m</mi></math>，
-全サンプル数を
-    <math><mi>n</mi></math>
-として，
+階級数を <var>m</var>，
+全サンプル数を <var>n</var> として，
 </p>
 <figure>
     <math displaystyle="true">
@@ -678,7 +650,7 @@ Examples of quantiles include quartile, quintile, percentile.
 
 <h3>Variance [STEPS:Glossary]</h3>
 <p>
-The (population) variance of a random variable is a non-negative number which gives an idea of how widely spread the values of the random variable are likely to be; the larger the variance, the more scattered the observations on average.
+The (population) <strong>variance</strong> of a random variable is a non-negative number which gives an idea of how widely spread the values of the random variable are likely to be; the larger the variance, the more scattered the observations on average.
 
 Stating the variance gives an impression of how closely concentrated round the expected value the distribution is; it is a measure of the 'spread' of a distribution about its average value.
 </p>
@@ -687,36 +659,49 @@ Stating the variance gives an impression of how closely concentrated round the e
 <h3>標準偏差 standard deviation [統計局:基本用語集]</h3>
 <p>
 データの散らばりの大きさを表す指標で、大きいほど、データが散らばっていることを表す。
-分散の平方根に等しく、記号
-    <math><mi>&sigma;</mi></math>
-で表す。
+分散の平方根に等しく、記号 <var>&sigma;</var> で表す。
 データが正規分布にしたがう場合、
-    <math>
-        <mo>&PlusMinus;</mo>
-        <mn>1</mn>
-        <mo>&times;</mo>
-        <mi>&sigma;</mi>
-    </math>
-内にデータの約68.3%、
-    <math>
-        <mo>&PlusMinus;</mo>
-        <mn>2</mn>
-        <mo>&times;</mo>
-        <mi>&sigma;</mi>
-    </math>
-内に約95.4%、
-    <math>
-        <mo>&PlusMinus;</mo>
-        <mn>3</mn>
-        <mo>&times;</mo>
-        <mi>&sigma;</mi>
-    </math>
-内に約99.7%のデータが含まれる（シグマの法則）。
+<ul>
+    <li>
+        <math>
+            <mrow>
+                <mo>&PlusMinus;</mo>
+                <mn>1</mn>
+                <mo>&times;</mo>
+                <mi>&sigma;</mi>
+            </mrow>
+        </math>
+        内に約 68.3 %
+    </li>
+    <li>
+        <math>
+            <mrow>
+                <mo>&PlusMinus;</mo>
+                <mn>2</mn>
+                <mo>&times;</mo>
+                <mi>&sigma;</mi>
+            </mrow>
+        </math>
+        内に約 95.4 %
+    </li>
+    <li>
+        <math>
+            <mrow>
+                <mo>&PlusMinus;</mo>
+                <mn>3</mn>
+                <mo>&times;</mo>
+                <mi>&sigma;</mi>
+            </mrow>
+        </math>
+        内に約 99.7 %
+    </li>
+</ul>
+のデータが含まれる（シグマの法則）。
 </p>
 
 <h3>Standard deviation [STEPS:Glossary]</h3>
 <p>
-Standard deviation is a measure of the spread or dispersion of a set of data.
+<strong>Standard deviation</strong> is a measure of the spread or dispersion of a set of data.
 
 It is calculated by taking the square root of the variance and is symbolised by s.d, or s. In other words
 </p>
@@ -748,17 +733,14 @@ The more widely the values are spread out, the larger the standard deviation. Fo
 
 <h3>変動係数 coefficient of variation [青木:用語辞典II]</h3>
 <p>
-測定値が何らかの規定要因に従うときには，平均値が異なっても変動係数
+測定値が何らかの規定要因に従うときには，平均値が異なっても<strong>変動係数</strong>
     <math>
         <msub>
             <mi>C</mi>
             <mi>v</mi>
         </msub>
     </math>
-は同程度の大きさになる。
-不偏分散を
-    <math><mi>U</mi></math>
-算術平均値を
+は同程度の大きさになる。不偏分散を <var>U</var>，算術平均値を
     <math>
         <mover>
             <mi>X</mi>
@@ -794,19 +776,26 @@ The more widely the values are spread out, the larger the standard deviation. Fo
 
 <h3>Coefficient of Variation [STEPS:Glossary]</h3>
 <p>
-The coefficient of variation measures the spread of a set of data as a proportion of its mean. It is often expressed as a percentage.
+The <strong>coefficient of variation</strong> measures the spread of a set of data as a proportion of its mean. It is often expressed as a percentage.
 
-It is the ratio of the sample standard deviation to the sample mean:
+It is the ratio of the <em>sample standard deviation</em> to the sample mean:
+<figure>
     <math>
-        <msub><mi>C</mi><mi>v</mi></msub>
-        <mo>&equals;</mo>
-        <mi>s</mi>
-        <mo>&div;</mo>
-        <mover>
-            <mn>x</mn>
-            <mo>&OverBar;</mo>
-        </mover>
-    </math>.
+        <mrow>
+            <msub>
+                <mi>C</mi>
+                <mi>v</mi>
+            </msub>
+            <mo>&equals;</mo>
+            <mi>s</mi>
+            <mo>&div;</mo>
+            <mover>
+                <mn>x</mn>
+                <mo>&OverBar;</mo>
+            </mover>
+        </mrow>
+    </math>
+</figure>
 </p>
 <p>
 There is an equivalent definition for the coefficient of variation of a population, which is based on the expected value and the standard deviation of a random variable.
@@ -819,20 +808,20 @@ There is an equivalent definition for the coefficient of variation of a populati
 
 <h3>5-Number Summary [STEPS:Glossary]</h3>
 <p>
-A 5-number summary is especially useful when we have so many data that it is sufficient to present a summary of the data rather than the whole data set. It consists of 5 values: the most extreme values in the data set (maximum and minimum values), the lower and upper quartiles, and the median.
+A <strong>5-number summary</strong> is especially useful when we have so many data that it is sufficient to present a summary of the data rather than the whole data set. It consists of 5 values: the most extreme values in the data set (maximum and minimum values), the lower and upper quartiles, and the median.
 </p>
 <p>
-A 5-number summary can be represented in a diagram known as a <i>box and whisker plot</i>. In cases where we have more than one data set to analyse, a 5-number summary is constructed for each, with corresponding multiple box and whisker plots.
+A 5-number summary can be represented in a diagram known as a <em>box and whisker plot</em>. In cases where we have more than one data set to analyse, a 5-number summary is constructed for each, with corresponding multiple box and whisker plots.
 </p>
 
 <h3>外れ値 outlier [青木:用語辞典I]</h3>
 <p>
-他の測定値から飛離れた観察値。外れ値は，常に異常値であるとは限らない。飛離れた観測値は，転記ミスや入力ミスによる場合もあるが，そうでない場合には外れ値が発生した原因をよく考察する必要がある。単に他とかけ離れた値だからといって，分析から除外するのは正しいデータ解析とはいえない。飛離れた値が実際に存在し得るならば，そのような値に影響されない統計手法を選択するようにしなければならない（例えばノンパラメトリックな手法）。
+他の測定値から飛離れた観察値。<strong>外れ値</strong>は，常に異常値であるとは限らない。飛離れた観測値は，転記ミスや入力ミスによる場合もあるが，そうでない場合には外れ値が発生した原因をよく考察する必要がある。単に他とかけ離れた値だからといって，分析から除外するのは正しいデータ解析とはいえない。飛離れた値が実際に存在し得るならば，そのような値に影響されない統計手法を選択するようにしなければならない（例えばノンパラメトリックな手法）。
 </p>
 
 <h3>Outlier [STEPS:Glossary]</h3>
 <p>
-An outlier is an observation in a data set which is far removed in value from the others in the data set. It is an unusually large or an unusually small value compared to the others.
+An <strong>outlier</strong> is an observation in a data set which is far removed in value from the others in the data set. It is an unusually large or an unusually small value compared to the others.
 </p>
 <ul>
     <li>
@@ -867,14 +856,14 @@ An outlier is an observation in a data set which is far removed in value from th
 
 <h3>Skewness [STEPS:Glossary]</h3>
 <p>
-Skewness is defined as asymmetry in the distribution of the sample data values. Values on one side of the distribution tend to be further from the 'middle' than values on the other side.
+<strong>Skewness</strong> is defined as asymmetry in the distribution of the sample data values. Values on one side of the distribution tend to be further from the 'middle' than values on the other side.
 
-For skewed data, the usual measures of location will give different values, for example, <i>mode &lt; median &lt; mean</i> would indicate positive (or right) skewness. Positive (or right) skewness is more common than negative (or left) skewness.
+For skewed data, the usual measures of location will give different values, for example, <em>mode &lt; median &lt; mean</em> would indicate positive (or <em>right</em>) skewness. Positive (or right) skewness is more common than negative (or left) skewness.
 </p>
 
 <h3>変数変換 transformation of variable [青木:用語辞典I]</h3>
 <p>
-統計手法の多くは（1）母分布が正規分布であること，（2）各群の分散が等しいことを仮定している。対数正規分布，二項分布，ポアソン分布などに従う変数はいずれの条件も満たさないので生のデータを使用して分析ができない。このような変数に数学的な変換をほどこし，新しく得られる変数が条件を満たすようにするための方法である。
+統計手法の多くは（1）母分布が正規分布であること，（2）各群の分散が等しいことを仮定している。対数正規分布，二項分布，ポアソン分布などに従う変数はいずれの条件も満たさないので生のデータを使用して分析ができない。このような変数に数学的な<em>変換</em>をほどこし，新しく得られる変数が条件を満たすようにするための方法である。
 </p>
 <ul>
     <li>
@@ -894,42 +883,66 @@ For skewed data, the usual measures of location will give different values, for 
 
 <h3>Transformation to Normality [STEPS:Glossary]</h3>
 <p>
-If there is evidence of marked non-normality then we may be able to remedy this by applying suitable transformations.
+If there is evidence of marked <em>non-normality</em> then we may be able to remedy this by applying suitable transformations. The more commonly used transformations which are appropriate for data which are
 </p>
 <ul>
     <li>
-        The more commonly used transformations which are appropriate for data which are skewed to the right with increasing strength (positive skew) are
-        <math>
-            <mn>1</mn>
-            <mo>&frasl;</mo>
-            <mi>x</mi>
-        </math>,
-        <math>
-            <mi>log</mi>
-            <mo>&ApplyFunction;</mo>
-            <mo fence="true">&lpar;</mo>
-            <mi>x</mi>
-            <mo fence="true">&rpar;</mo>
-        </math>
-        and
-        <math>
-            <mi>sqrt</mi>
-            <mo>&ApplyFunction;</mo>
-            <mo fence="true">&lpar;</mo>
-            <mi>x</mi>
-            <mo fence="true">&rpar;</mo>
-        </math>,
-        where the <math><mi>x</mi></math>'s are the data values.
+        skewed to the <em>right</em> with increasing strength (positive skew) are
+        <ul>
+            <li>
+                <math>
+                    <mrow>
+                        <mn>1</mn>
+                        <mo>&frasl;</mo>
+                        <mi>x</mi>
+                    </mrow>
+                </math>
+            </li>
+            <li>
+                <math>
+                    <mrow>
+                        <mi>log</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>x</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </li>
+            <li>
+                <math>
+                    <mrow>
+                        <mi>sqrt</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>x</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </li>
+        </ul>
     </li>
     <li>
-        The more commonly used transformations which are appropriate for data which are skewed to the left with increasing strength (negative skew) are squaring, cubing, and
-        <math>
-            <mi>exp</mi>
-            <mo>&ApplyFunction;</mo>
-            <mo fence="true">&lpar;</mo>
-            <mi>x</mi>
-            <mo fence="true">&rpar;</mo>
-        </math>.
+        skewed to the <em>left</em> with increasing strength (negative skew) are
+        <ul>
+            <li>
+                squaring
+            </li>
+            <li>
+                cubing
+            </li>
+            <li>
+                <math>
+                    <mrow>
+                        <mi>exp</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>x</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </li>
+        </ul>
     </li>
 </ul>
 
@@ -941,7 +954,9 @@ If there is evidence of marked non-normality then we may be able to remedy this 
 <section id="visualizing_data" class="description">
 
 <h3>度数分布表 frequency table [青木:用語辞典II]</h3>
-<p>一変量の場合，度数分布表は，データの分布の概要を数値的に把握するのに役立つ。</p>
+<p>
+一変量の場合，<strong>度数分布表</strong>は，データの分布の概要を数値的に把握するのに役立つ。
+</p>
 <ul>
     <li>
         名義尺度変数の場合は，出現するデータの度数を数え整理するだけである。
@@ -953,40 +968,40 @@ If there is evidence of marked non-normality then we may be able to remedy this 
         間隔尺度変数・比尺度変数の場合は，最大値と最小値の範囲を10個程度に区分する。これを階級数と呼び，各区分の区間幅を階級幅と呼ぶ。階級の欄にその階級幅を，度数の欄にその階級に属するデータの個数を，累積度数の欄はその階級までの度数の合計を記入する。
     </li>
 </ul>
-<p>二変量の場合は，クロス集計表（contingency table）を採用するとよい。</p>
+<p>二変量の場合は，<em>クロス集計表</em>（contingency table）を採用するとよい。</p>
 
 <h3>分割表 contingency table [青木:用語辞典II]</h3>
 <p>
-二変量の度数分布表は，分割表またはクロス集計表と呼ぶ。
+二変量の度数分布表は，分割表または</em>クロス集計表</em>と呼ぶ。
 各変数の階級分けは，一変量度数分布表の場合と同じように行う。
 </p>
 
 <h3>Frequency Table [STEPS:Glossary]</h3>
 <p>
-A frequency table is a way of summarising a set of data. It is a record of how often each value (or set of values) of the variable in question occurs. It may be enhanced by the addition of percentages that fall into each category.
+A <strong>frequency table</strong> is a way of summarising a set of data. It is a record of how often each value (or set of values) of the variable in question occurs. It may be enhanced by the addition of percentages that fall into each category.
 </p>
 <p>
 A frequency table is used to summarise categorical, nominal, and ordinal data. It may also be used to summarise continuous data once the data set has been divided up into sensible groups.
 </p>
 <p>
-When we have more than one categorical variable in our data set, a frequency table is sometimes called a <i>contingency table</i> because the figures found in the rows are contingent upon (dependent upon) those found in the columns.
+When we have more than one categorical variable in our data set, a frequency table is sometimes called a <em>contingency table</em> because the figures found in the rows are contingent upon (dependent upon) those found in the columns.
 </p>
 
 <h3>Contingency Table [STEPS:Glossary]</h3>
 <p>
-In statistics, a contingency table (also known as a cross tabulation or <i>crosstab</i>) is a type of table in a matrix format that displays the (multivariate) frequency distribution of the variables.
+In statistics, a <strong>contingency table</strong> (also known as a cross tabulation or <em>crosstab</em>) is a type of table in a matrix format that displays the (multivariate) frequency distribution of the variables.
 They provide a basic picture of the interrelation between two variables and can help find interactions between them.
-A <i>pivot table</i> is a way to create contingency tables using spreadsheet software.
+A <em>pivot table</em> is a way to create contingency tables using spreadsheet software.
 </p>
 
 <h3>階級 class[統計局:基本用語集]</h3>
 <p>
-量的データで、度数分布表やヒストグラムを作るとき、データの範囲をいくつかに分けた区間をいう。例：身長165cm以上170cm未満の階級
+量的データで、度数分布表やヒストグラムを作るとき、データの範囲をいくつかに分けた区間をいう。例：身長 165cm 以上 170cm 未満の<strong>階級</strong>
 </p>
 
 <h3>ヒストグラム histogram [統計局:学習教材1]</h3>
 <p>
-ヒストグラムとは、量的データの分布を見るために用いられるグラフで、度数分布表から求められます。データをある区間ごとのグループに分けて、度数を整理した度数分布表を基に、横軸に階級を、縦軸に度数密度をとった棒グラフが、ヒストグラムです。階級は、ある区間ごとに分けたグループを指し、これを示すヒストグラムの棒をビンと呼びます。ヒストグラムは、面積が度数を表すため、高さは度数密度となります。ビンの幅が全て同じヒストグラムでは、縦軸は度数と同じになります。
+<strong>ヒストグラム</strong>とは、量的データの分布を見るために用いられるグラフで、度数分布表から求められます。データをある区間ごとのグループに分けて、度数を整理した度数分布表を基に、横軸に階級を、縦軸に度数密度をとった棒グラフが、ヒストグラムです。階級は、ある区間ごとに分けたグループを指し、これを示すヒストグラムの棒をビンと呼びます。ヒストグラムは、<em>面積</em>が度数を表すため、高さは度数密度となります。ビンの幅が全て同じヒストグラムでは、縦軸は度数と同じになります。
 </p>
 <p>
 階級の数は、データの最大値と最小値、データの範囲、データの度数の合計を参考にして、決定します。分布の階級の幅が広すぎてグラフを作成することが難しい場合や、階級を細かく分析したいときなどは、ビンの幅が異なるヒストグラムを作成して、データの分布を見ることができます。ただし、ビン幅が異なるものがあるヒストグラムを作成する場合は、各ビンの面積が度数に比例するように、ビン幅に応じてビンの高さを変える必要があります。例えば、特定のビンの幅を、他のビンよりも2倍の幅で作成する場合、ビン幅を2倍とし、ビンの高さを&frac12;倍とします。
@@ -994,20 +1009,20 @@ A <i>pivot table</i> is a way to create contingency tables using spreadsheet sof
 
 <h3>Histogram [STEPS:Glossary]</h3>
 <p>
-A histogram is a way of summarising data that are measured on an interval scale (either discrete or continuous). It is often used in exploratory data analysis to illustrate the major features of the distribution of the data in a convenient form. It divides up the range of possible values in a data set into classes or groups. For each group, a rectangle is constructed with a base length equal to the range of values in that specific group, and an area proportional to the number of observations falling into that group. This means that the rectangles might be drawn of non-uniform height.
+A <strong>histogram</strong> is a way of summarising data that are measured on an interval scale (either discrete or continuous). It is often used in exploratory data analysis to illustrate the major features of the distribution of the data in a convenient form. It divides up the range of possible values in a data set into classes or groups. For each group, a rectangle is constructed with a base length equal to the range of values in that specific group, and an <em>area</em> proportional to the number of observations falling into that group. This means that the rectangles might be drawn of non-uniform height.
 </p>
 <p>
-The histogram is only appropriate for variables whose values are numerical and measured on an <strong>interval scale</strong>. It is generally used when dealing with large data sets (>100 observations), when stem and leaf plots become tedious to construct. A histogram can also help detect any unusual observations (outliers), or any gaps in the data set.
+The histogram is only appropriate for variables whose values are numerical and measured on an <em>interval scale</em>. It is generally used when dealing with large data sets (>100 observations), when stem and leaf plots become tedious to construct. A histogram can also help detect any unusual observations (outliers), or any gaps in the data set.
 </p>
 
 <h3>箱ひげ図 box and whisker plot [統計局:学習教材1]</h3>
 <p>
-箱ひげ図は、四分位数でデータの分布を表した、ヒストグラムを簡略化した図です。複数のデータ分布を比較するために用いられます。他のデータから大きく離れたデータの値を外れ値と呼び、外れ値を見つける簡易的な方法として箱ひげ図が利用できます。四分位範囲と呼ばれる箱ひげ図の箱の長さの1.5倍よりも外側に離れているデータは外れ値となります。
+<strong>箱ひげ図</strong>は、四分位数でデータの分布を表した、ヒストグラムを簡略化した図です。複数のデータ分布を比較するために用いられます。他のデータから大きく離れたデータの値を外れ値と呼び、外れ値を見つける簡易的な方法として箱ひげ図が利用できます。四分位範囲と呼ばれる箱ひげ図の箱の長さの <em>1.5</em> 倍よりも外側に離れているデータは外れ値となります。
 </p>
 
 <h3>Box and Whisker Plot [STEPS:Glossary]</h3>
 <p>
-A box and whisker plot is a way of summarising a set of data measured on an <strong>interval scale</strong>. It is often used in exploratory data analysis. It is a type of graph which is used to show the shape of the distribution, its central value, and variability. The picture produced consists of the most extreme values in the data set (maximum and minimum values), the lower and upper quartiles, and the median.
+A <strong>box and whisker plot</strong> is a way of summarising a set of data measured on an <em>interval scale</em>. It is often used in exploratory data analysis. It is a type of graph which is used to show the shape of the distribution, its central value, and variability. The picture produced consists of the most extreme values in the data set (maximum and minimum values), the lower and upper quartiles, and the median.
 </p>
 <p>
 A box plot (as it is often called) is especially helpful for indicating whether a distribution is skewed and whether there are any unusual observations (outliers) in the data set.
@@ -1017,8 +1032,7 @@ Box and whisker plots are also very useful when large numbers of observations ar
 
 <h3>散布図 scatterplot [統計局:学習教材1]</h3>
 <p>
-散布図は、2 つの変数を横軸と縦軸にとり、データをプロットした（点で打った）グラフです。2 つの変数の間に関連があるかをみるために用いられます。
-緯度と気温の散布図をみると、緯度が0（赤道）に近いほど年間平均気温が高くなり、緯度が高いほど平均気温が低くなっていることが分かります。2 組のデータにおいて、ひとつの変数が増加（減少）するに伴い、もう⼀⽅も増加（減少）する傾向で観測値が分布するとき、相関関係があると言い、「緯度と気温には相関関係がある」と言うことができます。
+<strong>散布図</strong>は、2つの変数を横軸と縦軸にとり、データをプロットした（点で打った）グラフです。2つの変数の間に関連があるかをみるために用いられます。緯度と気温の散布図をみると、緯度が 0（赤道）に近いほど年間平均気温が高くなり、緯度が高いほど平均気温が低くなっていることが分かります。2組のデータにおいて、ひとつの変数が増加（減少）するに伴い、もう⼀⽅も増加（減少）する傾向で観測値が分布するとき、<em>相関関係</em>があると言い、「緯度と気温には相関関係がある」と言うことができます。
 </p>
 <p>
 しかし、相関関係があることが、必ずしも因果関係があることを示すものとはならないことに、注意しなければなりません。例えば、働いている人について、血圧と給料の散布図を作成した場合、血圧が高くなるにつれて、給料が上がることがみられたとします。この場合、年齢が高い人ほど血圧が高く、また年齢が高いほど給料が高くなるという背景が考えられ、「血圧を高くすると、給料が上がる」という因果関係があるとは言えません。
@@ -1026,7 +1040,7 @@ Box and whisker plots are also very useful when large numbers of observations ar
 
 <h3>Scatterplot [STEPS:Glossary]</h3>
 <p>
-A scatterplot is a useful summary of a set of bivariate data (two variables), usually drawn before working out a linear correlation coefficient or fitting a regression line. It gives a good visual picture of the relationship between the two variables, and aids the interpretation of the correlation coefficient or regression model.
+A <strong>scatterplot</strong> is a useful summary of a set of bivariate data (two variables), usually drawn before working out a linear correlation coefficient or fitting a regression line. It gives a good visual picture of the relationship between the two variables, and aids the interpretation of the <em>correlation coefficient</em> or regression model.
 </p>
 <p>
 Each unit contributes one point to the scatterplot, on which points are plotted but not joined. The resulting pattern indicates the type and strength of the relationship between the two variables. The more the points tend to cluster around a straight line, the stronger the linear relationship between the two variables (the higher the correlation).
@@ -1037,52 +1051,33 @@ If there exists a random scatter of points, there is no relationship between the
 
 <h3>相関 correlation [統計局:基本用語集]</h3>
 <p>
-2つの変数の間で、一方が増えれば他方も増える（または減少する）という直線的な傾向がある場合、2つの変数の間に正の（負の）相関があるという。
+2つの変数の間で、一方が増えれば他方も増える（または減少する）という直線的な傾向がある場合、2つの変数の間に正の（負の）<strong>相関</strong>があるという。
 </p>
 
 <h3>相関係数 coefficient of correlation [統計局:基本用語集]</h3>
 <p>
-相関の強さを表す指標で、
-    <math>
-        <mo>&minus;</mo>
-        <mn>1</mn>
-    </math>
-から1の間の値をとる。2つの変量が正の相関関係にある場合、正の値をとり、負の相関関係にある場合、負の値をとる。いずれの場合も相関が強いほど1に近い大きな絶対値をとる。例えば、散布図を描いたときにデータが完全に一直線上に乗っており、その直線の傾きが正であるときは相関係数が1、負であるときは
-    <math>
-        <mo>&minus;</mo>
-        <mn>1</mn>
-    </math>
-となる。相関関係がない場合は、0に近い値をとる。
+相関の強さを表す指標で、&minus;1 から 1 の間の値をとる。2つの変量が正の相関関係にある場合、正の値をとり、負の相関関係にある場合、負の値をとる。いずれの場合も相関が強いほど 1 に近い大きな絶対値をとる。例えば、散布図を描いたときにデータが完全に一直線上に乗っており、その直線の傾きが正であるときは相関係数が 1、負であるときは &minus;1 となる。相関関係がない場合は、0 に近い値をとる。
 </p>
 
 <h3>Correlation Coefficient [STEPS:Glossary]</h3>
 <p>
-A correlation coefficient is a number between
-    <math>
-        <mo>&minus;</mo>
-        <mn>1</mn>
-    </math>
-and 1 which measures the degree to which two variables are linearly related.
+A <strong>correlation coefficient</strong> is a number between &minus;1 and 1 which measures the degree to which two variables are linearly related.
 </p>
 <ul>
     <li>
-        If there is perfect linear relationship with positive slope between the two variables, we have a correlation coefficient of 1;
+        If there is perfect linear relationship with <em>positive slope</em> between the two variables, we have a correlation coefficient of 1;
     </li>
     <li>
         if there is positive correlation, whenever one variable has a high (low) value, so does the other.
     </li>
     <li>
-        If there is a perfect linear relationship with negative slope between the two variables, we have a correlation coefficient of
-        <math>
-            <mo>&minus;</mo>
-            <mn>1</mn>
-        </math>;
+        If there is a perfect linear relationship with <em>negative slope</em> between the two variables, we have a correlation coefficient of &minus;1;
     </li>
     <li>
         if there is negative correlation, whenever one variable has a high (low) value, the other has a low (high) value.
     </li>
     <li>
-        A correlation coefficient of 0 means that there is no linear relationship between the variables.
+        A correlation coefficient of 0 means that there is <em>no linear relationship</em> between the variables.
     </li>
 </ul>
 <p>
