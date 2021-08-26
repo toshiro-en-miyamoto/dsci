@@ -1051,6 +1051,81 @@ A computational procedure frequently used to analyze the data from an experiment
 <strong>Regression analysis</strong> involves identifying the relationship between a <em>dependent variable</em> and one or more <strong>independent variables</strong>. A model of the relationship is hypothesized, and estimates of the parameter values are used to develop an <strong>estimated regression equation</strong>. Various tests are then employed to determine if the model is satisfactory. If the model is deemed satisfactory, the estimated regression equation can be used to predict the value of the dependent variable given values for the independent variables.
 </p>
 
+<h3>Regression model</h3>
+<p>
+In <strong>simple linear regression</strong>, the model used to describe the relationship between a single dependent variable <var>y</var> and a single independent variable <var>x</var> is
+<figure>
+    <math>
+        <mi>y</mi>
+        <mo>&equals;</mo>
+        <mi>&beta;₀</mi>
+        <mo>&plus;</mo>
+        <mi>&beta;₁</mi>
+        <mo>&InvisibleTimes;</mo>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mi>&epsilon;</mi>
+    </math>
+</figure>
+<p>
+<var>&beta;₀</var> and <var>&beta;₁</var> are referred to as the model parameters, and <var>&epsilon;</var> is a probabilistic error term that accounts for the variability in <var>y</var> that cannot be explained by the linear relationship with <var>x</var>. If the error term were not present, the model would be deterministic; in that case, knowledge of the value of <var>x</var> would be sufficient to determine the value of <var>y</var>.
+</p>
+<p>
+In <strong>multiple regression analysis</strong>, the model for simple linear regression is extended to account for the relationship between the dependent variable <var>y</var> and <var>p</var> independent variables <var>x₁</var>, <var>x₂</var>, &hellip;, <var>x<sub>p</sub></var>. The general form of the multiple regression model is
+<figure>
+    <math>
+        <mi>y</mi>
+        <mo>&equals;</mo>
+        <mi>&beta;₀</mi>
+        <mo>&plus;</mo>
+        <mi>&beta;₁</mi>
+        <mo>&InvisibleTimes;</mo>
+        <mi>x₁</mi>
+        <mo>&plus;</mo>
+        <mi>&beta;₂</mi>
+        <mo>&InvisibleTimes;</mo>
+        <mi>x₂</mi>
+        <mo>&plus;</mo>
+        <mi>&hellip;</mi>
+        <mo>&plus;</mo>
+        <msub>
+            <mi>&beta;</mi>
+            <mi>p</mi>
+        </msub>
+        <mo>&InvisibleTimes;</mo>
+        <msub>
+            <mi>x</mi>
+            <mi>p</mi>
+        </msub>
+        <mo>&plus;</mo>
+        <mi>&epsilon;</mi>
+    </math>
+</figure>
+The parameters of the model are the <var>&beta;₀</var>, <var>&beta;₁</var>, &hellip;, <var>&beta;<sub>p</sub></var>, and <var>&epsilon;</var> is the error term.
+</p>
+
+<h3>Least squares method</h3>
+<p>
+Either a simple or multiple regression model is initially posed as a hypothesis concerning the relationship among the dependent and independent variables. The <strong>least squares method</strong> is the most widely used procedure for developing estimates of the model parameters. For simple linear regression, the least squares estimates of the model parameters <var>&beta;₀</var> and <var>&beta;₁</var> are denoted <var>b₀</var> and <var>b₁</var>. Using these estimates, an estimated regression equation is constructed:
+    <math>
+        <mrow>
+            <mover accent="true">
+                <mi>y</mi>
+                <mo>&Hat;</mo>
+            </mover>
+            <mo>&equals;</mo>
+            <mi>b₀</mi>
+            <mo>&plus;</mo>
+            <mi>b₁</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>x</mi>
+        </mrow>
+    </math>.
+The graph of the estimated regression equation for simple linear regression is a straight line approximation to the relationship between <var>y</var> and <var>x</var>.
+</p>
+
+
+
 
 
 </body>
