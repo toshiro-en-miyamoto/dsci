@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
     <title>Statistics by Brotanica</title>
-    <link rel="stylesheet" href="../../style/dark.css" type="text/css">
-    <link rel="stylesheet" href="../../style/indent.css" type="text/css">
+    <link rel="stylesheet" href="dark.css" type="text/css">
+    <link rel="stylesheet" href="indent.css" type="text/css">
 </head>
 <body>
 
@@ -1048,7 +1048,7 @@ A computational procedure frequently used to analyze the data from an experiment
 <section id="correlation_analysis" class="description">
 
 <p>
-<strong>Regression analysis</strong> involves identifying the relationship between a <em>dependent variable</em> and one or more <strong>independent variables</strong>. A model of the relationship is hypothesized, and estimates of the parameter values are used to develop an <strong>estimated regression equation</strong>. Various tests are then employed to determine if the model is satisfactory. If the model is deemed satisfactory, the estimated regression equation can be used to predict the value of the dependent variable given values for the independent variables.
+<strong>Regression</strong> analysis involves identifying the relationship between a dependent variable and one or more independent variables. A <em>model</em> of the relationship is hypothesized, and estimates of the parameter values are used to develop an <em>estimated regression equation</em>. Various tests are then employed to determine if the model is satisfactory. If the model is deemed satisfactory, the estimated regression equation can be used to predict the value of the dependent variable given values for the independent variables.
 </p>
 
 <h3>Regression model</h3>
@@ -1068,10 +1068,10 @@ In <strong>simple linear regression</strong>, the model used to describe the rel
     </math>
 </figure>
 <p>
-<var>&beta;₀</var> and <var>&beta;₁</var> are referred to as the model parameters, and <var>&epsilon;</var> is a probabilistic error term that accounts for the variability in <var>y</var> that cannot be explained by the linear relationship with <var>x</var>. If the error term were not present, the model would be deterministic; in that case, knowledge of the value of <var>x</var> would be sufficient to determine the value of <var>y</var>.
+<var>&beta;₀</var> and <var>&beta;₁</var> are referred to as the <em>model parameters</em>, and <var>&epsilon;</var> is a probabilistic <em>error term</em> that accounts for the variability in <var>y</var> that cannot be explained by the linear relationship with <var>x</var>. If the error term were not present, the model would be deterministic; in that case, knowledge of the value of <var>x</var> would be sufficient to determine the value of <var>y</var>.
 </p>
 <p>
-In <strong>multiple regression analysis</strong>, the model for simple linear regression is extended to account for the relationship between the dependent variable <var>y</var> and <var>p</var> independent variables <var>x₁</var>, <var>x₂</var>, &hellip;, <var>x<sub>p</sub></var>. The general form of the multiple regression model is
+In <strong>multiple regression</strong> analysis, the model for simple linear regression is extended to account for the relationship between the dependent variable <var>y</var> and <var>p</var> independent variables <var>x₁</var>, <var>x₂</var>, &hellip;, <var>x<sub>p</sub></var>. The general form of the multiple regression model is
 <figure>
     <math>
         <mi>y</mi>
@@ -1123,10 +1123,343 @@ Either a simple or multiple regression model is initially posed as a hypothesis 
     </math>.
 The graph of the estimated regression equation for simple linear regression is a straight line approximation to the relationship between <var>y</var> and <var>x</var>.
 </p>
+<p>
+As an illustration of regression analysis and the least squares method, suppose a university medical centre is investigating the relationship between stress and blood pressure. Assume that both a stress test score and a blood pressure reading have been recorded for a sample of 20 patients. The data are shown graphically in Figure 4, called a scatter diagram. Values of the independent variable, stress test score, are given on the horizontal axis, and values of the dependent variable, blood pressure, are shown on the vertical axis. The line passing through the data points is the graph of the <em>estimated regression equation</em>:
+</p>
+<figure>
+    <math>
+        <mrow>
+            <mover accent="true">
+                <mi>y</mi>
+                <mo>&Hat;</mo>
+            </mover>
+            <mo>&equals;</mo>
+            <mn>42.3</mn>
+            <mo>&plus;</mo>
+            <mn>0.49</mn>
+            <mo>&InvisibleTimes;</mo>
+            <mi>x</mi>
+        </mrow>
+    </math>
+</figure>
+<p>
+The parameter estimates, <var>b₀</var> = 42.3 and <var>b₁</var> = 0.49, were obtained using the least squares method.
+</p>
+<figure>
+    <img src="stress-blood-pressure.jpg"
+        alt="Scatter diagram width estimated regress equation">
+    <figcaption>
+        Figure 4. A scatter diagram with estimated regress equation, showing the relationship between stress and blood pressure.
+    </figcaption>
+</figure>
+<p>
+A primary use of the estimated regression equation is to <em>predict</em> the value of the dependent variable when values for the independent variables are given. For instance, given a patient with a stress test score of 60, the predicted blood pressure is 42.3 + 0.49(60) = 71.7. The values predicted by the estimated regression equation are the points on the line in Figure 4, and the actual blood pressure readings are represented by the points scattered about the line. The difference between the observed value of <var>y</var> and the value of <var>y</var> predicted by the estimated regression equation is called a <em>residual</em>. The least squares method chooses the parameter estimates such that the sum of the squared residuals is minimized.
+</p>
+
+<h3>Analysis of variance and goodness of fit</h3>
+<p>
+A commonly used measure of the goodness of fit provided by the estimated regression equation is the <em>coefficient of determination</em>. Computation of this coefficient is based on the analysis of variance procedure that partitions the total variation in the dependent variable, denoted <em>SST</em>, into two parts: the part explained by the estimated regression equation, denoted <em>SSR</em>, and the part that remains unexplained, denoted <em>SSE</em>.
+</p>
+<p>
+The measure of total variation, SST, is the sum of the squared deviations of the dependent variable about its mean:
+    <math>
+        <mrow>
+            <mi>&sum;</mi>
+            <mo>&ApplyFunction;</mo>
+            <msup>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>y</mi>
+                    <mo>&minus;</mo>
+                    <mover accent="true">
+                        <mi>y</mi>
+                        <mo>&OverBar;</mo>
+                    </mover>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mn>2</mn>
+            </msup>
+        </mrow>
+    </math>.
+This quantity is known as the total sum of squares. The measure of unexplained variation, SSE, is referred to as the residual sum of squares. For the data in Figure 4, SSE is the sum of the squared distances from each point in the scatter diagram (see Figure 4) to the estimated regression line:
+    <math>
+        <mrow>
+            <mi>&sum;</mi>
+            <mo>&ApplyFunction;</mo>
+            <msup>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>y</mi>
+                    <mo>&minus;</mo>
+                    <mover accent="true">
+                        <mi>y</mi>
+                        <mo>&Hat;</mo>
+                    </mover>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mn>2</mn>
+            </msup>
+        </mrow>
+    </math>.
+SSE is also commonly referred to as the error sum of squares. A key result in the analysis of variance is that <em>SSR + SSE = SST</em>.
+</p>
+<p>
+The ratio <em><var>r<sup>2</sup></var> = SSR/SST</em> is called the <strong>coefficient of determination</strong>. If the data points are clustered closely about the estimated regression line, the value of SSE will be small and SSR/SST will be close to 1. Using <var>r<sup>2</sup></var>, whose values lie between 0 and 1, provides a measure of goodness of fit; values closer to 1 imply a <em>better fit</em>. A value of <var>r<sup>2</sup></var> = 0 implies that there is no linear relationship between the dependent and independent variables.
+</p>
+<section id="SST_SSE" class="wrapup">
+<table>
+    <tr>
+        <td>
+            Total Sum of Squares
+        </td>
+        <td>
+            SST =
+            <math>
+                <mrow>
+                    <mi>&sum;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <msup>
+                        <mrow>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>y</mi>
+                            <mo>&minus;</mo>
+                            <mover accent="true">
+                                <mi>y</mi>
+                                <mo>&OverBar;</mo>
+                            </mover>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+            </math>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Error Sum of Squares
+        </td>
+        <td>
+            SSE =
+            <math>
+                <mrow>
+                    <mi>&sum;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <msup>
+                        <mrow>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>y</mi>
+                            <mo>&minus;</mo>
+                            <mover accent="true">
+                                <mi>y</mi>
+                                <mo>&Hat;</mo>
+                            </mover>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+            </math>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            as SSR + SSE = SST,
+        </td>
+        <td>
+            <var>r<sup>2</sup></var> + SSE/SST = 1
+        </td>
+    </tr>
+</table>
+</section>
+<p>
+When expressed as a percentage, the coefficient of determination can be interpreted as the percentage of the total sum of squares that can be explained using the estimated regression equation. For the stress-level research study, the value of <var>r<sup>2</sup></var> is 0.583; thus, 58.3% of the total sum of squares can be explained by the estimated regression equation
+    <math>
+        <mrow>
+            <mover accent="true">
+                <mi>y</mi>
+                <mo>&Hat;</mo>
+            </mover>
+            <mo>&equals;</mo>
+            <mn>42.3</mn>
+            <mo>&equals;</mo>
+            <mn>0.49</mn>
+            <mo>&InvisibleTimes;</mo>
+            <mi>x</mi>
+        </mrow>
+    </math>.
+For typical data found in the social sciences, values of <var>r<sup>2</sup></var> as low as 0.25 are often considered useful. For data in the physical sciences, <var>r<sup>2</sup></var> values of 0.60 or greater are frequently found.
+</p>
+
+<h3>Significance testing</h3>
+<p>
+In a regression study, hypothesis tests are usually conducted to assess the statistical significance of the overall relationship represented by the regression model and to test for the statistical significance of the individual parameters. The statistical tests used are based on the following assumptions concerning the error term:
+</p>
+<ol>
+    <li>
+        <var>&epsilon;</var> is a random variable with an expected value of 0,
+    </li>
+    <li>
+        the variance of <var>&epsilon;</var> is the same for all values of <var>x</var>,
+    </li>
+    <li>
+        the values of <var>&epsilon;</var> are independent, and
+    </li>
+    <li>
+        <var>&epsilon;</var> is a normally distributed random variable.
+    </li>
+</ol>
+<p>
+The mean square due to regression, denoted MSR, is computed by dividing SSR by a number referred to as its <em>degrees of freedom</em>; in a similar manner, the mean square due to error, MSE, is computed by dividing SSE by its degrees of freedom. An <em>F-test</em> based on the ratio MSR/MSE can be used to test the statistical significance of the overall relationship between the dependent variable and the set of independent variables. In general, large values of <em>F = MSR/MSE</em> support the conclusion that the overall relationship is statistically significant. If the overall model is deemed statistically significant, statisticians will usually conduct hypothesis tests on the individual parameters to determine if each independent variable makes a significant contribution to the model.
+</p>
+
+<h3>Residual analysis</h3>
+<p>
+The analysis of residuals plays an important role in validating the regression model. If the error term in the regression model satisfies the four assumptions noted earlier, then the model is considered valid. Since the statistical tests for significance are also based on these assumptions, the conclusions resulting from these significance tests are called into <em>question if</em> the assumptions regarding ε are not satisfied.
+</p>
+<p>
+The <var>i</var> th residual is the difference between the observed value of the dependent variable,
+    <math>
+        <msub>
+            <mi>y</mi>
+            <mi>i</mi>
+        </msub>
+    </math>,
+and the value predicted by the estimated regression equation,
+    <math>
+        <msub>
+            <mover accent="true">
+                <mi>y</mi>
+                <mo>&Hat;</mo>
+            </mover>
+            <mi>i</mi>
+        </msub>
+    </math>.
+These residuals, computed from the available data, are treated as estimates of the model error, <var>&epsilon;</var>. As such, they are used by statisticians to validate the assumptions concerning <var>&epsilon;</var>. Good judgment and experience play key roles in residual analysis.
+</p>
+<p>
+Graphical plots and statistical tests concerning the residuals are examined carefully by statisticians, and judgments are made based on these examinations. The most common residual plot shows
+    <math>
+        <msub>
+            <mover accent="true">
+                <mi>y</mi>
+                <mo>&Hat;</mo>
+            </mover>
+            <mi>i</mi>
+        </msub>
+    </math>
+on the horizontal axis and the residuals on the vertical axis. If the assumptions regarding the error term, <var>&epsilon;</var>, are satisfied, the residual plot will consist of a horizontal band of points. If the residual analysis does not indicate that the model assumptions are satisfied, it often suggests ways in which the model can be modified to obtain better results.
+</p>
+
+<h3>Model building</h3>
+<p>
+In regression analysis, model building is the process of developing a probabilistic model that best describes the relationship between the dependent and independent variables. The major issues are
+<ul>
+    <li>
+        finding the proper form (linear or curvilinear) of the relationship and
+    </li>
+    <li>
+        selecting which independent variables to include.
+    </li>
+</ul>
+In building models it is often desirable to use qualitative as well as quantitative variables.
+</p>
+<p>
+As noted above, quantitative variables measure how much or how many; qualitative variables represent types or categories. For instance, suppose it is of interest to predict sales of an iced tea that is available in either bottles or cans. Clearly, the independent variable “container type” could influence the dependent variable “sales.” Container type is a <em>qualitative</em> variable, however, and must be assigned numerical values if it is to be used in a regression study. So-called <em>dummy variables</em> are used to represent qualitative variables in regression analysis. For example, the dummy variable <var>x</var> could be used to represent container type by setting
+    <math>
+        <mrow>
+            <mi>x</mi>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+        </mrow>
+    </math>
+if the iced tea is packaged in a bottle and
+    <math>
+        <mrow>
+            <mi>x</mi>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </mrow>
+    </math>
+if the iced tea is in a can. If the beverage could be placed in glass bottles, plastic bottles, or cans, it would require two dummy variables to properly represent the qualitative variable container type. In general,
+    <math>
+        <mrow>
+            <mi>k</mi>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+        </mrow>
+    </math>
+dummy variables are needed to model the effect of a qualitative variable that may assume <var>k</var> values.
+</p>
+<p>
+The general linear model
+    <math>
+        <mrow>
+            <mi>y</mi>
+            <mo>&equals;</mo>
+            <mi>&beta;₀</mi>
+            <mo>&plus;</mo>
+            <mi>&beta;₁</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>x₁</mi>
+            <mo>&plus;</mo>
+            <mi>&beta;₂</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>x₂</mi>
+            <mo>&plus;</mo>
+            <mi>&hellip;</mi>
+            <mo>&plus;</mo>
+            <msub>
+                <mi>&beta;</mi>
+                <mi>p</mi>
+            </msub>
+            <mo>&InvisibleTimes;</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>p</mi>
+            </msub>
+            <mo>&plus;</mo>
+            <mi>&epsilon;</mi>
+        </mrow>
+    </math>
+can be used to model a wide variety of <em>curvilinear</em> relationships between dependent and independent variables. For instance, each of the independent variables could be a nonlinear function of other variables. Also, statisticians sometimes find it necessary to transform the dependent variable in order to build a satisfactory model. A logarithmic transformation is one of the more common types.
+</p>
+
+<h3>Correlation</h3>
+<p>
+Correlation and regression analysis are related in the sense that both deal with relationships among variables. The <strong>correlation coefficient</strong> is a measure of <em>linear</em> association between two variables. Values of the correlation coefficient are always between −1 and +1. A correlation coefficient of +1 indicates that two variables are perfectly related in a positive linear sense, a correlation coefficient of −1 indicates that two variables are perfectly related in a negative linear sense, and a correlation coefficient of 0 indicates that there is no linear relationship between the two variables. For simple linear regression, the sample correlation coefficient is the square root of the coefficient of determination, with the sign of the correlation coefficient being the same as the sign of <var>b<sub>1</sub></var>, the coefficient of <var>x<sub>1</sub></var> in the estimated regression equation.
+</p>
+<p>
+Neither regression nor correlation analyses can be interpreted as establishing cause-and-effect relationships. They can indicate only how or to what extent variables are associated with each other. The correlation coefficient measures only the degree of linear association between two variables. Any conclusions about a cause-and-effect relationship must be based on the judgment of the analyst.
+</p>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h1>Time Series and Forecasting</h1>
+<section id="time_series" class="description">
+
+
+<p>
+A time series is a set of data collected at successive points in time or over successive periods of time. A sequence of monthly data on new housing starts and a sequence of weekly data on product sales are examples of time series. Usually the data in a time series are collected at equally spaced periods of time, such as hour, day, week, month, or year.
+</p>
+<p>
+A primary concern of time series analysis is the development of forecasts for <em>future</em> values of the series. For instance, the federal government develops forecasts of many economic time series such as the gross domestic product, exports, and so on. Most companies develop forecasts of product sales.
+</p>
+<p>
+While in practice both qualitative and quantitative forecasting methods are utilized, statistical approaches to forecasting employ quantitative methods. The two most widely used methods of forecasting are the Box-Jenkins <em>autoregressive integrated moving average</em> (ARIMA) and econometric models.
+</p>
+<p>
+<strong>ARIMA methods</strong> are based on the assumption that a probability model generates the time series data. Future values of the time series are assumed to be related to <em>past</em> values as well as to past errors. A time series must be <em>stationary</em>, i.e., one which has a constant mean, variance, and autocorrelation function, in order for an ARIMA model to be applicable. For nonstationary series, sometimes differences between successive values can be taken and used as a stationary series to which the ARIMA model can be applied.
+</p>
+<p>
+<strong>Econometric models</strong> develop forecasts of a time series using <em>one or more</em> related time series and possibly past values of the time series. This approach involves developing a regression model in which the time series is forecast as the dependent variable; the related time series as well as the past values of the time series are the independent or predictor variables.
+</p>
 
 
 
 
+</section>
 
 </body>
 </html>

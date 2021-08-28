@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
     <title>Inference and Test</title>
-    <link rel="stylesheet" href="../style/dark.css" type="text/css">
-    <link rel="stylesheet" href="../style/indent.css" type="text/css">
+    <link rel="stylesheet" href="dark.css" type="text/css">
+    <link rel="stylesheet" href="indent.css" type="text/css">
 </head>
 <body>
 
@@ -614,142 +614,6 @@ In a hypothesis test, a type II error occurs when the null hypothesis <var>H₀<
 A type II error would occur if it was concluded that the two drugs produced the same effect, i.e. there is no difference between the two drugs on average, when in fact they produced different ones.
 </p>
 
-<h3>分散分析 analysis of variance [青木:自習ノート、回帰の分散分析]</h3>
-<ul>
-    <li>帰無仮説 <var>H₀</var>:
-        「分析に使用した独立変数で，従属変数は説明できない」
-    </li>
-    <li>対立仮説 <var>H₁</var>:
-        「分析に使用した独立変数で，従属変数は説明できる」
-    </li>
-    <li>有意水準 <var>&alpha;</var> で両側検定を行う
-    </li>
-</ul>
-<p>
-従属変数の分散は回帰によって説明できる部分と，説明できない部分に分解される。
-</p>
-<figure>
-    <figcaption>回帰の分散分析表</figcaption>
-    <table>
-        <tr>
-            <th>変動要因</th>
-            <th>平方和</th>
-            <th>自由度</th>
-            <th>平均平方</th>
-            <th><var>F</var>値</th>
-        </tr>
-        <tr>
-            <td>回帰</td>
-            <td> <var>S<sub>r</sub></var> </td>
-            <td> <var>p</var> </td>
-            <td>
-                <math displaystyle="true">
-                    <msub>
-                        <mi>MS</mi>
-                        <mi>r</mi>
-                    </msub>
-                    <mo>&equals;</mo>
-                    <mfrac>
-                        <msub>
-                            <mi>S</mi>
-                            <mi>r</mi>
-                        </msub>
-                        <mi>p</mi>
-                    </mfrac>
-                </math>
-            </td>
-            <td>
-                <math displaystyle="true">
-                    <mfrac>
-                        <msub>
-                            <mi>MS</mi>
-                            <mi>r</mi>
-                        </msub>
-                        <msub>
-                            <mi>MS</mi>
-                            <mi>e</mi>
-                        </msub>
-                    </mfrac>
-                </math>
-            </td>
-        </tr>
-        <tr>
-            <td>残差</td>
-            <td> <var>S<sub>e</sub></var> </td>
-            <td>
-                <var>n</var> &minus; <var>p</var> &minus; 1
-            </td>
-            <td>
-                <math displaystyle="true">
-                    <msub>
-                        <mi>MS</mi>
-                        <mi>e</mi>
-                    </msub>
-                    <mo>&equals;</mo>
-                    <mfrac>
-                        <msub>
-                            <mi>S</mi>
-                            <mi>r</mi>
-                        </msub>
-                        <mrow>
-                            <mi>n</mi>
-                            <mo>&minus;</mo>
-                            <mi>p</mi>
-                            <mo>&minus;</mo>
-                            <mn>1</mn>
-                        </mrow>
-                    </mfrac>
-                </math>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>全体</td>
-            <td> <var>S<sub>t</sub></var> </td>
-            <td>
-                <var>n</var> &minus; 1
-            </td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-</figure>
-<p>
-<var>F</var> 値は自由度が
-    <math>
-        <mo fence="true">&lpar;</mo>
-        <mi>p</mi>
-        <mo separator="true">&comma;</mo>
-        <mi>n</mi>
-        <mo>&minus;</mo>
-        <mi>p</mi>
-        <mo>&minus;</mo>
-        <mn>1</mn>
-        <mo fence="true">&rpar;</mo>
-    </math>
-の <var>F</var> 分布に従う。有意確率を <var>P₀</var> とすると，
-</p>
-<ul>
-    <li>
-        <math>
-            <mi>P₀</mi>
-            <mo>&gt;</mo>
-            <mi>&alpha;</mi>
-        </math>
-        のとき，帰無仮説は棄却できない。
-        「分析に使用した独立変数で，従属変数は説明できるとはいえない」
-    </li>
-    <li>
-        <math>
-            <mi>P₀</mi>
-            <mo>&le;</mo>
-            <mi>&alpha;</mi>
-        </math>
-        のとき，帰無仮説を棄却する。
-        「分析に使用した独立変数で，従属変数は説明できる」
-    </li>
-</ul>
-
 <h3>Experimental Design [STEPS:Glossary]</h3>
 <p>
 We are concerned with the analysis of data generated from an experiment. It is wise to take time and effort to organise the experiment properly to ensure that the right type of data, and enough of it, is available to answer the questions of interest as clearly and efficiently as possible. This process is called <strong>experimental design</strong>.
@@ -787,7 +651,7 @@ A factor is a general type or category of treatments. Different treatments const
 
 <h3>従属変数 dependent variable [青木:用語辞典I]</h3>
 <p>
-回帰分析において，ある1個の変数 <var>Y</var> の予測値
+<em>回帰分析</em>において，ある1個の変数 <var>Y</var> の予測値
     <math>
         <mover>
             <mi>Y</mi>
@@ -989,7 +853,510 @@ A factor is a general type or category of treatments. Different treatments const
 あるケースがどの群に属するかは，例えば臨床所見から医師が鑑別診断を下すように，統計学とは別の観点から（やや経験学的に）決められる「外的基準」である。このようなことから，「従属変数」を基準変数（criterion variable）と呼ぶ場合もある（回帰分析の場合にも独立変数が「外的基準」であることに変りはない）。
 </p>
 
+<h3>回帰分析 regression analysis [青木:用語辞典I]</h3>
+<p>
+ある変数を別の（複数の）変数によって予測するための<em>予測式</em>を求めるための手法。予測式は両者の関係を表すことにもなる。
+</p>
 
+<h3>Regression [STEPS:Glossary]</h3>
+<ul>
+    <li>
+        <strong>Simple linear regression</strong> aims to find a <em>linear</em> relationship between a response variable and a possible predictor variable by the method of least squares.
+    </li>
+    <li>
+        <strong>Multiple linear regression</strong> aims is to find a <em>linear</em> relationship between a response variable and several possible predictor variables.
+    </li>
+    <li>
+        <strong>Nonlinear regression</strong> aims to describe the relationship between a response variable and one or more explanatory variables in a <em>non-linear</em> fashion.
+    </li>
+</ul>
+
+<h3>重回帰分析 multiple linear regression analysis [青木:用語辞典I]</h3>
+<p>
+いくつかの変数 <var>X₁</var>，<var>X₂</var>，&hellip;，<var>X<sub>n</sub></var>（独立変数）に基づいて，別の変数 <var>Y</var>（従属変数）を予測することである。予測式として，以下のようなものを得る。つまり，独立変数の重み付け合計値で予測値
+    <math>
+        <mover accent="true">
+            <mi>Y</mi>
+            <mo>&Hat;</mo>
+        </mover>
+    </math>
+を得る。重みは<em>偏回帰係数</em>と呼ばれる。
+</p>
+<figure>
+    <math>
+        <mover accent="true">
+            <mi>Y</mi>
+            <mo>&Hat;</mo>
+        </mover>
+        <mo>&equals;</mo>
+        <mi>&beta;₀</mi>
+        <mo>&plus;</mo>
+        <mi>&beta;₁</mi>
+        <mo>&InvisibleTimes;</mo>
+        <mi>X₁</mi>
+        <mo>&plus;</mo>
+        <mi>&beta;₂</mi>
+        <mo>&InvisibleTimes;</mo>
+        <mi>X₂</mi>
+        <mo>&plus;</mo>
+        <mi>&hellip;</mi>
+        <mo>&plus;</mo>
+        <msub>
+            <mi>&beta;</mi>
+            <mi>p</mi>
+        </msub>
+        <mo>&InvisibleTimes;</mo>
+        <msub>
+            <mi>X</mi>
+            <mi>p</mi>
+        </msub>
+    </math>
+</figure>
+<p>
+独立変数が 1 個の場合は
+    <math>
+        <mrow>
+            <mover accent="true">
+                <mi>Y</mi>
+                <mo>&Hat;</mo>
+            </mover>
+            <mo>&equals;</mo>
+            <mi>&beta;₀</mi>
+            <mo>&plus;</mo>
+            <mi>&beta;₁</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>X</mi>
+        </mrow>
+    </math>
+のように簡単になり，特に，<em>単回帰分析</em>あるいは直線回帰と呼ばれる。
+</p>
+
+<h3>Regression Equation [STEPS:Glossary]</h3>
+<p>
+A regression equation allows us to express the relationship between two (or more) variables algebraically. It indicates the nature of the relationship between two (or more) variables. In particular, it indicates the <em>extent</em> to which you can predict some variables by knowing others, or the extent to which some are associated with others.
+</p>
+<p>
+A <strong>linear regression</strong> equation is usually written
+</p>
+<figure>
+    <math>
+        <mi>Y</mi>
+        <mo>&equals;</mo>
+        <mi>a</mi>
+        <mo>&plus;</mo>
+        <mi>b</mi>
+        <mo>&InvisibleTimes;</mo>
+        <mi>X</mi>
+        <mo>&plus;</mo>
+        <mi>e</mi>
+    </math>
+</figure>
+<p>
+where
+    <ul>
+        <li>
+            <var>Y</var> is the dependent variable
+        </li>
+        <li>
+            <var>a</var> is the intercept
+        </li>
+        <li>
+            <var>b</var> is the slope or <em>regression coefficient</em>
+        </li>
+        <li>
+            <var>X</var> is the independent variable (or covariate)
+        </li>
+        <li>
+            <var>e</var> is the <em>error term</em>
+        </li>
+    </ul>
+</p>
+<p>
+The equation will specify the average magnitude of the expected change in <var>Y</var> given a change in <var>X</var>. The regression equation is often represented on a scatterplot by a regression line.
+</p>
+
+<h3>偏回帰係数 partial regression coefficient [青木:用語辞典I]</h3>
+<p>
+1 個の従属変数 <var>Y</var> を <var>p</var> 個の独立変数 <var>X₁</var>，<var>X₂</var>，&hellip;，<var>X<sub>p</sub></var> で予測を行うための予測式は，
+<figure>
+    <math>
+        <mover accent="true">
+            <mi>Y</mi>
+            <mo>&Hat;</mo>
+        </mover>
+        <mo>&equals;</mo>
+        <mi>&beta;₀</mi>
+        <mo>&plus;</mo>
+        <mi>&beta;₁</mi>
+        <mo>&InvisibleTimes;</mo>
+        <mi>X₁</mi>
+        <mo>&plus;</mo>
+        <mi>&beta;₂</mi>
+        <mo>&InvisibleTimes;</mo>
+        <mi>X₂</mi>
+        <mo>&plus;</mo>
+        <mi>&hellip;</mi>
+        <mo>&plus;</mo>
+        <msub>
+            <mi>&beta;</mi>
+            <mi>p</mi>
+        </msub>
+        <mo>&InvisibleTimes;</mo>
+        <msub>
+            <mi>X</mi>
+            <mi>p</mi>
+        </msub>
+    </math>
+</figure>
+である（
+    <math>
+        <mover accent="true">
+            <mi>Y</mi>
+            <mo>&Hat;</mo>
+        </mover>
+    </math>
+は従属変数の予測値）。ここで，
+    <math>
+        <mrow>
+            <msub>
+                <mi>b</mi>
+                <mi>i</mi>
+            </msub>
+            <mspace width="0.5em"/>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mi>i</mi>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>1</mn>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>p</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </mrow>
+    </math>
+が<strong>偏回帰係数</strong>である（「偏 partial」を付けないほうがよいとの意見もある）。
+</p>
+
+<h3>標準化残差 standardised residual [青木:用語辞典I]</h3>
+<p>
+重回帰分析において残差（residual）は，（実測値 &minus; 予測値）で定義される。<em>残差分析</em>に用いられる場合には，標準誤差で標準化した残差が使用される。
+</p>
+
+<h3>残差分析 residual analysis [青木:用語辞典I]</h3>
+<p>
+重回帰分析においては，<em>誤差項</em>の分布にいくつかの仮定を前提としている。
+これらの仮定が満たされているかどうかについては，予測値と実測値の乖離について検討する<strong>残差分析</strong>が行われる。残差はモデル中の誤差項とは異なった振舞いをするので，<em>標準化残差</em>が用いられる。
+<dl>
+    <dt>標準化残差と予測値のプロット</dt>
+    <dd>
+        標準化残差が一定の傾向を持っている場合，例えば実測値が大きくなるにつれ残差も大きくなる場合，あるいは途中まで増加（減少）しその後減少（増加）する場合などには，重回帰モデルの妥当性が疑わしいと判断される。
+    </dd>
+    <dt>標準化残差の <var>Q-Q</var> プロット</dt>
+    <dd>
+        理論直線から離れたプロット点が存在する場合には，重回帰モデルの妥当性が疑わしいと判断される。
+    </dd>
+</dl>
+また，いくつか飛離れたケースがある場合には，測定ミス，データ入力ミスなどの可能性もあるので，注意深く検討すべきである。
+</p>
+
+<h3>重回帰分析の補足説明 [青木:自習ノート]</h3>
+<p>
+重回帰分析では，個々の説明変数は従属変数と<em>直線相関</em>関係にあることが仮定されている。個々の独立変数と従属変数の組合せで散布図を描き，直線相関から大幅にずれる独立変数は適当な変数変換をしてから用いた方がよい場合もある。
+</p>
+<p>
+予測値と標準化残差のプロット（ 残差分析 ）により，重回帰モデルの妥当性が検証できる。
+</p>
+<ul>
+    <li>
+        予測値の大小にかかわらず標準化残差が一様に散らばっていれば重回帰モデルは妥当である。
+    </li>
+    <li>
+        予測値が大きく（ 小さく ）なるにつれ標準化残差の大きさが変化するような場合には分散が不均一であり，重回帰モデルが妥当でないことを表している。
+    </li>
+    <li>
+        標準化残差が曲線的な変動を見せるときは，独立変数と従属変数が曲線相関を示すので，なんらかの変数変換が必要であることを表す。
+    </li>
+</ul>
+
+
+<h3>分散分析 analysis of variance [青木:自習ノート、回帰の分散分析]</h3>
+<ul>
+    <li>帰無仮説 <var>H₀</var>:
+        「分析に使用した独立変数で，従属変数は説明できない」
+    </li>
+    <li>対立仮説 <var>H₁</var>:
+        「分析に使用した独立変数で，従属変数は説明できる」
+    </li>
+    <li>有意水準 <var>&alpha;</var> で両側検定を行う
+    </li>
+</ul>
+<p>
+従属変数の分散は回帰によって説明できる部分と，説明できない部分に分解される。
+</p>
+<figure>
+    <figcaption>回帰の分散分析表</figcaption>
+    <table>
+        <tr>
+            <th>変動要因</th>
+            <th>平方和</th>
+            <th>自由度</th>
+            <th>平均平方</th>
+            <th><var>F</var>値</th>
+        </tr>
+        <tr>
+            <td>回帰</td>
+            <td> <var>S<sub>r</sub></var> </td>
+            <td> <var>p</var> </td>
+            <td>
+                <math displaystyle="true">
+                    <msub>
+                        <mi>MS</mi>
+                        <mi>r</mi>
+                    </msub>
+                    <mo>&equals;</mo>
+                    <mfrac>
+                        <msub>
+                            <mi>S</mi>
+                            <mi>r</mi>
+                        </msub>
+                        <mi>p</mi>
+                    </mfrac>
+                </math>
+            </td>
+            <td>
+                <math displaystyle="true">
+                    <mfrac>
+                        <msub>
+                            <mi>MS</mi>
+                            <mi>r</mi>
+                        </msub>
+                        <msub>
+                            <mi>MS</mi>
+                            <mi>e</mi>
+                        </msub>
+                    </mfrac>
+                </math>
+            </td>
+        </tr>
+        <tr>
+            <td>残差</td>
+            <td> <var>S<sub>e</sub></var> </td>
+            <td>
+                <var>n</var> &minus; <var>p</var> &minus; 1
+            </td>
+            <td>
+                <math displaystyle="true">
+                    <msub>
+                        <mi>MS</mi>
+                        <mi>e</mi>
+                    </msub>
+                    <mo>&equals;</mo>
+                    <mfrac>
+                        <msub>
+                            <mi>S</mi>
+                            <mi>r</mi>
+                        </msub>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&minus;</mo>
+                            <mi>p</mi>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </mfrac>
+                </math>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>全体</td>
+            <td> <var>S<sub>t</sub></var> </td>
+            <td>
+                <var>n</var> &minus; 1
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</figure>
+<p>
+<var>F</var> 値は自由度が
+    <math>
+        <mo fence="true">&lpar;</mo>
+        <mi>p</mi>
+        <mo separator="true">&comma;</mo>
+        <mi>n</mi>
+        <mo>&minus;</mo>
+        <mi>p</mi>
+        <mo>&minus;</mo>
+        <mn>1</mn>
+        <mo fence="true">&rpar;</mo>
+    </math>
+の <var>F</var> 分布に従う。有意確率を <var>P₀</var> とすると，
+</p>
+<ul>
+    <li>
+        <math>
+            <mi>P₀</mi>
+            <mo>&gt;</mo>
+            <mi>&alpha;</mi>
+        </math>
+        のとき，帰無仮説は棄却できない。
+        「分析に使用した独立変数で，従属変数は説明できるとはいえない」
+    </li>
+    <li>
+        <math>
+            <mi>P₀</mi>
+            <mo>&le;</mo>
+            <mi>&alpha;</mi>
+        </math>
+        のとき，帰無仮説を棄却する。
+        「分析に使用した独立変数で，従属変数は説明できる」
+    </li>
+</ul>
+
+<h3>決定係数 coefficient of determination [青木:用語辞典I]</h3>
+<p>
+<em>重相関係数</em>の 2 乗である。<em>寄与率</em>とも呼ばれる。独立変数が従属変数のどれくらいを説明できるかを表す。この値が低いということは，得られた重回帰式の予測能力が低いことを意味する。
+</p>
+
+<h3>重相関係数 multiple correlation coefficient [青木:用語辞典I]</h3>
+<p>
+実測値 <var>Y</var> と予測値
+    <math>
+        <mover accent="true">
+            <mi>Y</mi>
+            <mo>&Hat;</mo>
+        </mover>
+    </math>
+の相関係数であり，<var>R</var> で表されることが多い。
+もし，重回帰式による予測が完全ならば <var>R</var> = 1 になる。
+    <math>
+        <mrow>
+            <mn>0</mn>
+            <mo>&le;</mo>
+            <mi>R</mi>
+            <mo>&le;</mo>
+            <mn>1</mn>
+        </mrow>
+    </math>
+</p>
+
+</section>
+
+<!-- ******************************************************************** -->
+<h2>Time Series</h2>
+
+<section id="time_series" class="description">
+
+<h3>時系列データ [統計局:DSS上級]</h3>
+<p>
+時系列データは、複数時点から収集したデータをもとに<em>未来</em>の傾向を探るために活用されます。このデータの特徴は、データが時点順に並べられており、この順番は変更できないことです。
+</p>
+
+<h3>時系列データの変動 [統計局:DSS上級]</h3>
+<p>
+時系列データは、次の４つからなると考えられています。
+</p>
+<ul>
+    <li>
+        傾向変動 (T): 長期にわたる連続的な変化、基本的な変動方向 (傾向) を表す。
+    </li>
+    <li>
+        循環変動 (C): 数年程度の周期の一定しない上下運動、景気循環などを表す。
+    </li>
+    <li>
+        季節変動 (S): １年周期の規則的な変動、季節性を表す。
+    </li>
+    <li>
+        不規則変動 (I): 上記以外の変動で特に規則的でない変動を表す。
+    </li>
+</ul>
+
+<h3>Time Series [STEPS:Glossary]</h3>
+<p>
+A <strong>time series</strong> is a sequence of observations which are ordered in time (or space). If observations are made on some phenomenon throughout time, it is most sensible to display the data in the order in which they arose, particularly since successive observations will probably be dependent. Time series are best displayed in a scatter plot. The series value <var>X</var> is plotted on the vertical axis and time t on the horizontal axis. Time is called the independent variable (in this case however, something over which you have little control). There are two kinds of time series data:
+</p>
+<ul>
+    <li>
+        Continuous, where we have an observation at every instant of time, e.g. lie detectors, electrocardiograms. We denote this using observation <var>X</var> at time <var>t</var>,
+        <math>
+            <mrow>
+                <mi>X</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>t</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>.
+    </li>
+    <li>
+        Discrete, where we have an observation at (usually regularly) spaced intervals. We denote this as <var>X<sub>t</sub></var>.
+    </li>
+</ul>
+
+<h3>Trend Component [STEPS:Glossary]</h3>
+<p>
+We want to increase our understanding of a time series by picking out its main features. One of these main features is the <strong>trend component</strong>. Descriptive techniques may be extended to forecast (predict) future values.
+</p>
+<p>
+Trend is a long term movement in a time series. It is the underlying <em>direction</em> (an upward or downward tendency) and rate of change in a time series, when allowance has been made for the other components.
+</p>
+<p>
+A simple way of detecting trend in seasonal data is to take averages over a certain period. If these averages change with time we can say that there is evidence of a trend in the series. There are also more formal tests to enable detection of trend in time series.
+</p>
+<p>
+It can be helpful to model trend using straight lines, polynomials etc.
+</p>
+
+<h3>Cyclical Component [STEPS:Glossary]</h3>
+<p>
+We want to increase our understanding of a time series by picking out its main features. One of these main features is the <strong>cyclical component</strong>. Descriptive techniques may be extended to forecast (predict) future values.
+</p>
+<p>
+In weekly or monthly data, the cyclical component describes any regular fluctuations.
+
+It is a non-seasonal component which varies in a recognisable cycle.
+</p>
+
+<h3>Seasonal Component [STEPS:Glossary]</h3>
+<p>
+We want to increase our understanding of a time series by picking out its main features. One of these main features is the <strong>seasonal component</strong>. Descriptive techniques may be extended to forecast (predict) future values.
+</p>
+<p>
+In weekly or monthly data, the seasonal component, often referred to as seasonality, is the component of variation in a time series which is dependent on the <em>time of year</em>. It describes any regular fluctuations with a period of less than one year. For example, the costs of various types of fruits and vegetables, unemployment figures and average daily rainfall, all show marked seasonal variation.
+</p>
+<p>
+We are interested in comparing the seasonal effects within the years, from year to year; removing seasonal effects so that the time series is easier to cope with; and, also interested in adjusting a series for seasonal effects using various models.
+<p>
+
+<h3>Irregular Component [STEPS:Glossary]</h3>
+<p>
+We want to increase our understanding of a time series by picking out its main features. One of these main features is the <strong>irregular component</strong> (or '<em>noise</em>'). Descriptive techniques may be extended to forecast (predict) future values.
+</p>
+<p>
+The irregular component is that left over when the other components of the series (trend, seasonal and cyclical) have been accounted for.
+</p>
+
+<h3>Exponential Smoothing [STEPS:Glossary]</h3>
+<p>
+<strong>Exponential smoothing</strong> is a smoothing technique used to reduce <em>irregularities</em> (random fluctuations) in time series data, thus providing a clearer view of the true underlying behaviour of the series. It also provides an effective means of predicting future values of the time series (forecasting).
+</p>
+
+<h3>Moving Average Smoothing [STEPS:Glossary]</h3>
+<p>
+A moving average is a form of average which has been adjusted to allow for seasonal or cyclical components of a time series. <strong>Moving average smoothing</strong> is a smoothing technique used to make the <em>long term trends</em> of a time series clearer.
+</p>
+<p>
+When a variable, like the number of unemployed, or the cost of strawberries, is graphed against time, there are likely to be considerable seasonal or cyclical components in the variation. These may make it difficult to see the underlying trend. These components can be eliminated by taking a suitable moving average.
+</p>
+<p>
+By reducing random fluctuations, moving average smoothing makes long term trends clearer.
+</p>
 
 
 </section>

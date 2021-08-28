@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
     <title>Probability</title>
-    <link rel="stylesheet" href="../style/dark.css" type="text/css">
-    <link rel="stylesheet" href="../style/indent.css" type="text/css">
+    <link rel="stylesheet" href="dark.css" type="text/css">
+    <link rel="stylesheet" href="indent.css" type="text/css">
 </head>
 <body>
 
@@ -48,10 +48,10 @@
             <mo fence="true">&rbrace;</mo>
         </mrow>
     </math>
-のいずれかの値をとることになります。正しいさいころでは、乱数サイの目はランダムネスをもっており、予測はできません。このように変数 <var>X</var> がある特定の値をとることが偶然に支配されており、かつ、ある特定の値 <var>x</var> をとる確率が与えられているとき、その変数を確率変数といいます。
+のいずれかの値をとることになります。正しいさいころでは、乱数サイの目はランダムネスをもっており、予測はできません。このように変数 <var>X</var> がある特定の値をとることが偶然に支配されており、かつ、ある特定の値 <var>x</var> をとる確率が与えられているとき、その変数を<strong>確率変数</strong>といいます。
 </p>
 <p>
-離散型確率変数のとる値が
+<em>離散型</em>の確率変数のとる値が
     <math>
         <mrow>
             <mo fence="true">&lbrace;</mo>
@@ -74,7 +74,7 @@
             <mo fence="true">&rbrace;</mo>
         </mrow>
     </math>
-である場合、確率分布
+である場合、<em>確率分布</em>
     <math>
         <mrow>
             <mi>P</mi>
@@ -225,7 +225,7 @@
 </p>
 
 <p>
-次に連続型の確率変数を定義してみましょう。例えば、日本の高校1年生の男子生徒の身長について考えることにします。Aくんが 165.5cm、Bくんが 168.2cmであったとしましょう。身長は遺伝や生育環境により決まるものですが、高校1年生という集団を考える場合、ある確率でこのような身長の生徒が出現すると考えることが、確率論を用いた推測を行う場合の基本となります。
+次に<em>連続型</em>の確率変数を定義してみましょう。例えば、日本の高校1年生の男子生徒の身長について考えることにします。Aくんが 165.5cm、Bくんが 168.2cmであったとしましょう。身長は遺伝や生育環境により決まるものですが、高校1年生という集団を考える場合、ある確率でこのような身長の生徒が出現すると考えることが、確率論を用いた推測を行う場合の基本となります。
 </p>
 <p>
 身長のような連続量の場合は、連続確率変数 <var>X</var> を考える必要があります。連続確率変数の場合は、ある特定の値 <var>x</var> になる確率を考えることができず、次のようにある範囲を考える必要があります。すなわち、変数 <var>X</var> がある特定の値をとることが偶然に支配されており、かつ、ある特定の範囲
@@ -318,7 +318,7 @@
         <mi>x</mi>
         <mo fence="true">&rpar;</mo>
     </math>
-を <var>X</var> の<strong>確率密度関数</strong> (Probability Density Function)、
+を <var>X</var> の<em>確率密度関数</em> (Probability Density Function)、
     <math>
         <mi>F</mi>
         <mo>&ApplyFunction;</mo>
@@ -326,7 +326,7 @@
         <mi>x</mi>
         <mo fence="true">&rpar;</mo>
     </math>
-を<strong>確率分布関数</strong>または<em>累積密度関数</em> (Cumulative Distribution Function) といいます。密度関数は下の図で表され、この場合 <var>X</var> が <var>x₁</var> から <var>x₂</var> の範囲の値をとる確率は斜線の部分の面積になります。
+を<em>確率分布関数</em>または<em>累積密度関数</em> (Cumulative Distribution Function) といいます。密度関数は下の図で表され、この場合 <var>X</var> が <var>x₁</var> から <var>x₂</var> の範囲の値をとる確率は斜線の部分の面積になります。
 </p>
 <figure>
     <img src="bellcurve.svg" alt="Bell curve">
@@ -539,7 +539,7 @@ A random variable has either an associated <em>probability distribution</em> (di
         </msub>
         <mo fence="true">&rpar;</mo>
     </math>
-である（略して分布関数あるいは確率分布）。
+である（略して<em>分布関数</em>あるいは<strong>確率分布</strong>）。
 </p>
 
 <h3>Probability Distribution [STEPS:Glossary]</h3>
