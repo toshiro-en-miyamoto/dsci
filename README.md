@@ -8,6 +8,7 @@
 
 ## Data Analysis
 
-- `stats-ml`: fundamentals of statistics and machine learning
+- `britannica`: Statistics at Britannica Kids & my glossary
 - `navlani`: Python Data Analysis, Third Edition by Avinash Navlani
+- `dangeti`: Statistics for Machine Learning by Pratap Dangeti
 - `stackof`: analyzing Stackoverflow's survey as a self-exercise
