@@ -37,3 +37,9 @@ Miniforge is an effort to provide Miniconda-like installers, with the added feat
 - All packages are shared in a single channel named conda-forge.
 - Care is taken that all packages are up-to-date.
 - Common standards ensure that all packages have compatible versions.
+
+# `conda` command usage
+
+- If you don't want the conda environment to be activated by default:
+  - `$ conda config --set auto_activate_base false`
+  - the above command append the key:value to the ~./condarc file
